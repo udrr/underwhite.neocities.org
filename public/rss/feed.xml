@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+	<channel>
+		<title>------------------------</title>
+		<link>https://underwhite.neocities.org</link>
+		<description>cool rss feed about updates and yapping</description>
+		
+		<item>
+			<title>30.Dec.24 - Links! (and button)</title>
+			<link>https://underwhite.neocities.org/links</link>
+			<description>yoo guyss! i made a (link) button in my links page! the software i used is GIMP btw, still learning it. XD</description>
+			<pubDate>Mon, 30 Dec 24 13:02:04 +0000</pubDate>
+		</item>
+		
+		<item>
+			<title>30.Dec.24 - Strawpage</title>
+			<link>https://underwhite.straw.page</link>
+			<description>oh boyyYyy! I made a cool strawpage! send me your gimmicks if you wanna! and a &lt;a href=&quot;https://underwhite.neocities.org/credit&quot; target=&quot;_blank&quot;&gt;credits&lt;/a&gt; page! (finallyyy)</description>
+			<pubDate>Mon, 30 Dec 24 13:02:04 +0000</pubDate>
+		</item>
+		
+  <item>
+			<title>26.Dec.24 - Updates</title>
+			<link>https://underwhite.neocities.org/home</link>
+			<description>HI!! I made a &lt;a href=&quot;https://underwhite.neocities.org/sitemap&quot; target=&quot;_blank&quot;&gt;sitemap&lt;/a&gt; + revamped my status and piclog section ~ trying to make a credits section :)</description>
+			<pubDate>Thu, 26 Dec 2024 15:10:31 +0400</pubDate>
+		</item>
+		
+		
+			<item>
+			<title>21.Dec.24 - New Tutorials</title>
+			<link>https://underwhite.neocities.org/tutorials</link>
+			<description>oh boy! OH BOY! i just got back with three new tutorials! i will use my own advice to make a theme input! (maybe.. just maybe.)</description>
+			<pubDate>Sat, 21 Dec 2024 12:02:21 +0400</pubDate>
+		</item>
+	</channel>
+</rss>

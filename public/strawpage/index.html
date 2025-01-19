@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artbox - Underwhite</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+     .mailbox {
+       text-align: center;
+width: 600px;
+height: 556px;
+border-radius: 3%;
+--color1: #5a3fb0;
+--color2: slateblue;
+background: repeating-linear-gradient(
+45deg,
+var(--color1),
+var(--color1) 30px,
+var(--color2) 30px,
+var(--color2) 60px
+
+);
+z-index: 2;
+position: relative;
+animation: clip2 0.5s infinite, flicker 0.01s infinite;
+animation-timing-function: steps(4);
+left: 4px;
+     }
+     .mailbox .inner {
+       width: 540px;
+       height: 450px;
+       
+       background: black;
+      position: relative;
+      top: 10px;
+      border-radius: 2%;
+      font-family: 'ms', sans-serif;
+      letter-spacing: -0.5px;
+      color: white;
+      padding: 20px;
+      padding-top: 10px;
+      font-size: 12px;
+      animation: none;
+      overflow-y: scroll;
+      overflow-x: hidden;
+     }
+      .buttoncontain {
+       display: flex;
+  flex-wrap: nowrap;
+  background: transparent;
+  position: relative;
+  left: 50px;
+  z-index: 999;
+     }
+     
+      .button {
+       background: repeating-linear-gradient(
+-45deg,
+#5a3fb0,
+slateblue 50%
+);
+width: 80px;
+height: 20px;
+display: block;
+border: 5px solid black;
+border-radius: 20px;
+position: relative;
+top: -50px;
+left: 380px;
+margin-left: 20px;
+box-shadow: 4px 8px 0 1px rgba(0, 0, 0, 0.6);
+     }
+     
+         .button:active {
+          border-color: #100324;
+       top: -47px;
+       left: 382px;
+       box-shadow: 2px 4px 0 2px rgba(0, 0, 0, 0.6);
+     }
+      
+  
+.inner {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+  scrollbar-color: slateblue #5a3fb0;
+  scrollbar-width: thin;
+}
+
+	
+@keyframes clip2 {
+    0% {
+
+    background: repeating-linear-gradient(
+45deg,
+var(--color1),
+var(--color1) 30px,
+var(--color2) 30px,
+var(--color2) 60px
+);
+box-shadow: 0px 0 15px 0 var(--color1);
+    }
+    
+       100% {
+        
+
+    background: repeating-linear-gradient(
+45deg,
+var(--color2),
+var(--color2) 30px,
+var(--color1) 30px,
+var(--color1) 60px
+);
+box-shadow: 0px 0 15px 0 var(--color2);
+    }
+}
+
+
+      /* <div class="hr"></div> */
+     .mailbox .hr {
+      
+       width: 100%;
+       height: 1px;
+       background: var(--color2);
+     }
+     
+     
+     @font-face { font-family: "tp"; src: url("https://underwhite.neocities.org/fonts/thickPixels.otf");}
+@font-face { font-family: "hh"; src: url("https://underwhite.neocities.org/fonts/hh.ttf");}
+@font-face { font-family: "muh"; src: url("https://underwhite.neocities.org/fonts/my.otf");}
+@font-face { font-family: "cs"; src: url("https://underwhite.neocities.org/fonts/cat.ttf");}
+@font-face { font-family: "sg"; src: url("https://underwhite.neocities.org/fonts/Skygraze.otf");}
+@font-face { font-family: "a"; src: url("https://underwhite.neocities.org/fonts/alphys.ttf");}
+@font-face { font-family: "ms"; src: url("https://underwhite.neocities.org/fonts/modeseven.ttf");}
+
+
+p {
+    word-break: break-all;
+    white-space: normal;
+}
+
+@keyframes flicker { 0% { opacity: 0.63 }; 1% { opacity: 0.46 }; 2% { opacity: 0.95 }; 3% { opacity: 0.37 }; 4% { opacity: 0.78 }; 5% { opacity: 0.41 }; 6% { opacity: 1.14 }; 7% { opacity: 0.9 }; 8% { opacity: 0.43 }; 9% { opacity: 1.17 }; 10% { opacity: 0.48 }; 11% { opacity: 0.94 }; 12% { opacity: 0.91 }; 13% { opacity: 0.92 }; 14% { opacity: 0.86 }; 15% { opacity: 0.73 }; 16% { opacity: 0.76 }; 17% { opacity: 1.04 }; 18% { opacity: 0.42 }; 19% { opacity: 0.99 }; 20% { opacity: 0.53 }; 21% { opacity: 0.76 }; 22% { opacity: 1.12 }; 23% { opacity: 1.22 }; 24% { opacity: 0.79 }; 25% { opacity: 0.36 }; 26% { opacity: 0.8 }; 27% { opacity: 0.57 }; 28% { opacity: 1.28 }; 29% { opacity: 1.05 }; 30% { opacity: 0.38 }; 31% { opacity: 0.85 }; 32% { opacity: 1.23 }; 33% { opacity: 1.07 }; 34% { opacity: 0.41 }; 35% { opacity: 0.64 }; 36% { opacity: 0.4 }; 37% { opacity: 0.63 }; 38% { opacity: 0.97 }; 39% { opacity: 1.03 }; 40% { opacity: 0.84 }; 41% { opacity: 1.34 }; 42% { opacity: 0.78 }; 43% { opacity: 0.69 }; 44% { opacity: 1.17 }; 45% { opacity: 0.64 }; 46% { opacity: 1.04 }; 47% { opacity: 1.02 }; 48% { opacity: 0.65 }; 49% { opacity: undefined }; 50% { opacity: 1 }; 
+        }
+        
+        @keyframes flicker2 { 0% { opacity: 0.1 }; 1% { opacity: 0.2 }; 2% { opacity: 0.12 }; 3% { opacity: 0.1 }; 4% { opacity: 0.1}; 5% { opacity: 0.11 }; 6% { opacity: 0.14 }; 7% { opacity: 0 }; 8% { opacity: 0.403 }; 9% { opacity: 0.17 }; 10% { opacity: 0.18 }; 11% { opacity: 0.14 }; 12% { opacity: 0.11 }; 13% { opacity: 0.1  }; 14% { opacity: 0.1  }; 15% { opacity: 0.13 }; 16% { opacity: 0.16 }; 17% { opacity: 0.04 }; 18% { opacity: 0.02 }; 19% { opacity: 0.04 }; 20% { opacity: 0.03 }; 21% { opacity: 0.36 } 22% { opacity: 0.12 }; 23% { opacity: 0.1  }; 24% { opacity: 0.09 }; 
+        }
+        
+        h1 {
+          color: #7f07d5; 
+ background-image: linear-gradient(45deg, #8d6fed 50%, var(--color2) 50%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+ font-size: 30px;
+
+        }
+        
+        h2 {
+          color: #7f07d5; 
+ background-image: linear-gradient(45deg, var(--color1) 50%, #8d6fed 50%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+ font-size: 20px;
+        }
+        
+        /** Text Gradient Example */ 
+
+        
+        h1, h2, h3, h4, h5, h6 { font-family: "sg", sans-serif;}
+        
+        button {
+          border: 2px solid var(--color2);
+          background: black;
+          padding: 10px;
+          width: fit-content;
+          text-align: center;
+          height: 38px;
+          color: var(--color2);
+          font-family: "tp";
+          cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+          transition: 1s;
+        }
+        button:hover {
+          cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+          border: 2px solid var(--color1);
+          color: var(--color1);
+          box-shadow: 0 0 40px 0 rgba(106, 90, 205, 0.2);
+        transition: 1.3s;
+        }
+        
+        
+        button::after {
+          content: " »";
+        }
+        
+        a {
+          color: #7f07d5; 
+ background-image: linear-gradient(45deg, var(--color1) 50%, #8d6fed 50%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+ text-decoration: none;
+        }transition: 1.3s;
+        }
+        
+        a:hover {
+transition: 1.3s;
+ background-image: linear-gradient(45deg, var(--color2) 50%, var(--color1) 50%); 
+ filter: brightness(90%);
+
+        }
+        
+        b, strong  {
+          color: slateblue;
+        }
+        
+        i {
+          color: slateblue;
+          opacity: 0.6;
+          font-size: 7px;
+          
+        }
+        
+        u {
+          font-weight: bold;
+          
+        }
+        
+        .desc {
+          border-radius: 10px;
+          background: slateblue;
+          width: fit-content;
+          border-top-right-radius: 0;
+          border-top-left-radius: 0;
+          padding: 8px;
+        }
+   </style>
+  </head>
+  <body style="overflow-y: scroll; overflow-x: hidden;">
+   <center> 
+   <div class="mailbox"><center>
+     <div class="inner"><br>
+       <form>
+      <button type="reset" onclick="location.href='https://underwhite.neocities.org/home'">
+        BACK
+      </button>
+    </form>
+
+       <h1>
+       Artbox
+        </h1>
+        <i style="font-size: 10px;">gimmick page for my strawpage</i>
+        <br><br>
+        
+        
+        <br><br>
+        <div class="hr"></div><br>
+        <small>this layout was made by me btw!</small><br>
+      <p>right now, you can send me some stuff over <a href="//underwhite.straw.page">here</a>.</p>
+      <p>sorry if i'm like, 3 days late.</p>
+      <img src="https://underwhite.neocities.org/strawpage/images/1.png" width="190px">
+      <div class="desc">aw what a cute heart :D</div><br>
+      <img src="https://underwhite.neocities.org/strawpage/images/2.webp" width="190px">
+      <div class="desc">that's actually a great amongus.</div><br>
+      <img src="https://underwhite.neocities.org/strawpage/images/3.webp" width="190px">
+      <div class="desc">huh, thanks mlum casino i guess..</div><br>
+      <img src="https://underwhite.neocities.org/strawpage/images/4.png" width="190px">
+      <div class="desc">smiley face</div><br>
+      <img src="https://underwhite.neocities.org/strawpage/images/5.png" width="190px">
+      <div class="desc">ok audioduck..?</div><br>
+     </div>
+     </center>
+    
+   </div>
+    <div class="buttoncontain" style="opacity: 1;"><div class="button"></div> <div class="button"></div> <div class="button"></div> <div class="button"></div></div>
+  
+
+   </center>
+  </body>
+</html>
+

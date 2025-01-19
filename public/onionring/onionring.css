@@ -1,0 +1,64 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+
+#ringID {
+  color: #111;
+  margin: 0 auto;
+  padding: 15px; /* creates some space around the widget */
+}
+
+#ringID table {
+  background-color: skyblue; /* makes the background pure white */
+  background-image: url("https://dimden.dev/images/overlay.png");
+  background-size: 50px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 0 auto; /* centers the widget */
+}
+
+
+    
+    
+@keyframes Static {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -2px;
+    }
+}
+
+ 
+ 
+
+
+
+#ringID table tr td {
+  padding: 15px; /* creates some space between the links and text inside the widget */
+}
+
+#ringID .webring-prev {
+  text-align:center;
+}
+
+#ringID .webring-info {
+   text-align:center;
+}
+
+#ringID .webring-next {
+  text-align:left;
+}
+
+#ringID .webring-links {
+  font-size:small;
+}
+
+#ringID .webring-prev {
+  text-align:center;
+}
+

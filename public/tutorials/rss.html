@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+  <title>tutorials</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://underwhite.neocities.org/images/png/cam.png" rel="icon" type="image/png">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  scrollbar-width: thin;
+  scrollbar-color: green white;
+}
+ body { 
+        font-family: 'me';
+        color: yellow;
+        text-align: center;
+        background: url("https://sadhost.neocities.org/images/tiles/b4g.gif") fixed;
+        line-height: 130%;
+      }
+      
+            @font-face {
+                font-family: 'me'; 
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+            
+
+
+
+
+a { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; font-weight: bold;}
+a:hover { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; padding: 1px;}
+
+.spinnono {
+  width: 300px;
+  position: absolute; top: -30px; right: 150px; z-index: -99;
+  
+}
+
+@-moz-keyframes spin { 100% {-moz-transform: rotate(360deg);}}
+@-webkit-keyframes spin { 100% {-webkit-transform: rotate(360deg);}}
+@keyframes spin { 100% {-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+
+.inner { background: #32a852; max-width: 600px border: 15px solid #32a852;}
+.main { background: #32a852; max-width: 600px; border-radius: 10px; border: 4px ridge green; padding: 10px;}
+</style>
+</head>
+<body align="center"><center>
+   <div class="main"> <div class="inner">
+    <h2>RSS Feeds</h2>
+<p>RSS Feeds are .xml / .atom / etc.. files! they keep YOU updated! Like an <a href="https://status.cafe/users/test.atom">.atom file</a>.</p>
+
+<p>Today, you are gonna learn how to display one. because why not? we need our vistors to feel nice.</p>
+
+<p>first, get notepad+++ or any notepad that supports the XML language.</p>
+
+<p>then, modify and paste the template below:</p>
+
+<pre><textarea style="height:300px; background: #111212; color: white; width: 555px;" readonly>
+  
+  <?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+	<channel>
+		<title>sitename</title>
+		<link>https://site.org</link>
+		<description>desc of site</description>
+
+		<item>
+			<title>title of the update 1</title>
+			<link>https:/example.com/update</link>
+			<description>desc of update</description>
+			<pubDate>Tue, 09 Jul 2024 15:00:00 -0400</pubDate>
+		</item>
+
+	</channel>
+</rss>
+</textarea></pre>
+<p>here you see your sitename, desc, updates, and more. just copy paste the code for a new update!</p>
+<p>note 1: the date of each item is the pubDate aka published date. it has to be formatted as shown in the code or you will get an error. the time of the item pubDate is configured using your timezone. you'll have to check your time zone in order to put the correct value!</p>
+<p>edit 1: you can also use this <a href="https://timestampgenerator.com/">time stamp generator</a> to generate your pubDate, just make sure to copy paste the one that says RFC822.</p>
+
+<p>And yes, you can display html stuff. but you have to use those ugly html entites. like <textarea style="color: green; font-family: monospace; background: black;" readonly>& lt;a href=& quot;URL& quot;& gt;LINK& lt;/a& gt;</textarea> which is pretty ugly tbh</p>
+<p>once you have your rss.xml done you need to validate it using something like w3c's feed validation service. this is an important step since you wanna make sure your rss.xml is not causing any errors when being put into a reader.</p>
+<p>once you get a vaild rss your good to go</p>
+<p>note 1: link to your rss.xml file somewhere on your page so people know you have an RSS feed.</p>
+<p>ok, now your wondering: how in the world do i display my xml file? well you have two options.</p>
+
+<p>one: manually use javascript to display it</p>
+<p>two: third party rss displayers</p>
+<p>i prefer two for me because first: it easy, second: it's good. i like rss 2 html since you can customize it with css stuff and it's super cool.</p>
+<p>but if your not lazy do the first one. idk how to. you gotta find out yourself.</p>
+<a href="/tutorials">Go back?</a><br>
+<img src="https://underwhite.neocities.org/tutorials/neocites.svg" class="spinnono">
+  </div>
+</div>
+</center>
+</body>
+</html> 

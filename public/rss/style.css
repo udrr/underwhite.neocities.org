@@ -1,0 +1,143 @@
+	body {
+	  background: transparent;
+	  }
+	  
+	  #rss {
+	   scrollbar-width: thin;
+	   scrollbar-color: magenta transparent;
+	  }
+	  
+	  #rss {
+
+			box-sizing: border-box;
+			max-width: 170px;
+			border: 1px solid black;
+			padding: 5px;
+			background: #031524;
+			font-family: "nunito", sans-serif;
+			color: white;
+      border-radius: 5px;
+			font-size: 9px;
+		}
+		
+		 #s-m-t-tooltip {
+  max-width:60px;
+  padding:3px 5px;
+  margin:5px 0px 0px 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: helvetica, sans-serif;
+  font-size:5px;
+  font-weight:light;
+
+  text-align: justify;
+  color:white;
+  z-index:999999999999999999;
+  -moz-box-shadow: 2px 2px 40px rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+}
+
+  
+html, a, a:hover {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+}
+  
+		 ::selection {
+
+		   background: rgba(255, 255, 0, 0.1);
+		 }
+		 
+		 
+    @keyframes flicker { 0% { filter: brightness(0.63); }; 1% {filter: brightness(0.46); }; 2% { filter: brightness(0.95); }; 3% { filter: brightness(0.37); }; 4% { filter: brightness(0.78); }; 5% { opacity: 0.41 }; 6% { opacity: 1.14 }; 7% { opacity: 0.9 }; 8% { opacity: 0.43; }; 9% { opacity: 1.17; }; 10% { opacity: 0.48 }; 11% { opacity: 0.94 }; 12% { opacity: 0.91 }; 13% { opacity: 0.92 }; 14% { opacity: 0.86 }; 15% { opacity: 0.73 }; 16% { opacity: 0.76 }; 17% { opacity: 1.04 }; 18% { opacity: 0.42 }; 19% { opacity: 0.99 }; 20% { opacity: 0.53 }; 21% { opacity: 0.76 }; 22% { opacity: 1.12 }; 23% { opacity: 1.22 }; 24% { opacity: 0.79 }; 25% { opacity: 0.36 }; 26% { opacity: 0.8 }; 27% { opacity: 0.57 }; 28% { opacity: 1.28 }; 29% { opacity: 1.05 }; 30% { opacity: 0.38 }; 31% { opacity: 0.85 }; 32% { opacity: 1.23 }; 33% { opacity: 1.07 }; 34% { opacity: 0.41 }; 35% { opacity: 0.64 }; 36% { opacity: 0.4 }; 37% { opacity: 0.63 }; 38% { opacity: 0.97 }; 39% { opacity: 1.03 }; 40% { opacity: 0.84 }; 41% { opacity: 1.34 }; 42% { opacity: 0.78 }; 43% { opacity: 0.69 }; 44% { opacity: 1.17 }; 45% { opacity: 0.64 }; 46% { opacity: 1.04 }; 47% { opacity: 1.02 }; 48% { opacity: 0.65 }; 49% { opacity: undefined }; 50% { opacity: 1 }; 
+        }
+      
+@font-face {
+  font-family: "nunito";
+  src: url("/fonts/thickPixels.otf");
+}
+
+	#rss a {
+			text-decoration: none;
+		}
+		
+	#rss h1 {
+			color: dodgerblue;
+			font-size: 12px;
+			text-shadow: #00f 1px 0 10px;
+			text-decoration: none;
+			animation: flicker 0.15s infinite;
+		}
+		
+				
+	#rss h1::after {
+	     content: "";
+			color: dodgerblue;
+			font-size: 12px;
+			text-shadow: #00f 1px 0 10px;
+			text-decoration: none;
+			animation: flicker 0.15s infinite;
+		}
+		
+		#rss h4 a {
+			color: yellow;
+			text-shadow: goldenrod 1px 0 10px;
+			text-decoration: none;
+			animation: flicker 0.15s infinite;
+		}
+		
+		#rss h4 a::after {
+		  content: " v";
+			color: yellow;
+			text-shadow: goldenrod 1px 0 10px;
+			text-decoration: none;
+			animation: flicker 0.215s infinite;
+		}
+		
+		
+		#rss a {
+      color: skyblue;
+			text-decoration: none;
+		}
+		
+		
+
+		#rss h3 a {
+			color: dodgerblue;
+			text-shadow: #00f 1px 0 10px;
+		}
+
+		#rss h3 {
+			margin: 5px;
+		}
+
+		#rss h4 {
+			margin: 10px 4px;
+		}
+
+		#rss p {
+			padding: 10px;
+			margin: 0px 0px 0px 20px;
+			background: #0a1b29;
+      border-radius: 5px 5px 0px 5px;
+
+      line-height: 10px;
+      border: 2px groove rgba(255, 255, 255, 0.05);
+		}
+		
+			#rss .last {
+			padding: 10px;
+			margin: 0px 0px 0px 20px;
+			background: #0a1b29;
+      border-radius: 5px;
+
+		}
+
+		#rss div a {
+      font-size: 4px;
+			text-decoration: none;
+			animation: flicker 0.215s infinite;
+		}
+		
+		#rss #desc {
+		  font-size: 7px;
+		}
+		}

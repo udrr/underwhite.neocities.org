@@ -1,0 +1,57 @@
+ html {
+  scrollbar-width: thin;
+  scrollbar-color: grey black;
+}
+ body { 
+        font-family: 'me';
+        color: white;
+        text-align: center;
+        background: url("https://underwhite.neocities.org/images/background/zoom.png") fixed;
+
+     
+        overflow-x: hidden;
+        line-height: 130%;
+      }
+      
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+            
+.copy {
+width:557px; 
+background: #111212; 
+color: white; 
+height: 30px; 
+font-family: monospace; 
+}
+
+a { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: grey; font-size: 16px; font-weight: bold;}
+a:hover { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; padding: 1px;}
+
+.spin {
+  width: 300px;
+  position: absolute; top: -50px; right: 150px; z-index: -99;
+  -webkit-animation:spin 5s linear infinite;
+  -moz-animation:spin 5s linear infinite;
+  animation:spin 5s linear infinite;
+}
+
+
+
+@-moz-keyframes spin { 100% {-moz-transform: rotate(360deg);}}
+@-webkit-keyframes spin { 100% {-webkit-transform: rotate(360deg);}}
+@keyframes spin { 100% {-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+
+.inner { background: #20272D; max-width: 600px border: 25px solid grey;}
+.main { background: #20272D; max-width: 600px; border-radius: 10px; border: 4px ridge grey; padding: 30px; }
+
+textarea::selection {
+  background: transparent;
+}

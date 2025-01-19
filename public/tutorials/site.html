@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+  <title>tutorials</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://underwhite.neocities.org/images/png/cam.png" rel="icon" type="image/png">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  scrollbar-width: thin;
+  scrollbar-color: green white;
+}
+ body { 
+        font-family: 'me';
+        color: yellow;
+        text-align: center;
+        background: url("https://sadhost.neocities.org/images/tiles/b4g.gif") fixed;
+        line-height: 130%;
+      }
+      
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+            
+
+
+
+
+a { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; font-weight: bold;}
+a:hover { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; padding: 1px;}
+
+.spin {
+  width: 300px;
+  position: absolute; top: -50px; right: 150px; z-index: -99;
+  -webkit-animation:spin 5s linear infinite;
+  -moz-animation:spin 5s linear infinite;
+  animation:spin 5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% {-moz-transform: rotate(360deg);}}
+@-webkit-keyframes spin { 100% {-webkit-transform: rotate(360deg);}}
+@keyframes spin { 100% {-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+
+.inner { background: #32a852; max-width: 600px border: 25px solid #32a852;}
+.main { background: #32a852; max-width: 600px; border-radius: 10px; border: 4px ridge green; }
+</style>
+</head>
+<body align="center"><center>
+   <div class="main"> <div class="inner">
+    <h2>Orbiting Elements (using css)</h2>
+<p>Site age counters track the site's release date and says how many days, hours, months the site has been open at. There are different ones too, like an example below.</p> 
+
+    <div id="tutorialAge"></div>
+
+<script>
+    const hourInMillis = 3600000;
+    const dayInMillis = 86400000;
+    const monthInMillis = 2592000000; // this number assumes a month with 30 days
+    
+    // Replace the below date with your date
+    const myDate = new Date("Fri, 25 Oct 2024 16:14:04 -0000");
+
+    function getAge() {
+        let diff = Date.now() - myDate.valueOf();
+
+        let months = Math.floor(diff / monthInMillis);
+        diff = diff - (months * monthInMillis);
+
+        let days = Math.floor(diff / dayInMillis);
+        diff = diff - (days * dayInMillis);
+
+        let hours = Math.floor(diff / hourInMillis);
+
+        let formattedTime = " " + months + " months, " + days + " days, " + hours + " hours";
+        document.getElementById("tutorialAge").innerText = formattedTime;
+    }
+    getAge();
+    setInterval(getAge, 60000); // Calls getAge() every minute
+</script>
+<p>The code for the date!</p>
+<textarea style="width:555px; background: #111212; color: white; height: 400px;" readonly>
+  
+    <div id="Age"></div>
+
+<script>
+    const hourInMillis = 3600000;
+    const dayInMillis = 86400000;
+    const monthInMillis = 2592000000; // this number assumes a month with 30 days
+    
+    // replace the below date with your date
+    const myDate = new Date("Fri, 25 Oct 2024 16:14:04 -0000");
+
+    function getAge() {
+        let diff = Date.now() - myDate.valueOf();
+
+        let months = Math.floor(diff / monthInMillis);
+        diff = diff - (months * monthInMillis);
+
+        let days = Math.floor(diff / dayInMillis);
+        diff = diff - (days * dayInMillis);
+
+        let hours = Math.floor(diff / hourInMillis);
+
+        let formattedTime = " " + months + " months, " + days + " days, " + hours + " hours";
+        document.getElementById("Age").innerText = formattedTime;
+    }
+    getAge();
+    setInterval(getAge, 60000); // Calls getAge() every minute
+</script>
+
+</textarea></pre><br><br>
+<p>If your advanced enough in javascript, you can maybe add a custom counter!!  It's fully custom so you can freely use it and do anything! <br>(credit not required)</p>
+<a href="/tutorials">Go back?</a><br><br>
+  </div>
+</div>
+</center>
+</body>
+</html> 

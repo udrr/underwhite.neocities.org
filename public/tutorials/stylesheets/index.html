@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+  <title>tutorials</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+     <link href="light.css"rel="stylesheet" type="text/css" media="all"  id="theme" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://underwhite.neocities.org/images/png/cam.png" rel="icon" type="image/png">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body align="center"><center>
+   <div class="main"> <div class="inner">
+    <h2>Stylesheet changing (<i>javascript</i>)</h2>
+<p>Ok, you learned about HTML and CSS. it's time to go to Javascript.</p>
+
+<p>JavaScript, often abbreviated as JS, is a programming language and core technology of a website, alongside HTML and CSS. Not to be confused with Java (programming language), Javanese script, or ECMAScript.</p> <i>(taken from wikipedia)</i>
+
+<p>99% of websites have Javascript for interactive funsies and stuff.</p> 
+
+<p>Ok, time to get back. We first need a .js or any JavaScript file.</p>
+
+<p>And you also have to have like, two or more css stylesheets.</p>
+
+<p>On your .js file, add this line of code:</p>
+
+    
+<button class="copy" onclick="myFunction()">copy</button>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  
+}
+</script>
+<textarea style="width:555px; background: #111212; color: white; height: 220px;" id="myInput" readonly >
+  function toggleTheme() {
+            // Select the link element
+            let theme = document.getElementById('theme');
+
+            // Toggle between light.css and dark.css
+            if (theme.getAttribute('href') = 'css 1') {
+                theme.setAttribute('href', 'css 2');
+            } else {
+                theme.setAttribute('href', 'css 1');
+            }
+        }
+
+</textarea></pre><br><br>
+<p>then add this in your index.html or whatever you want:</p>
+<textarea style="width:555px; background: #111212; color: white; height: 160px;" id="myInput" readonly >
+ <h2>Changing Style Sheets</h2>
+    <br />
+    Click the button below to switch 
+      between light and dark themes.<br />
+
+    <button onclick="toggleTheme()">Switch</button>
+</textarea></pre><br><br>
+<textarea style="width:555px; background: #111212; color: white; height: 60px;" id="myInput" readonly >
+ <link id="theme" rel="stylesheet" 
+          type="text/css" href="INSERT ACTIVE CSS FILE" />
+</textarea></pre>
+output:
+<br><br>
+<button onclick="toggleTheme()">Switch</button><br><br>
+<script>
+    function toggleTheme() {
+            // Select the link element
+            let theme = document.getElementById('theme');
+
+            // Toggle between light.css and dark.css
+            if (theme.getAttribute('href') == 'light.css') {
+                theme.setAttribute('href', 'dark.css');
+            } else {
+                theme.setAttribute('href', 'light.css');
+            }
+        }
+</script>
+<a href="/tutorials">Go back?</a><br><br>
+  </div>
+</div>
+</center>
+</body>
+</html> 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+  <title>tutorials</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://underwhite.neocities.org/images/png/cam.png" rel="icon" type="image/png">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  scrollbar-width: thin;
+  scrollbar-color: green white;
+}
+ body { 
+        font-family: 'me';
+        color: yellow;
+        text-align: center;
+        background: url("https://sadhost.neocities.org/images/tiles/b4g.gif") fixed;
+        line-height: 130%;
+      }
+      
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+            
+
+
+
+
+a { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; font-weight: bold;}
+a:hover { text-decoration: underline; text-decoration-color: red; text-decoration-style: wavy; text-decoration-thickness: 1px; color: white; font-size: 16px; padding: 1px;}
+
+.spin {
+  width: 300px;
+  position: absolute; top: -50px; right: 150px; z-index: -99;
+  -webkit-animation:spin 5s linear infinite;
+  -moz-animation:spin 5s linear infinite;
+  animation:spin 5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% {-moz-transform: rotate(360deg);}}
+@-webkit-keyframes spin { 100% {-webkit-transform: rotate(360deg);}}
+@keyframes spin { 100% {-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+
+.inner { background: #32a852; max-width: 600px border: 15px solid #32a852;}
+.main { background: #32a852; max-width: 600px; border-radius: 10px; border: 4px ridge green; }
+</style>
+</head>
+<body align="center"><center>
+   <div class="main"> <div class="inner">
+    <h2>:active</h2>
+<p>That's a pseudo-class, A pseudo-class is used to define a special state of an element; since it only has one colon. Like :hover :active and :focus.<br>Two colons represent a pseudo-element, A CSS pseudo-element is used to style specific parts of an element, it's common in websites, examples like ::before and ::after, are pseudo-elements.</p>
+<p>A brief use of pseudo classes:</p>
+<pre><textarea style="width:555px; background: #111212; color: white; height: 400px;" readonly>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      
+    </head>
+  
+  <style>
+  
+   button {
+  
+  background-color: grey;
+  width: 80px;
+  transition-duration: 0.5s;
+  border: none;
+  
+  }
+  
+  
+  button:hover {
+  
+  background-color: #112233;
+  width: 50px;
+  transition-duration: 0.5s;
+  border: none;
+  
+  }
+  
+  </style>
+  <body>
+  
+  <button>Click me!</button>
+  </body>
+  </html>
+</textarea></pre>
+<p>A breif use of a pseudo-element:</p>
+<pre><textarea style="width:555px; background: #111212; color: white; height: 400px;" readonly>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      
+    </head>
+  
+  <style>
+  
+   button {
+  
+  background-color: grey;
+  width: 80px;
+  transition-duration: 0.5s;
+  border: none;
+  }
+  
+  
+  button::after {
+  
+  content: "<>";
+  color: red;
+  
+  }
+  
+  </style>
+  <body>
+  
+  <button>Click me!</button>
+  </body>
+  </html>
+</textarea></pre>
+<a href="/tutorials">Go back?</a>
+  </div>
+</div>
+</center>
+</body>
+</html> 
+

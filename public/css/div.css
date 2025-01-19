@@ -1,0 +1,37 @@
+/* <!DOCTYPE html>
+<html>
+<head>
+<style> 
+.div {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  position: relative;
+  background-color: dodgerblue;
+  
+  box-shadow: 10px 10px lightblue;
+}
+
+.div:active {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  position: relative;
+  left: 5px;
+  top: 5px;
+  
+  background-color: dodgerblue;
+  box-shadow: 5px 5px lightblue;
+}
+</style>
+</head>
+<body>
+
+<h1>The box-shadow Property</h1>
+
+<div class="div">A div element with a lightblue box-shadow</div>
+
+</body>
+</html> */
+
+

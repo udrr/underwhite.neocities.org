@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREDIT</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script>
+
+var titletext="CREDIT"
+var repeat=true;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+set=setTimeout;
+var index=0;
+function scrolltitle(){
+if(index<=titletext.length){
+document.title=titletext.substring(0,index);
+index++;
+set('scrolltitle()', 200);
+}else{
+index=0;
+if(repeat)set('scrolltitle()',1000);
+}}
+window.onload=function(){
+if(!document.layers)set('scrolltitle()',1000);
+}
+</script>
+    <style>
+      .container {
+  display: grid;
+  
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 2fr 4fr;
+  gap: 10px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  font-family: "ms", sans-serif;
+  font-size: 13px;
+}
+.container > div {
+  background-color: pink;
+  padding: 10px;
+  border-radius: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  grid-area: content;
+}
+.container > div.footer {
+  grid-area: footer;
+}
+
+#back {
+  width: 100px;
+  height: 16px;
+  font-size: 16px;
+  background: red;
+  border-radius: 20px;
+  display: block;
+  font-family: "tp";
+  text-align: center;
+  
+}
+
+h3, h2 {
+  color: red;
+   line-height: 4px;
+   font-size: 18px;
+}
+
+a {
+  color: salmon;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* fonts */
+
+#tp {font-family: "tp", Sans-Serif;}
+#hh {font-family: "hh", Sans-Serif;}
+#muh {font-family: "muh", Sans-Serif; font-size: 16px;}
+#cs {font-family: "cs", Sans-Serif;}
+#sg {font-family: "sg", Sans-Serif;}
+#a {font-family: "a", Sans-Serif;}
+#s {font-family: "s", Sans-Serif;}
+
+@font-face { font-family: "tp"; src: url("https://underwhite.neocities.org/fonts/thickPixels.otf");}
+@font-face { font-family: "hh"; src: url("https://underwhite.neocities.org/fonts/hh.ttf");}
+@font-face { font-family: "muh";src: url("https://underwhite.neocities.org/fonts/my.otf");}
+@font-face { font-family: "cs"; src: url("https://underwhite.neocities.org/fonts/cat.ttf");}
+@font-face { font-family: "sg"; src: url("https://underwhite.neocities.org/fonts/Skygraze.otf");}
+@font-face { font-family: "a";  src: url("https://underwhite.neocities.org/fonts/alphys.ttf");}
+@font-face { font-family: "ms"; src: url("https://underwhite.neocities.org/fonts/modeseven.ttf");}
+@font-face { font-family: 's';  src: url(https://dl.dropbox.com/s/cfcp07kvx3qut4s/starlight.ttf);}
+    </style>
+  </head>
+  <body>
+   <div class="container">
+  <div class="header">
+    <h2>credits!!</h2> <a id="back" href="/home">back</a>
+    <p>all good sites have at least one credit</p>
+    </div>
+    
+  <div class="menu">
+    <h3>resources</h3>
+    <a href="//www.w3schools.com" target="_blank">w3schools</a> - <a href="https://stackoverflow.com/">stackoverflow</a> - <a href="https://cssgradient.io/">cssgradient</a> - <br>
+    <a href="//pixel-soup.tumblr.com/">PIXEL-SOUP</a> - <a href="https://css-generators.com/">css-generators.com</a> - <br>
+    <a href="//obby.dog/resources">vert.plush</a> - <br>
+    </div>
+    
+  <div class="content">
+    <p><a href="https://y2k.neocities.org/collections">y2k</a>, <a href="https://iwasarob0t.neocities.org/collection">iwasarob0t</a> for blinkies, and buttons.</p>
+    <p><a href="//sadgrl.online">sadgrl</a> for old layout.</p>
+    <p>sometimes takes snippets of code from <a href="//doqmeat.com">doqmeat</a> and <a href="//sugarforbrains.neocities.org/">benny</a>.</p>
+    
+    </div>
+    
+  <div class="footer"><h4>fonts:</h4><p style="font-size: 9px;">Most are obtained by <a href="//dafont.com">dafont</a>, <a href="//dcavederps.neocities.org">dcavederps</a>, <a href="//vidapon.net">vidapon's artbox</a>, or <a href="//doqmeat.com">doqmeat</a>.</p><hr><br>
+  <li><a href="https://dcavederps.neocities.org/misc/fonts" target="_blank"><span id="tp">thickPixels</span>/<span id="cs">catScratch</span></a> </li><br>
+  <li><a id="hh" href="https://www.dafont.com/holidays-homework.font" target="_blank">Hoilday Homework</a></li><br>
+  <li><a id="muh" href="https://www.dafont.com/my-ugly-handwriting.font" target="_blank">My Ugly Handwriting</a></li><br>
+  <li><a id="sg" href="https://www.dafont.com/skygraze.font">Skygraze</a></li><br>
+  <li><a id="a" href="https://fontstruct.com/fontstructions/show/2501874/alphys-2">Alphys</a></li><br>
+  <li><a style="font-family: 'ms', sans-serif;" href="https://www.ffonts.net/ModeSeven.font.download">ModeSeven</a></li><br>
+  <li><a id="s" href="https://pastebin.com/ZgdCbyUE">Starlight</a></li><br>
+  </div>
+</div>
+
+  </body>
+</html>

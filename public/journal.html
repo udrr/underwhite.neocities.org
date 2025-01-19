@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+<html>
+<!-- 
+coded with love by des 
+don't take this code for your template cus it might be outdated or missing comments btw... i always update codepen and the github versions-->
+
+<!-- hehehehe idc >:3 -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>notebook</title>
+	<link rel="icon" type="image/x-icon" href="https://doqmeat.com/!g/pix/notebook-1.gif">
+	<style>
+	 .bordering {
+       
+       background-color: #031524;
+       border: 4px groove rgba(34, 45, 255, 1);
+       color: #fcaeff;
+       border-radius: 9px;
+       width: 30px;
+       
+     }
+     
+	a {
+	  transition-duration: 0.5s;
+	  font-size:16px;
+                text-decoration: none;
+                color: black;
+                background: linear-gradient(315deg, rgba(255,255,128,0.2) 0%, rgba(255,255,128,0.2) 93%); }
+		a:hover {
+                text-decoration: none;
+                color: grey;
+                cursor: help;
+                font-size:16.9px;
+                top: 12px
+              ;
+              line-spacing: 4px;
+                transition-duration: 0.5s;
+                background: linear-gradient(315deg, rgba(255,255,128,0.2) 0%, rgba(255,255,128,0.2) 93%); }
+	
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/my.otf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/hh.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+            
+              @font-face {
+                font-family: 'evil';
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+		html {
+			/* feel free to delete this if you just want the normal cursor! */
+			
+		}
+
+	   body {
+	     background: #031524;
+    	margin: 0px;
+    	word-wrap: break-word;
+    	font-size: 16px;
+    	line-height: 25px;
+    	letter-spacing: 0px;
+    	word-spacing: 4px;
+    	font-family: Nunito, sans-serif;
+    	color: black;
+			
+			
+		}
+		h1 {
+		  
+		  padding: 9px;
+		  font-size: 30px;
+		 
+		  
+		  
+		}
+		
+/* Remove the default triangle */
+summary {
+  display: block;
+}
+
+/* Create a new custom triangle on the right side */
+summary::before {
+  margin-left: 1ch;
+  display: inline-block;
+  content: '🛑   ';
+  transition: 1s;
+}
+
+details[open] > summary::before {
+  transform: rotate(-90deg);
+}
+
+		mark {
+			background: linear-gradient(315deg, rgba(255,255,128,0.2) 0%, rgba(255,255,128,0.2) 93%);
+		}
+
+		#wrapper-index {
+			/* the notebook's cover */
+			background: linear-gradient(315deg, rgba(117,1,1,0.5) 0%, rgba(118,61,1,0.5004862296481092) 9%, rgba(118,98,1,0.5004862296481092) 18%, rgba(124,124,1,0.5004862296481092) 28%, rgba(0,132,12,0.5004862296481092) 35%, rgba(0,180,88,0.7217747450542717) 44%, rgba(1,94,119,0.5004862296481092) 54%, rgba(65,1,123,0.5004862296481092) 64%, rgba(116,0,140,0.5004862296481092) 75%, rgba(122,0,108,0.5004862296481092) 85%, rgba(127,0,78,0.5004862296481092) 93%);
+			position: relative;
+			margin: auto;
+			margin-top: 30px;
+			margin-bottom: 35px;
+			width: 1108px;
+			padding: 20px 10px 15px 10px;
+			border-radius: 20px;
+			border: 1px dotted black;
+		}
+
+		/*this is my ugly binder spiral! feel free to remove it or change it. it wont mess the rest of the code! */
+		#tab1-wrapper:after,
+		#tab2-wrapper:after,
+		#tab3-wrapper:after,
+		#tab4-wrapper:after,
+		#tab5-wrapper:after,
+		#tab6-wrapper:after,
+		#tab7-wrapper:after,
+		#tab8-wrapper:after {
+			content: url(https://underwhite.neocities.org/images/png/bind.png);
+			position: absolute;
+			z-index: 10;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			pointer-events: none;
+		}
+
+		/* PAGES CSS */
+
+		.paper {
+			/*the CSS of both "pages" boxes. you can choose the look of ALL pages here */
+			background: url(https://img.freepik.com/free-vector/blank-white-notepaper-design_53876-118304.jpg?t=st=1731413062~exp=1731416662~hmac=ad6097a6357d44e9e190e85ae62373164d40c1543c60fd9a6862f3d4ba310c2a&w=360);
+			z-index: 5;
+			position: relative;
+			display: inline-block;
+			box-sizing: border-box;
+			border: 4px double white;
+			height: 600px;
+		}
+
+		.left {
+			width: 490px;
+			margin-left: 50px;
+			margin-right: 10px;
+			border-radius: 10px 0px 0px 10px;
+			overflow: hidden;
+		}
+
+		.left-in {
+			padding: 15px 10px 15px 25px;
+			height: 100%;
+			margin-right: 15px;
+			overflow: auto;
+		}
+
+		.right {
+			padding: 15px 25px;
+			width: 490px;
+			margin-left: 10px;
+			border-radius: 0px 10px 10px 0px;
+			overflow: auto;
+		}
+
+		/* you can also customize the look of SPECIFIC TAB pages. take TAB 2 for example: */
+
+		#tab2-p {
+		
+		}
+
+		/* tab buttons CSS stuff */
+
+		.tab {
+			/* for the ones on the right */
+			width: 590px;
+			height: 50px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			rotate: -90deg;
+			top: -10px;
+			left: -232px;
+		}
+
+		.tab2 {
+			/* for the ones on the left */
+			width: 590px;
+			height: 50px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			rotate: 90deg;
+			top: 590px;
+			right: -232px;
+		}
+
+		.tab button,
+		.tab2 button {
+			/*this is the look of the TABS! */
+			z-index: 1;
+			position: relative;
+			vertical-align: top;
+			width: 120px;
+			margin: 0px 8px;
+			padding: 10px 0px 30px 0px;
+		
+			border: none;
+			cursor: help;
+			font-size: 19px;
+			transition-duration: 0.5s;
+			top: 15px;
+			border-radius: 10px 10px 0 0;
+			border: 3px groove grey;
+		}
+
+		/* here you can change the color of each individual TAB button*/
+		
+.tab1-b, .tab2-b, .tab3-b, .tab4-b, .tab5-b, .tab6-b, .tab7-b, .tab8-b {
+  background: #8866889;
+  opacity: 0.2;
+  
+  
+}
+		/* hover effect of TAB*/
+		.tab button:hover,
+		.tab2 button:hover {
+			top: 12px;
+opacity: 0.4;
+background: white;
+	border: 3px groove lightgrey;
+		}
+
+		/* selected TAB effect */
+		.tab button.active,
+		.tab2 button.active {
+			top: 7px;
+		opacity: 1;
+			background: white;
+			box-shadow: 2px 2px 30px 14px white;
+			border: 3px groove white;
+		}
+
+		/* so pages stay hidden */
+		.tabcontent {
+			display: none;
+		}
+
+		/* custom scrollbar for chrome users, firefox users cant see this */
+		::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+
+		::-webkit-scrollbar-thumb:vertical {
+			background: transparent;
+			border: 2px dotted black;
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-thumb:horizontal {
+			background: transparent;
+			border: 2px solid black;
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background: transparent;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- 	NOTEBOOK wrapper -->
+	<div id="wrapper-index">
+
+		<div class="tab">
+			<button class="tablinks tab4-b" onclick="openTab('tab4-wrapper')">2025</button>
+			<button class="tablinks tab3-b" onclick="openTab('tab3-wrapper')">2024</button>
+			<button class="tablinks tab2-b" onclick="openTab('tab2-wrapper')">2023</button>
+			<button class="tablinks tab1-b" onclick="openTab('tab1-wrapper')" id="defaultOpen">Intro</button>
+		</div>
+
+		<div class="tab2">
+			<button class="tablinks tab5-b" onclick="openTab('tab5-wrapper')">2026</button>
+			<button class="tablinks tab6-b" onclick="openTab('tab6-wrapper')">2027</button>
+			<button class="tablinks tab7-b" onclick="openTab('tab7-wrapper')">2028</button>
+			<button class="tablinks tab8-b" onclick="openTab('tab8-wrapper')">2029</button>
+		</div>
+
+		<!-- 	TAB 1 wrapper -->
+		<div id="tab1-wrapper" class="tabcontent">
+			<div id="tab1-p" class="paper left">
+				<div class="left-in">
+				  
+				  <marquee class="bordering" scrollamount="1" style="font-size: 10px;"><i><img src="/images/svg/phone.svg"></i></marquee>
+					<h1>notebook/journal!</h1>
+					<hr>
+					<p style="color: linear-gradient(315deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 93%);"><b>NOV 12 24</b></p>
+					<p style="font-size: 19px; color: #000001;">by <a href="https://doqmeat.com" target="_blank" title="car =D">doqmeat.com</a> </p>
+
+					<p><mark style="font-size: 9px;">credit is not required but a link back to my website is very appreciated! -doqmeat</mark></p>
+<a href="/home">go back if you want :D</a>
+					<p>hello, welcome to my journal!</p>
+
+					<p>each tab is a year where i store all of my journals that i made!</p>
+
+					<p>tested on both firefox and chrome and compatible with both, but no scrollbar for firefox :(</p>
+					<p style="font-family: 'evil'">MOBLIE USERS, SUFFER.</p>
+
+					<!-- TAB 1 left paper end div -->
+				</div>
+			</div>
+			<!-- 	TAB 1 right paper -->
+			<div id="tab1-p" class="paper right">
+				
+				<!-- TAB 1 right paper end div -->
+			</div>
+			<!-- 	TAB 1 wrapper end div -->
+		</div>
+
+		<!-- TAB 2 wrapper -->
+		<div id="tab2-wrapper" class="tabcontent">
+			<div id="tab2-p" class="paper left">
+				<div class="left-in">
+				  <h4>2023</h4>
+					<p><details><summary>jan 6 -- the beginning</summary><p>I'm recording in my notes app on my iphone, I'm addicted to <a href="https://www.roblox.com/games/1365404657/Feather-Family-Turkey">feather family on roblox</a> and i don't know this decimal things. I played i am bread (didn't rage but did accept defeat) and other ps4 games, I also realized I'm never going to get anything in life, not with roblox. i also like c.ai lol</p></details>
+<p><details><summary>march 2 -- RAIN</summary><p>OMG OMG OMG RAIN RAIN THERE'S RAIN</p><p>this is a short entry i'm sorry i have nothing to do ✨</p></details>
+<p><details><summary>june 12 -- more stuff</summary><p>yeah more homework and more final exams :///</p><p>this is a short entry i'm sorry i have nothing to do ✨</p></details>
+<p><details><summary>jul 22 -- more stuff</summary><p>nyam</p><p>alphabet lore is fire</p></details>
+<p><details><summary>september 4 -- birthday</summary><p>happy birthday to me</p><p>yayayayayaaaaa</p></details>
+		<p><details><summary>dec 1 -- winter</summary><p>me when the hottest country in the world is still cold for me: <span style="color: red;">idk what do now</span></span></p><p>again another lazy entry :/// watching some fnf content and stuff, when is poppy playtime chapter 3 gonna release >:(</p></details>			
+
+					<!-- TAB 2 left paper end div -->
+				</div>
+			</div>
+			<!-- 	TAB 2 right paper -->
+			<div id="tab2-p" class="paper right">
+			
+				<!-- TAB 2 right paper end div -->
+			</div>
+			<!-- TAB 2 wrapper end div -->
+		</div>
+
+		<div id="tab3-wrapper" class="tabcontent">
+			<div id="tab3-p" class="paper left">
+				<div class="left-in">
+				  <h4>2024</h4>
+				  	<p><p><details><summary>jan 2 -- sand</summary><p>hell yeah i go to desert, it was so cool i was able to go on top of a dune :D</p></details>
+				  		<p><p><details><summary>jan 12 -- mmm</summary><p>yay i got griffin in feather family</p></details>
+				  			<p><p><details><summary>march 2 -- spring</summary><p>i love the clouds oh my godzh</p></details>
+				  				<p><p><details><summary>jul 2 -- please sum my mer </summary><p>summer go brrrrrrrrrr</p></details>
+				  					<p><p><details><summary>august 12 -- so close to bday</summary><p>grade 6 started</p></details>
+				  					<p><p><details><summary>september 4 -- bday</summary><p>YES YES BirTHdAY</p></details>
+					<p><p><details><summary>nov 22 -- i'm gonna die</summary><p>SCRATCH I JUST GOT UNBANNED GIVE ME A BREAKKKKKKKKK!!!!!<span style="color: red;">>:((((((</span></span></p><p>HELL NAW I GOT PERMABANNED NOT EVEN FOUR SECONDS WHY >:(( I CAN'T SLEEP AFTER THIS, oh yeah i sent an appeal it looks like this:</p>
+					<blockquote>Dear Scratch Team,
+<br><br>
+Can you unblock my account? 
+<br><br>
+I don't know what happened, but I got blocked because one of my [deleted] accounts @Ch3vDog got blocked/deleted and I was "ban evading".  <br>
+I can't log into that account to learn more. I believe this is a mistake from Scratch Team.
+<br><br>
+So, can I appeal my account? This is my school account and I need it to work in class, without it I can't do anything.
+<br><br>
+Please respond as quick as you can, I need it to be unblocked.
+<br><br>
+<br><br>
+
+Honors, Thank you.</blockquote></details>
+					<p><details><summary>dec 5 - snow </summary><p>ogmz</p><p>it's decembher allready??????? novemebr was like yesterday whaatt :O</p><p>imslaimic exam go byebye, next exam is math hope i don't die</p></details>
+					
+					
+					
+					
+			
+
+
+				</div>
+			</div>
+			<div id="tab3-p" class="paper right">
+				<p>	
+
+			</div>
+		</div>
+
+		<div id="tab4-wrapper" class="tabcontent">
+			<div id="tab4-p" class="paper left">
+				<div class="left-in">
+				  <h4>2025</h4>
+				<p><p><details><summary>jan 5 -- hi</summary><p>it's so cold haha, idk what to do now</p> <p>school is tomorrow, hope i don't die and my friend hasn't responded to my messages</p> <p><a href="https://css-generators.com/">i found a website</a></p></details>
+				</div>
+			</div>
+			<div id="tab4-p" class="paper right">
+					
+
+
+			</div>
+		</div>
+
+
+		<div id="tab5-wrapper" class="tabcontent">
+			<div id="tab5-p" class="paper left">
+				<div class="left-in">
+				  <h4>2026</h4>
+						No journal entries.
+
+				</div>
+			</div>
+			<div id="tab5-p" class="paper right">
+			
+
+			</div>
+		</div>
+
+		<div id="tab6-wrapper" class="tabcontent">
+			<div id="tab6-p" class="paper left">
+				<div class="left-in">
+				  <h4>2027</h4>
+						No journal entries.
+
+				</div>
+			</div>
+			<div id="tab6-p" class="paper right">
+			
+
+			</div>
+		</div>
+
+		<div id="tab7-wrapper" class="tabcontent">
+			<div id="tab7-p" class="paper left">
+				<div class="left-in">
+				  <h4>2028</h4>
+					No journal entries.
+				</div>
+			</div>
+			<div id="tab7-p" class="paper right">
+				
+
+			</div>
+		</div>
+
+		<div id="tab8-wrapper" class="tabcontent">
+			<div id="tab8-p" class="paper left">
+				<div class="left-in">
+				  <h4>2029</h4>
+						No journal entries.
+
+				</div>
+			</div>
+			<div id="tab8-p" class="paper right">
+				
+			</div>
+		</div>
+
+
+
+		<!-- TEMPLATE for new set of TAB pages
+
+	<div id="tab[num]-wrapper" class="tabcontent">
+	<div id="tab[num]-p" class="paper left">
+	<div class="left-in">
+		text goes here
+
+		</div></div>
+	<div id="tab[num]-p" class="paper right">
+		text goes here
+
+	</div></div>
+
+-->
+
+
+
+
+		<!-- NOTEBOOK wrapper end div -->
+	</div>
+
+
+	<script>
+		function openTab(tabName) {
+			var i;
+			var tab = document.getElementById(tabName);
+			var otherContent = document.getElementsByClassName("tabcontent");
+			var defaultOpen = document.getElementById("defaultOpen");
+			var buttons = document.getElementsByClassName("tablinks");
+			for (i = 0; i < otherContent.length; i++) {
+				otherContent[i].style.display = "none";
+			}
+			for (i = 0; i < buttons.length; i++) {
+				buttons[i].classList.remove("active");
+			}
+			tab.style.display = "block";
+			event.currentTarget.className += " active";
+		}
+		document.getElementById("defaultOpen").click();
+
+	</script>
+</body>
+
+</html>

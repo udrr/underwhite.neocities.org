@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://underwhite.neocities.org/images/svg/phone.svg" rel="icon" type="image/png">
+    <title>Shrines - Underwhite</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+      <style>
+  body { color: white; text-align: center;}
+  
+  .inner { max-width: 600px; position: relative; top: 25%; left: 27%; background: black; border: 4px double white; border-radius: 10px;}
+
+
+        html, body {
+      
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #000000;
+            
+                background-size: 65px;
+                color: #fceaff;
+                background-image: url('https://sadhost.neocities.org/images/tiles/anisnow.gif');
+               }
+  
+  
+            @font-face {
+                font-family: 'Nunito';
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: 'Nunito';
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+   
+ 
+    .squisherzActivated {
+        animation-name: squisherzSpin;
+        animation-duration: 2s;
+        opacity: 0.3;
+    }
+
+    @keyframes squisherzSpin {
+        from {
+            opacity: 0.05;
+            rotate: none;
+            transform: scale(1, 1);
+        }
+        to {
+            opacity: 0;
+            rotate: z 360deg;
+            transform: scale(0, 0);
+        }
+    }
+
+
+#squisher0 { opacity: 0.05; }
+   
+   
+   
+   
+.a { color: yellow; text-decoration: none; transition-duration: 0.5s; }
+.a:hover { color: goldenrod; text-decoration: none; transition-duration: 0.5s; }
+.a:active { color: black; text-decoration: none; transition-duration: 0.1s; }
+
+.a:hover::after { content: ' <' }
+.a:hover::before { content: '> ' }
+</style>
+  </head>
+
+  <body>
+     <!-- this is the squisher -->
+<img id="squisher0" src="https://dcavederps.neocities.org/staticFiles/images/mushiCat.png" alt="squisher0" style="width: 50px; height: 60px;">
+<!-- this is the sound effect -->
+<audio crossOrigin="anonymous" preload hidden id="squisherzClip0" controls src="https://dcavederps.neocities.org/staticFiles/music/squisherzCollect.wav">play</audio>
+
+<script>
+    let song0 = document.getElementById("squisherzClip0"); // id of the audio tag
+    let squisherElem0 = document.getElementById("squisher0"); // id of the img tag
+    let song0Playing = false;
+
+    squisherElem0.addEventListener("click", function() {
+        if (!song0Playing) {
+            this.classList.add("squisherzActivated");
+            song0.play();
+            song0Playing = true;
+        }
+    });
+
+    // this removes the squisher after the animation finishes
+    squisherElem0.addEventListener("animationend", function() { 
+        this.parentElement.removeChild(song0);
+        this.parentElement.removeChild(this); 
+    });
+</script>
+    <br><br><br><br><br>
+  <div class="inner">
+    <br><a href="/" class="a">home</a><br><br>
+    <br><br><br>
+    <p>Shrines are pages made to honor funni games or characters :D</p>
+    These are all my shrines!<br><br>
+    <p>Game Shrine</p>
+    <a href="/shrines/justshapesandbeats"><img style="text-align: center; width: 160px; height: 100px;" src="https://www.justshapesandbeats.com/img/logo_jsb.png"></a>
+    <a href="/shrines/deltarune"><img style="text-align: center; width: 160px; height: 100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6_o_4-xRBLm3VLV_ZDpWwgyQadFC-z8cG0g&s"></a>
+    <p>Character Shrine</p>
+    <p>coming soon.</p>
+  </div>
+ 
+  </body>
+</html>

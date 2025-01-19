@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of underwhite</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+			body:before {
+        content: "";
+        position: fixed;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        width: 1000%;
+        height: 1000%;
+        background-size: 50px;
+        pointer-events: none;
+        z-index: 1000;
+        background-image: url(https://dimden.dev/images/overlay.png);
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 0.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+    }
+    	body:after {
+        content: "";
+        position: fixed;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        width: 1000%;
+        height: 1000%;
+        background-size: 20px;
+        pointer-events: none;
+        z-index: 1000;
+        background-image: url(https://dimden.dev/images/overlay2.png);
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+    }
+    </style>
+  </head>
+  <body>
+   <iframe src="/testing/winamp.html" height="350px" width="276px" scrolling="no" style="border: none;"></iframe>
+  </body>
+</html>

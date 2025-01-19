@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?&family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet">
+<script>
+function getTimeCurrentTime() {
+  let time = new Date();
+  // toLocaleString in us format outputs 8/2/2019, 10:14:54 PM
+  // we can then split that by comma and space and take last part of it
+  return time.toLocaleString('en-US').split(', ')[1];
+}
+
+function updateCurrentTime() {
+  let timeNode = document.getElementById('time');
+  timeNode.innerHTML = getTimeCurrentTime();
+}
+
+setInterval(updateCurrentTime, 1000);
+</script>
+<style>
+/* This is a CSS message, by an * and a slash. Remember to close it by doing the opposite on the other side!! */
+body { color:; } /* if you add this in a line of code, CSS will ignore that line! Make your comments on your own line to not break anything. */
+
+/* The #box keeps the timer in it.*/
+  #box {
+    background: #000;
+    color: white;
+    width: 160px;
+    height: 30px;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    padding-top: 15px;
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border: 5px dashed rgba(255, 127.5, 0, 0.05);
+    text-align: center;
+  }
+  /* Outside css.. */
+  #out {
+    background: orange;
+    width: 200px;
+    height: 70px;
+    padding: 20px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
+    border: 4px solid rgba(0,0,0,0.1);
+  }
+  /* Delete selection, you can delete this! */
+  ::selection {
+    background: none;
+  }
+  /* This is just an easter egg, you can remove it! */
+  @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+  /* This is just an easter egg, you can remove it! (2) */
+#time:hover {
+  animation: blinker 1s linear;
+  animation-iteration-count: infinite;
+        animation-timing-function: steps(2);
+}
+
+  /* More styling.. */
+#time {
+  text-shadow: rgba(255,255,255,0.5) 1px 0 10px;
+  white-space: nowrap;
+  position: relative;
+  right: 5px;
+  line-break: none;
+}
+  </style>
+</head>
+  <body>
+<div id="out">
+ <div id="box">
+<a id='time'></a>
+ </div>
+</div>
+
+<p>You can input more custom things as you can do nothing to everything.</p>
+<p>Such as changing the:</p>
+<ul>
+  <li>Color</li>
+  <li>Fonts</li>
+  <li>Code</li>
+</ul>
+<p>As long as you credit me somewhere, i won't find your house.</p>
+<style>
+  /* This is not part of the clock.. */
+  /* Please delete this! */
+  li {
+    list-style-type: "// ";
+  }
+</style>
+</body>
+</html>

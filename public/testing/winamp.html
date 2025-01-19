@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+      body {
+        background: #171724;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" style="margin-right: 99999999px;">
+      <!-- Webamp will attempt to center itself within this div -->
+    </div>
+    <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+    <script>
+      const Webamp = window.Webamp;
+      const webamp = new Webamp({
+        /**
+         * Here we list three tracks. Note that the `metaData` fields and
+         * duration are required to populate the playlist.  If any of those
+         * fields are omitted, Webamp will download at least part of each file
+         * on initial page load in order to determine the missing information.
+         */
+        initialTracks: [
+          {
+            metaData: {
+              artist: "underwhite",
+              title: "8bit",
+            },
+            // link for file: https://tinyurl.com/udr001
+            url: "https://files.catbox.moe/rmdkgq.mp3",
+            duration: 5.322286,
+          },
+         
+          {
+            metaData: {
+              title: "The Art Of War",
+              artist: "Chipzel",
+            },
+            
+            url: "https://files.catbox.moe/23jdra.mp3",
+            duration: 322.612245,
+          },
+           
+          {
+            metaData: {
+              title: "Vindicate Me",
+              artist: " Big Giant Circles",
+            },
+            
+            url: "https://files.catbox.moe/bwjieh.mp3",
+            duration: 190.093061,
+          },
+         
+          {
+            metaData: {
+              title: "Megalovaina",
+              artist: "Aider",
+            },
+            url: "https://files.catbox.moe/87pm5s.mp3",
+            duration: 190.093061,
+          },
+       
+          {
+            metaData: {
+              title: "Giant Masked Dedede",
+              artist: "Kirby's Blowout Blast",
+            },
+            url: "https://files.catbox.moe/c5s82m.mp3",
+            duration: 190.093061,
+          },
+        ],
+      });
+
+      // Returns a promise indicating when it's done loading.
+      webamp.renderWhenReady(document.getElementById("app"));
+    </script>
+  </body>
+</html>

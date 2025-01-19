@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>room</title>
+    <style>
+    *{
+    padding:0;
+    margin:0;
+    font-family: 'thickPixels', sans-serif;
+    color: #111;
+}
+
+@font-face {
+  font-family: 'thickPixels';
+  src: url('https://underwhite.neocities.org/fonts/thickPixels.otf')
+}
+
+body{
+    background-color: #000;
+    overflow: hidden;
+    text-align: center;
+}
+.player{
+    background-color: #d52831;
+    width:330px;
+    height: 190px;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+    border-radius: 10px;
+
+}
+.record{
+    width:175px;
+    height: 175px;
+    position:absolute;
+    border-radius: 50%;
+    top:10px;
+    left:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.label{
+    height: 15px;
+    width: 15px;
+    background-color: #181312;
+    border:20px solid #ff8e00;
+    border-radius: 50%;
+    content: '';
+}
+.tone-arm{
+    height:90px;
+    width:6px;
+    background-color: #ffffff;
+    position:absolute;
+    top:25px;
+    right:95px;
+    transform:1s;
+    transform-origin:top;
+
+}
+
+.control{
+    background-color: #181312;
+    width:17px;
+    height:17px;
+    border:10px solid #2c2c2c;
+    border-radius: 50%;
+    position:absolute;
+    top:-16px;
+    left:-16px;
+}
+.tone-arm:before{
+    content:" ";
+    position: absolute;
+    height: 40px;
+    width:6px;
+    background-color: #ffffff;
+    transform: rotate(30deg);
+    bottom:-36px;
+    right:10px;
+}
+.tone-arm:after{
+    content:" ";
+    position: absolute;
+    height: 0px;
+    width:10px;
+    border-top:18px solid #b2aea6;
+    border-left:2px solid transparent;
+    border-right:2px solid transparent;
+    top:108px;
+    right:14px;
+    border-radius: 2px;
+    transform: rotate(30deg);
+    
+}
+.btn{
+    width: 28px;
+    height:28px;
+    background-color: #ed5650;
+    border-radius: 50%;
+    position: absolute;
+    bottom:25px;
+    right:30px;
+    border:none;
+    border:3.5px solid rgb(190,39,42);
+    outline:none;
+    box-shadow: 0px 7px 0 0.1px rgb(195,39,42);
+    cursor: pointer;
+}
+
+.btn:active{
+    width: 28px;
+    height:28px;
+    background-color: #ed5650;
+    border-radius: 50%;
+    position: absolute;
+    bottom:20px;
+    right:30px;
+    border:none;
+    border:3.5px solid rgb(190,39,42);
+    outline:none;
+    box-shadow: 0px 2px 0 0.05px rgb(195,39,42);
+    cursor: pointer;
+}
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    transform: rotate(-90deg);
+    width: 90px;
+    height:7px;
+    position: absolute;
+    left:233px;
+    top:60px;
+    background-color: #be272a;
+    outline: none;
+    border-radius: 5px;
+    border: 6px solid #ed5650;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance:none;
+    width:10px;
+    height:12px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.play{
+    transform:rotate(30deg);
+    transform-origin: top;
+    transition: 1s;
+}
+.on{
+    animation: spin 10s 1s linear infinite ;
+}
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+    
+    </style>
+</head>
+<body>
+    <div class="player">
+        <div class="record">
+            <div class="label"><img src="/images/misc/disk.png" style="position: relative; bottom: 103px; right: 103px; width: 220px;" preload="auto"></div>
+        </div>
+        <div class="tone-arm">
+            <div class="control"></div>
+        </div>
+        <button class="btn"></button>
+        <div class="slider-container">
+            <input type="range" class="slider" min="0" max="1" step="0.05" value="0.7">
+        </div>
+    </div>
+  
+<br>where did you come from?
+    <audio loop class="my-song" src="https://deltarune.com/assets/audio/results.mp3" preload="auto"></audio>
+    
+
+
+
+
+    <script>
+    let state = false;
+let btn = document.querySelector(".btn");
+let record = document.querySelector(".record");
+let toneArm = document.querySelector(".tone-arm");
+let song = document.querySelector(".my-song");
+let slider = document.querySelector(".slider");
+
+btn.addEventListener("click", () => {
+    if(state == false){
+        record.classList.add("on");
+        toneArm.classList.add("play");
+        setTimeout(() => {
+            song.play();
+        },1000);
+
+    }
+    else{
+        record.classList.remove("on");
+        toneArm.classList.remove("play");
+        song.pause();
+
+    }
+    state = !state;
+    
+});
+
+slider.addEventListener("input",(e) => {
+    song.volume = Number(e.target.value);
+});
+</script>
+</body>
+</html>

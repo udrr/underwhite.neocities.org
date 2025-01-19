@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>widget 1</title>
+    <!-- widget by underwhite.neocites.org -->
+  <style>
+    body {
+      background: transparent;
+      color: black;
+    }
+    
+    @font-face {
+      font-family: "huh";
+      src: url("https://underwhite.neocities.org/fonts/modeseven.ttf")
+    }
+
+#quot3 {
+  color: #fff;
+  font-size: 18px;
+  max-width: 40ch;
+  text-align: center;
+  font-family: "huh", sans-serif;
+  font-size: 13px;
+  margin: auto;
+}
+#quot3 {
+  --r: 1.2em; /* the radius */
+  --b: 2px; /* border width  */
+  --c2: black; /* background */
+  padding: 1em;
+  border-radius: 1.2em;
+  padding-bottom: 0.2em;
+  background: var(--c2);
+  position: relative;
+}
+
+
+
+::selection {
+  background: none;
+}
+
+.box {
+  width: 280px;
+  height: 280px;
+  border: 1px dotted black;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@keyframes ani {
+50% {
+top: 4px;
+}
+}
+.tri {
+  animation: ani 0.5s infinite;
+  animation-timing-function: steps(1);
+  top: 0;
+  font-family: monospace;
+  color: darkgrey;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  opacity: 1;
+  background: transparent;
+  text-shadow: #111 0px 0 2px;
+ 
+}
+
+.tri:hover { color: white; }
+.tri:active { color: grey; }
+
+
+  </style>
+  <script>
+    // This is the script for randomizer! and query strings.. //
+    // DO NOT EDIT!! only the css stuff in the const "name". //
+    const url = new URL(window.location.href);
+
+const params = new URLSearchParams(url.search);
+
+const name = "<span style='color: yellow'>" + params.get('name') + "</span>";
+    // OK noww you can edit.. Here's quotes!
+const quotes = [
+  "Zzz..",
+  "Nice to meet you!",
+  "How are you doing?",
+  "Do you have anything to eat?",
+  "How's your day?",
+  "You're looking sharp today!",
+  "Remember to be happy!",
+  "Have you wondered about dreams?",
+  "Do you have anything to drink?",
+  "What's your name?",
+  "Nice computer you got there!",
+  "Who are you?",
+  "Can I give you a hug? Please?",
+  "Love you!",
+  "Woah..",
+  "Nice website there!",
+  "I love my new home!"
+  // You can add some iframe fourth-wall breaking by addressing the website theme too, like:
+  // "Why is it so cold? I'm freezing!", 
+  // "Haha! I love playing with snow!", 
+  // "Tooo pink.." 
+  // "Birdies!"
+  // "Leafs leafs, I love playing in orange leafs!"
+  // Yes, you can add anything if it's not breaking US law or is just foul in general.
+  // For more ideas, feel free to contact me!
+];
+// DO NOT EDIT BELOW THIS COMMENT! unless you're a javascript expert.
+function index() {
+  const randomIndex = Math.floor(Math.random() * quotes.length); 
+  const randomQuote = quotes[randomIndex]; 
+  document.getElementById("quote").innerHTML = randomQuote;
+   var audio = document.getElementById("audio");
+        audio.play();
+}
+  </script>
+  </head>
+  <body>
+    <div class="box">
+    <div id="quot3">
+      <span id="quote">
+        <script>
+          // This is the introduction using query stuff! Feel free to edit.
+document.write("Hello, I'm ".concat(name, "!"));
+</script>
+      </span>
+      <!-- Triangle, you can change. -->
+      <br><div class="tri" onclick="index();">▾</div>
+    </div><br><br>
+    
+    </div>
+    <audio id="audio" src="https://files.catbox.moe/vh7rqo.mp3"></audio>
+    
+  </body>
+</html>

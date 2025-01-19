@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    ::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #000; /* or add it to the track */
+}
+
+/* Add a thumb */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+        /* Set the body to fill the entire viewport and make background dark */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+            overflow: auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Darken the entire page with an overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.97); /* Dark background with some transparency */
+            pointer-events: none; /* Prevent the overlay from blocking mouse events */
+        }
+
+        /* The flashlight effect (the "circle" of light) */
+        .flashlight {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 1); /* Light area color */
+            pointer-events: none; /* So it won't block the mouse events */
+            box-shadow: 0 0 10px 10px rgba(255, 255, 255, 1);
+            transform: translate(-50%, -50%); /* Center it on mouse position */
+            mix-blend-mode: overlay;
+        }
+
+        /* Random long text to create scrolling effect */
+        .long-text {
+            color: darkgrey;
+            line-height: 1.6;
+            font-size: 18px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark overlay that covers the whole page -->
+    <div class="overlay"></div>
+
+    <!-- Flashlight light circle, initially invisible -->
+    <div class="flashlight" style="width: 200px; height: 200px;"></div>
+
+    <!-- Long text content to make the page scrollable -->
+    <div class="long-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. </p>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
+        <p>Nulla vehicula, eros vel feugiat volutpat, neque erat cursus nunc, non volutpat leo turpis vitae felis. Sed auctor sollicitudin purus, in elementum metus scelerisque vitae. Nunc pretium tincidunt felis, id fringilla nunc tincidunt a. Donec molestie sollicitudin euismod. Etiam suscipit viverra justo, vitae cursus nisi euismod et. Pellentesque suscipit libero sed nulla interdum convallis. Suspendisse ac magna dolor. Nulla facilisi. Duis sit amet vestibulum mauris, vel tempus lectus. Nam eget arcu ante. Etiam vel metus id magna dignissim dictum. Donec sit amet lorem eu purus sollicitudin hendrerit sit amet ac erat. Integer hendrerit augue et augue malesuada, ut euismod ante porttitor. Donec aliquet risus eu nunc tincidunt, et hendrerit turpis blandit. In vel justo viverra, suscipit nulla in, luctus metus.</p>
+        <p>Donec sit amet velit augue. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus feugiat ligula eget magna viverra tristique. Ut sit amet massa sollicitudin, vehicula erat sit amet, sodales est. Proin interdum euismod eros. Sed aliquet nisl ut felis faucibus fermentum. Integer et orci felis. Sed at suscipit risus. Etiam placerat, turpis sit amet vehicula finibus, odio libero suscipit dui, eu vestibulum risus odio et dui.</p>
+        <p>Morbi id dolor quis metus gravida convallis. Aenean tincidunt felis sed ante tincidunt, ut vulputate velit euismod. Integer auctor, urna ac tincidunt malesuada, metus nisi gravida risus, nec pretium mi eros at erat. Aenean et rhoncus nulla. Integer accumsan orci non dolor tincidunt, eget efficitur nulla blandit. Nunc non justo nec purus vulputate rutrum. Nunc malesuada sapien eget nulla suscipit, in tempus ante vestibulum. Etiam nec lacus turpis. In ac tristique leo. Phasellus malesuada odio a dui euismod, sed vestibulum elit sollicitudin. Nulla facilisi. Ut gravida nulla non neque posuere, nec scelerisque augue efficitur. Nunc convallis lorem et dolor lobortis, in cursus magna hendrerit. Proin hendrerit turpis felis. Vivamus nec mauris nisl. Nulla iaculis scelerisque ante, et venenatis eros. Nam at dolor non erat lacinia gravida ut a purus.</p>
+        <p>Curabitur vel neque sit amet nulla dictum consectetur non id orci. Curabitur et massa vitae nisi cursus euismod sed vel elit. Curabitur non erat id purus gravida accumsan in ut felis. Etiam ut sollicitudin urna. In consectetur, sem nec dignissim feugiat, mi neque tempus felis, ac tincidunt enim nisi non metus. Aenean accumsan, ligula vel suscipit viverra, turpis sapien sollicitudin ante, et gravida metus sapien et risus. Donec id velit nec urna fringilla fringilla. Vivamus at lectus at enim lacinia dignissim et et ante.</p>
+    </div>
+
+    <script>
+        const flashlight = document.querySelector('.flashlight');
+        const overlay = document.querySelector('.overlay');
+
+        // Set the size of the flashlight
+        const flashlightRadius = 100;
+
+        // Update flashlight position based on mouse movement
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.pageX;
+            const mouseY = e.pageY;
+
+            // Position the flashlight at mouse position
+            flashlight.style.left = `${mouseX}px`;
+            flashlight.style.top = `${mouseY}px`;
+
+            // Set the flashlight size dynamically (optional)
+            flashlight.style.width = `${flashlightRadius * 2}px`;
+            flashlight.style.height = `${flashlightRadius * 2}px`;
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferret's Corner</title>
+    <!-- 
+ ____  ____  ____  ____  ____  ____   ____    ___  ______ ____        ____  ____     _____
+( ___)( ___)(  _ \(  _ \( ___)(_  _)'( __)   / __)(  _  )(  _ \( \( )( ___)(  _ \   (_)(_)
+ )__)  )__)  )   / )   / )__)   )(   \__ \  ( (__  )(_)(  )   / )  (  )__)  )   /   __ __
+(__)  (____)(_)\_)(_)\_)(____) (__)  (___/   \___)(_____)(_)\_)(_)\_)(____)(_)\_)  (_)(_)
+
+hellosx i'm underwhite and i make html/css for thiss!! i was bored and decided to make a cool flexbox layout for ferretosan.neoctiies.org (inspired by doqmeat.com), even if they said no to it.. i'll just use it for a free layout :P 
+
+BTW, thought is not a real html tag, you can make them by not adding a dot or #. and adding them as a tag like thought { blahblah } <thought>HI</thought>
+-->
+    <style>
+    /* never used a root variable tree before, here's my first attempt! I made it easier so you can change these only once! to add one add var() and the root var name like var(--examplevar) */
+    :root {
+      --background: #fff;
+      --border: 2px ridge #000000;
+      --hr: grey;
+      scrollbar-color: rgba(0,0,0,0.9) transparent;
+      scrollbar-width: thin;
+      color: black;
+    }
+    
+    /* this is what i'm talking bout */
+    ed {
+      opacity: 1;
+      color: grey;
+      font-style: italic;
+    }
+    
+    body {
+    background: url("https://underwhite.neocities.org/testing/ferret/dither_it_e.jpg");
+    font-family: "webfont";
+    background-size: 1600px;
+    text-align: center;
+    margin: auto;
+    }
+    
+    @font-face {
+      font-family: "webfont";
+      src: url("https://underwhite.neocities.org/testing/ferret/000webfont.ttf");
+    }
+    
+   
+  
+    
+    #container {
+       display: flex;
+       flex-wrap: wrap;
+       margin: none;
+       padding: 20px;
+       justify-content: space-between;
+       background: rgba(255, 255, 255, 0.1);
+       border-radius: 5%;
+    }
+    
+    
+
+#welcome {
+   background: var(--background);
+   border: var(--border);
+   border-radius: 1%;
+  padding: 20px;
+  max-width: 620px;
+  max-height: 230px;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+
+#box {
+   background: var(--background);
+   border: var(--border);
+   border-radius: 1%;
+  padding: 20px;
+  max-width: 600px;
+  max-height: 230px;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  margin-left: 20px;
+}
+
+#nav {
+   background: var(--background);
+   border: var(--border);
+   border-radius: 1%;
+  padding: 20px;
+  width: 200px;
+  max-height: 225px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+#rss {
+   background: var(--background);
+   border: var(--border);
+   border-radius: 1%;
+  padding: 20px;
+  width: 200px;
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+#current {
+   background: var(--background);
+   border: var(--border);
+   border-radius: 1%;
+  padding: 20px;
+  width: 200px;
+  height: 80px;
+  overflow-y: scroll;
+  position: relative;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  position: relative;
+  top: 13px;
+
+}
+
+a {
+  color: dodgerblue;
+  text-decoration-color: transparent;
+
+}
+
+a:hover {
+  text-decoration-style: dotted;
+  text-decoration-thickness: 0px;
+  text-decoration-color: slateblue;
+  text-decoration-skip-ink: none;
+}
+
+
+#nav a:hover {
+  width: 20000%;
+  text-decoration-color: transparent;
+  background: dodgerblue;
+  color: white;
+}
+
+
+
+#nav a:hover::before {
+  width: 20000%;
+  text-decoration-color: transparent;
+  background: dodgerblue;
+  color: white;
+  content: "> ";
+}
+
+#nav a:hover::after {
+  width: 20000%;
+  text-decoration-color: transparent;
+  background: dodgerblue;
+  color: white;
+  content: " <";
+}
+
+#nav a {
+  width: 20000%;
+  background: transparent;
+}
+
+/* this makes it moblie friendly */
+@media only screen and (max-width : 300px) {
+    #container > div {
+        width: 130%;
+    }
+}
+
+.hr {
+        width: 100%;
+        height: 1px;
+        background: var(--hr);
+    }
+
+/* scrollbar stuff */
+    </style>
+  </head>
+  <body><h1 style="text-align: left; padding-left: 20px; font-size: 50px;">WELCOME TO MY WEBSITE!</h1>
+    <div id="container">
+      <div id="nav">
+        <h2>Navigation</h2><br>
+        <h4>Section 1</h4><br><div class="hr"></div><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <h4>Section 2</h4><br><div class="hr"></div><br>
+         <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <h4>Section 3</h4><br><div class="hr"></div><br>
+       <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <h4>Section 4</h4><br><div class="hr"></div><br>
+         <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+        <a href="#">Link</a><br>
+      </div>
+      <div id="welcome">
+        
+        <h2>Welcome!</h2>
+        <p style="font-style: italic; color: grey;">"I usually don't get visitors, so this must be my lucky day!"</p>
+        <p>This is a layout for.. basically everyone. it's inspired by <a href="//doqmeat.com">doqmeat</a>'s homepage v4 layout. because i know it's made of flexboxes, that means it's mobile friendly too!</p>
+        <br>
+        <p>I also made it in preparation for ferretosan.neocities.org. cuz why not?</p>
+        <br>
+        <p>Even if this looks bad <ed>(to you)</ed>. you can modify the CSS code to your likings!</p>
+        <br>
+        <p>I use max-width and scrollbar-width: |thin|thick| and scrollbar-color: 'thumb color' 'track color'</p>
+        
+      </div>
+      <div id="rss">
+        
+        insert rss feed<br><div class="hr"></div>
+        you can repurpose this, too.
+        <br>for rss/xml to html converters check rss.bloople.net and more
+        
+      </div>
+        
+        <div id="current">
+        <h2>Current status</h2>
+        <p>playing: ???</p>
+        <p>reading: ???</p>
+        <p>watching: ???</p>
+        <p>listening: ???</p>
+        <p>working: ???</p>
+      </div>
+       
+        
+      <br><br>
+   <div id="box" style="width: 200px; height: 70px; position: relative; top: 20px;"> credit: underwhite for layout; <br> can be repurposed <br> <ed>It's fine if you don't credit me in the footer, just include that in your credits page!</ed></div>
+    </div>
+</body>
+</html>

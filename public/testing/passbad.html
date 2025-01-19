@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passcode Screen</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .passcode {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+        }
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+        .keypad button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        .keypad button:hover {
+            background-color: #e0e0e0;
+        }
+        .keypad button:active {
+            background-color: #ccc;
+        }
+        .message {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #ff0000;
+            opacity: 1;
+            transition: opacity 0.3s ease-out;
+        }
+        .message.success {
+            color: #4caf50;
+        }
+        .locked-out {
+            color: #ff0000;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .refresh-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+        }
+        .refresh-btn:hover {
+            background-color: #45a049;
+        }
+        
+        
+        @font-face {
+          font-family: 'Nunito';
+          src: url("https://underwhite.neocities.org/fonts/thickPixels.otf")
+          
+        }
+        
+        * {
+          
+          font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="passcodeContainer">
+    <input type="text" id="passcodeInput" class="passcode" disabled />
+    <div class="keypad" id="keypad">
+        <!-- Number Keypad -->
+        <button class="key" data-key="1">1</button>
+        <button class="key" data-key="2">2</button>
+        <button class="key" data-key="3">3</button>
+        <button class="key" data-key="4">4</button>
+        <button class="key" data-key="5">5</button>
+        <button class="key" data-key="6">6</button>
+        <button class="key" data-key="7">7</button>
+        <button class="key" data-key="8">8</button>
+        <button class="key" data-key="9">9</button>
+        <button class="key" data-key="0">0</button>
+        <button class="key" id="clear">C</button>
+        <button class="key" id="submit">=</button>
+        
+    </div>
+    
+    <div class="message" id="message" style="font-size: 7px"></div>
+    <div id="locked-out-message" class="locked-out" style="display:none;">
+        <p>whoops, you have been locked out after <b>5</b> failed attempts. refresh if you wanna continue annoying me.</p>
+        <button class="refresh-btn" onclick="location.reload();">refresh</button>
+    </div>
+</div>
+<h6 style="left: 10px; position: relative;" id="messagehint"> &lt;- the password is 4 digits long.</h6>
+
+<script>
+    const correctPassword = "1234";  // Customizable password here
+    const passcodeInput = document.getElementById("passcodeInput");
+    const messageDiv = document.getElementById("message");
+    const hint = document.getElementById("messagehint");
+    const passcodeContainer = document.getElementById("passcodeContainer");
+    const keypad = document.getElementById("keypad");
+    const lockedOutMessage = document.getElementById("locked-out-message");
+    let enteredPasscode = "";  // Store the passcode entered by the user
+    let failedAttempts = 0;  // Track the number of failed attempts
+
+    // Handle key clicks
+    const keys = document.querySelectorAll(".key");
+    keys.forEach(key => {
+        key.addEventListener("click", function () {
+            // Add key to passcode input field
+            if (this.id === "clear") {
+                enteredPasscode = "";  // Clear the passcode input
+                passcodeInput.value = "";  // Clear the displayed passcode
+            } else if (this.id === "submit") {
+                checkPasscode();  // Submit the passcode
+            } else {
+                enteredPasscode += this.dataset.key;  // Add key to passcode
+                passcodeInput.value = enteredPasscode;  // Update displayed passcode
+            }
+        });
+    });
+
+    // Check the passcode after submitting
+    function checkPasscode() {
+        if (failedAttempts >= 10) {
+            showLockedOut();  // If 5 failed attempts, lock out the user
+            hint.style.display = 'none';
+            return;
+        }
+
+        if (enteredPasscode === correctPassword) {
+            messageDiv.textContent = "loading gateway.html";
+            messageDiv.className = "message success";
+            setTimeout(() => {
+                window.location.href = "https://www.example.com"; // Redirect after success
+            }, 1000);
+        } else {
+            failedAttempts++;  // Increment failed attempts counter
+            messageDiv.textContent = "try again, you have  " + failedAttempts + " attempt(s)!!";
+            messageDiv.className = "message error";
+            messageDiv.style.opacity = 1;
+            // Fade out the message after a short delay
+            setTimeout(() => {
+                messageDiv.style.opacity = 1;  // Fade out the incorrect message
+                setTimeout(() => {
+                    messageDiv.style.opacity = 1;  // Reset opacity for the next message
+                }, 300);  // Reset opacity after fade-out
+            }, 1500);  // Delay for 1.5 seconds before fading out
+        }
+    }
+
+    // Show the "locked out" message after 5 failed attempts
+    function showLockedOut() {
+        keypad.style.display = 'none';  // Hide the keypad
+        passcodeInput.style.display = 'none';  // Hide the passcode input
+        lockedOutMessage.style.display = 'block';  // Show the lockout message
+    }
+</script>
+
+</body>
+</html>
+

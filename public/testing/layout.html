@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>blog layout</title>
+<meta charset="UTF-8">
+<meta name="description" content="layout by almostsweet">
+<style>
+ @font-face {font-family:'web';src: url("/fonts/modeseven.ttf");}
+  @font-face {font-family:'webr';src: url("/fonts/04font.ttf");}
+  body{
+background: var(--darkslate);
+font-family: 'web';
+text-align:justify;
+font-size:13px;
+line-height:20px;
+margin:0 auto;
+color: white;
+}
+
+ :root {
+      --slate: #1E2940;
+      --darkslate: #020514;
+      --darkerslate: #01030d;
+      --darkerdarkerslate: #000208;
+    }
+    
+#box1 p{
+text-indent:26px;
+text-decoration: rgba(189, 160, 222 , 0.3);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration-thickness: 0px;
+}
+
+#box1 p::before{
+content: '0 ';
+text-decoration: rgba(189, 160, 222 , 0.4);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration-thickness: 0px;
+}
+
+h1{
+font-family:'webr';
+margin-bottom:4px;
+text-align:right;
+font-weight:normal;
+letter-spacing:2px;
+border-left:16px var(--darkslate) solid;
+border-radius: 2px;
+color: slateblue;
+ --color: rgba(79, 68, 154, 0.2);
+  border-right: .15em solid var(--color);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  animation: 
+    blink-caret .75s infinite;
+}
+
+
+@keyframes blink-caret {
+  from, to { border-right-color: transparent }
+  50% { border-right-color: var(--color); }
+}
+
+
+h6{
+margin-bottom:4px;
+text-align:right;
+font-weight:normal;
+letter-spacing:2px;
+border-left:16px var(--darkslate) solid;
+margin-top: 0px;
+border-radius: 2px;
+}
+
+h2{
+border-top:1px gray dotted;
+margin-top:4px;
+font-weight:normal;
+letter-spacing:2px;
+font-size:11px;
+color: var(--slate);
+}
+
+a{
+color:slateblue;
+text-decoration:none;  
+transition-duration: 0.4s;
+}
+
+a:hover{
+color: var(--slate);
+transition-duration: 0.4s;
+}
+
+
+
+.post{
+width:572px;
+padding:16px;
+margin-bottom:60px;
+}
+
+
+.post {
+  color: #fff;
+  max-width: 572px;
+}
+.post {
+  /* triangle dimension */
+  --b: 1em; /* control the base */
+  --h: .7em; /* control the height */
+
+  --c:var(--darkerdarkerslate);
+background-color:var(--darkerdarkerslate);
+border-radius: 10px;
+border-bottom-right-radius: 0px;
+border: 4px solid var(darkerslate);
+  padding: 1em;
+  border-radius: 1.2em;
+  border-bottom-right-radius: 0;
+  clip-path: polygon(100% 0,0 0,0 100%,
+    calc(100% - var(--b)) 100%,
+    calc(100% + var(--h)) calc(100% + var(--h)),
+    100% calc(100% - var(--b)));
+  background: var(--c);
+  border-image: conic-gradient(var(--c) 0 0) 0 999 999 0/
+    0 calc(var(--h) + var(--b)) calc(var(--h) + var(--b)) 0/0 var(--h) var(--h) 0;
+}
+
+#linkboxbox{
+width:196px;
+float:left;
+position:fixed;
+left:26px;
+top:32px;
+padding:16px;
+background-color:#000;
+height: 480px;
+border-radius: 10px;
+}
+
+#linkbox{
+padding:11px;
+border:1px solid slateblue;
+height: 70%;
+overflow-y: scroll;
+overflow-x: hidden;
+scrollbar-color: slateblue transparent;
+scrollbar-width: thin;
+border-radius: 5px;
+}
+
+#box1{
+position:relative;
+width:642px;
+margin-left:296px;
+top:26px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--slate) var(--darkslate);
+}
+
+.webrhead {
+  font-family:'webr';
+  font-size: 20px;
+}
+
+.webr {
+  font-family:'webr';
+}
+
+li {
+  list-style-type: "0";
+}
+
+ 
+      .a:hover {
+        background-color: var(--slate);
+        color: black;
+        cursor: pointer;
+        padding-left: 15px;
+        
+      }
+      
+.a {
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.4s;
+   background: slateblue;
+   color: black;
+   width: 40px;
+   padding-right: 20px;
+}
+.a {
+  --f: .5em; /* control the folded part*/
+  --r: .8em; /* control the ribbon shape */
+  
+  position: absolute;
+  top: 20px;
+  left: calc(-1*var(--f));
+  padding-inline: .25em;
+  line-height: 1.8;
+  border-bottom: var(--f) solid #0005;
+  border-right: var(--r) solid #0000;
+  clip-path: 
+    polygon(0 0,0 calc(100% - var(--f)),var(--f) 100%,
+      var(--f) calc(100% - var(--f)),100% calc(100% - var(--f)),
+      calc(100% - var(--r)) calc(50% - var(--f)/2),100% 0);
+padding-left: 20px;
+transition: 0.4s;
+}
+</style>
+</head>
+<body>
+<div id="linkboxbox">
+<br>
+<a href="/home" title="go back if you want" class="a">back</a><br><br><div id="linkbox">
+
+</div><small>blog • <a href="http://almostsweet.neocities.org" style="display:inline;">(credit)</a><br><br></small></div>
+
+<!--Please do not remove this link unless you move the credit to me elsewhere on your site -->
+<!-- it would fit in my credits page, but who gives a.. yeah. -->
+
+<div id="box1">
+<div class="post"><h6>PINNED</h6>
+<p>hello, this is a collection of my thoughts, my life. and my updates apart from the <a href="/rss/feed.xml">rss feed</a>.</p>
+<h2>January 3, 2O25</h2></div>
+
+<div class="post"><h1>hello there</h1>
+<p>Halvah candy topping brownie marshmallow. Wafer lollipop I love I love pudding candy canes I love I love. Tootsie roll lemon drops apple pie chocolate cake cotton candy. Brownie I love soufflÃ© oat cake jujubes apple pie cake. Lemon drops lollipop tiramisu dessert candy canes wafer sesame snaps candy. Topping I love topping wafer. Chupa chups gummies powder. Chocolate croissant bonbon topping bear claw. Croissant bonbon gummi bears chocolate bar jelly-o jelly beans. Chocolate tart bonbon liquorice I love oat cake. Cookie I love chupa chups topping topping. Powder powder chupa chups I love icing. Candy canes halvah fruitcake pudding pudding. Cheesecake sugar plum biscuit oat cake sesame snaps jelly beans.</p>
+<h2>00 month year</h2></div>
+
+<div class="post"><h1>hello there</h1>
+<p>Halvah candy topping brownie marshmallow. Wafer lollipop I love I love pudding candy canes I love I love. Tootsie roll lemon drops apple pie chocolate cake cotton candy. Brownie I love soufflÃ© oat cake jujubes apple pie cake. Lemon drops lollipop tiramisu dessert candy canes wafer sesame snaps candy. Topping I love topping wafer. Chupa chups gummies powder. Chocolate croissant bonbon topping bear claw. Croissant bonbon gummi bears chocolate bar jelly-o jelly beans. Chocolate tart bonbon liquorice I love oat cake. Cookie I love chupa chups topping topping. Powder powder chupa chups I love icing. Candy canes halvah fruitcake pudding pudding. Cheesecake sugar plum biscuit oat cake sesame snaps jelly beans.</p>
+<h2>00 month year</h2></div>
+
+<div class="post"><h1>hello there</h1>
+<p>Halvah candy topping brownie marshmallow. Wafer lollipop I love I love pudding candy canes I love I love. Tootsie roll lemon drops apple pie chocolate cake cotton candy. Brownie I love soufflÃ© oat cake jujubes apple pie cake. Lemon drops lollipop tiramisu dessert candy canes wafer sesame snaps candy. Topping I love topping wafer. Chupa chups gummies powder. Chocolate croissant bonbon topping bear claw. Croissant bonbon gummi bears chocolate bar jelly-o jelly beans. Chocolate tart bonbon liquorice I love oat cake. Cookie I love chupa chups topping topping. Powder powder chupa chups I love icing. Candy canes halvah fruitcake pudding pudding. Cheesecake sugar plum biscuit oat cake sesame snaps jelly beans.</p>
+<h2>00 month year</h2></div>
+
+<div class="post"><h1>hello there</h1>
+<p>Halvah candy topping brownie marshmallow. Wafer lollipop I love I love pudding candy canes I love I love. Tootsie roll lemon drops apple pie chocolate cake cotton candy. Brownie I love soufflÃ© oat cake jujubes apple pie cake. Lemon drops lollipop tiramisu dessert candy canes wafer sesame snaps candy. Topping I love topping wafer. Chupa chups gummies powder. Chocolate croissant bonbon topping bear claw. Croissant bonbon gummi bears chocolate bar jelly-o jelly beans. Chocolate tart bonbon liquorice I love oat cake. Cookie I love chupa chups topping topping. Powder powder chupa chups I love icing. Candy canes halvah fruitcake pudding pudding. Cheesecake sugar plum biscuit oat cake sesame snaps jelly beans.</p>
+<h2>00 month year</h2></div>
+
+</div>
+</body>
+</html>

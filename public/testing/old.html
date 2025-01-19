@@ -1,0 +1,699 @@
+ <!-- Hello inspector! Do not take ma code! -->
+ <link rel="shortcut icon" href="https://uploads.scratch.mit.edu/get_image/user/95165001_120x80.png" type="image/x-icon">
+ <!DOCTYPE html>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  	<a href class="test"></a>
+<div class="theBall-outer"><div class="theBall"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(function() {
+  var prefix = function() {
+    var a = window.getComputedStyle(document.documentElement, ""),
+      b = (Array.prototype.slice.call(a).join("").match(/-(moz|webkit|ms)-/) || "" === a.OLink && ["", "o"])[1];
+    return "WebKit|Moz|MS|O".match(new RegExp("(" + b + ")", "i"))[1], "-" + b + "-"
+  }();
+  $(document).mousemove(function(e) {
+    mouseX = e.pageX + 15;
+    mouseY = e.pageY - $(window).scrollTop() + 15;
+    $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
+  });
+
+  // The origin of this "inverted" js code on on https://jsfiddle.net/p1ja0n8r/, credits to them and me. i just changed the mix-blend-mode css and added style stuff to create a "flashlight" look. it's very cool too!
+  // right now idk if i should improve it so it hides text but shows them, maybe not now XP
+  // -underwhite.neocities.org
+})
+</script>
+     <style>
+     
+     .theBall, .theBall-outer {
+	mix-blend-mode: overlay;
+	width: 150px;
+	height: 150px;
+}
+.theBall-outer {
+	position: fixed;
+	top: -150px;
+	left: -150px;
+	z-index: 5000;
+	pointer-events: none!important;
+}
+.theBall {
+	position: absolute;
+	background-color: white;
+	box-shadow: 0px 0px 20px 0px white;
+	border-radius: 50%;
+	-webkit-transition:  transform .2s cubic-bezier(.175,.85,.32,1.275);
+	-moz-transition:  transform .2s cubic-bezier(.175,.85,.32,1.275);
+	-ms-transition:  transform .2s cubic-bezier(.175,.85,.32,1.275);
+	-o-transition:  transform .2s cubic-bezier(.175,.85,.32,1.275);
+	transition:  transform .2s cubic-bezier(.175,.85,.32,1.275);
+	transform-origin: center center;
+}
+.dark_page .theBall,
+.coloring .theBall {
+	background-color: black;
+}
+/* .zooming.theBall {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+} */
+
+
+#menu {
+  background: #04000f;
+  width: 300px;
+  height: 240px;
+  border-radius: 10%;
+  margin: auto;
+  box-shadow: 9px 9px 0px 9px #08001f;
+}
+
+     /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+
+body {
+  background-color: black;
+  color: white;
+}
+  
+html, a, a:hover {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+}
+  
+	
+			body:before {
+        content: "";
+        position: fixed;
+        opacity: 0.3;
+        left: 0;
+        top: 0;
+        width: 1000%;
+        height: 1000%;
+        background-size: 100px;
+        pointer-events: none;
+        z-index: 1000;
+        background-image: url(https://augar.nekoweb.org/images/background/overlay.png);
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+    }
+    
+    
+@keyframes Static {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -4px;
+    }
+}
+
+
+     .bordering {
+       
+       background-color: #013524;
+       border: 2px dotted #013524;
+       color: #fcaeff;
+       
+     }
+     }
+#iframe {
+float: right;
+}
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #031524;
+  text-align: center;
+  border: 2px dotted white;
+  opacity: 50%;
+
+  float: right;
+  color: white;
+  float: right;
+}
+
+#mydivheader {
+  padding: 6px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: #031524;
+  color: #031524;
+  color: grey;
+  
+}
+  
+
+    #mydivheader:hover {
+     background-color: #052138;
+     color: white;
+     opacity: 70%;
+    }
+</style>
+
+                        
+
+  
+
+
+<div id="mydiv">
+  <div id="mydivheader" title="Hold and hover with mouse to drag! ^w^">^< Music Player >^ <i>(draggable :D)</i>
+ </div>
+  
+ 
+
+ <center><iframe width="384" height="60" style="border: 1px dotted white;" src="https://www.beepbox.co/player/#song=9n64s0k0l00e0gt2ma7g0gj07r1i0o432333T0v0u00f0q802d04w4h0E0T1v1u01f0q8x10l520d04AcFfB7Q0245P7788E2b27iT0v0u00f0qg03d04w1h0E0T1v1u01f10k0q8y020d02A9F6B5Q0681Pfd59E0T5v1u05f0q8w10p72d04HXzzrrrqiii9998h0E1baT1v3u01f0qq10820d04AcF4B5Q2600Pdc00E21174T2v3u02f10w4qw02d03w1E0T2v3u02f10w4qw02d03w4E0T2v1u02f10w4qw02d03w4E0T2v4u02f10w4qw02d04w1E0b4h4h4h4h4h4w4h4h4h4h4h8P00004h4h4i014h4h4h4h400i824w8x0i004i4i400i000Bd14h4h4h40lych4h4h4h004i010g0h0300000O400w4wp26LFGvwGqfxcK2b0yW4bIgdKibAkV8KAbAq2b0yW4bIgc5AyV5eia1jh_2excK2bwaqD25O86T95OasAnCyezt5PtQn8eD0LrFY7bplvt-LKUtfjtfMI1jh_2excK2bwc50QSQRkRkRgo2Cz-4t1vgCLMUfcjbObibjjIZIhQ5Z6nlBX8J8Jde0w9wMSouhMc2GsMs9AulgP1M9AwkR_G7jhZpkFBQmpJeqQfymlapt45wB84Lja0CzgaCz0iZcF9EQ5d1WeQEfhW5ALaJRpEQ2FEOy_GjhEaqKzmaL7igFBe6zgqd1EQg5GqcEFEfhUdvcGNiI1MhFB8d6wQqbreaakXZjaIkxjaBckOGAzIzOcGplyD2dmaBlV16EBmaghG1lyA4tYOH58OH7AtgsSESOAlnA74wEfhS5nhH5nzE4I7E_200"></iframe><p>-------------------------------------------------------</p></p><iframe width="384" height="60" style="border: none;" src="https://www.beepbox.co/player/#song=9n71s0k0l00e0gt2ma5g0gj07r1i0o3333333T1v2u01f0qM002d04A0F0B1Q1000Pf746E0T0v3u00f22t02beq00d0aw1h0E0T0v4u00f0qg01d04w4h0E0T0v4u00f0q8103d00w4h0E0T1v0u01f22oe2daqM001d07A1F0B1Q1000Pf826E0T1v0u01f0q00d04A0F0B0Q9000Pf000E250617T1v1u01f10v0q00d04A0F0B0Q9000Pf000E250617T2v1u02f10w4qw02d03w1E0b4h4h4h4i4h4g00000h4h40000w024h4h040000014i8y414h4h4h4h4h0h4h4j4y0h0M4h4hcx8g41cx4j4hcz8Pcjgp277FE_ips7aM5djwV8KlBXCjJkjMmM2Czh17ghQ2FBoM8zE8W1sw1jbM8Uw8WieAmKEzG8WieAzIQvOhCn1hqpoLGm0FcRc3Cnr4E5zjhNvdpBLhpEV1bbJCFJOCqpuh73At97ib0R4th7ib2lfpuyhwlY9OPh_FcN5FBy_Fo2APkMeptIiwmdd75YTOZ5CzA4IKPb2PhZF6ps55FBy_Fo2APkMeptIiwmdd75YRCmZ5CzA4IKSqCTapFBSEhN2hQAt8I3khR4t8I9kZBW961nMD0bd7WApBMkmCmbUBwajdj0VBSNa1oQQsnPmprQmqegiOXpGrsFA1jbYcmwNq35EcngcmwNq35EcngcmwNq35E5E5EE1jbYcmwNq35EcngcmwNq35EcngcmwNq35E5E5EE1cJ8FVNapi35V0Nq35EcmwNt0Nq35EcmwzEEsyw4El8HYh8j0"></iframe><p>New! ^^</p></center>
+ 
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+    
+ <div class="scroller">
+ 
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underwhite</title>
+    <link href="/static.css" rel="stylesheet" type="text/css" media="all">
+    
+ 
+        <div id="container"><div id="header"></div><div id="topBar"><small><marquee scrollamount="3">Working on a new layout.. <a href="/">So cool so far!</a></marquee></small></div>
+            <div id="headerArea">   
+                
+            </div>
+
+            <div id="flex">
+                
+                <main>
+            <style>
+    /* Basic styling for the play/pause button */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 4px;
+    }
+
+    input[type="checkbox"] {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      position: relative;
+      
+    }
+
+    .button-container p {
+      font-size: 7px;
+      
+    }
+
+   
+    
+  </style>
+
+
+  <audio id="audio" src="https://files.catbox.moe/tlpdz9.mp3" preload="auto"></audio>
+
+  <div class="button-container">
+    <label>
+      <p class="easteregg">Background music: <input type="checkbox" id="playPauseCheckbox" checked></p>
+      
+      
+    </label>
+  </div>
+
+  <script>
+    // Get references to the elements
+    const audio = document.getElementById('audio');
+    const checkbox = document.getElementById('playPauseCheckbox');
+
+    // Function to play or pause based on checkbox state
+    function toggleAudio() {
+      if (checkbox.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    // Add an event listener to toggle play/pause when checkbox state changes
+    checkbox.addEventListener('change', toggleAudio);
+
+    // Automatically play the audio when the page loads if the checkbox is checked
+    window.onload = function() {
+      if (checkbox.checked) {
+        audio.play();
+      }
+    };
+  </script>      
+<center> <h6> >~>> <a href="https://underwhite.neocities.org/about-me">About</a> <<~< >~>> <a href="https://underwhite.neocities.org/journal">Journal</a> <<~< >~>> <a href="https://underwhite.neocities.org/tutorials/">Tutorials</a> <<~< >~>> <a href="https://underwhite.neocities.org/shrines/">Shrines</a> <<~<</h6></center>
+  
+  
+
+                 <center>  <h1>Welcome!!!!! <img src="/images/svg/phone.svg"> <img src="/images/svg/phone.svg"> <img src="/images/svg/phone.svg"></h1>
+                    <p><strong>Please read this first! <img src="/images/svg/phone.svg"> :D</strong></p>
+                    
+                    
+                    <p>Hello! Call me Undey! I'm just looking to see what <strong>HTML/CSS</strong> is!</p>
+                    
+                    
+                    <p>I do stuff for fun, mainly Scratch. I enjoy it too!</p>
+                    
+                    
+                    <p>But i decided, "<i>Ehh.. I wanna make a website.</i>"</p>
+                    <p>And made my website! :D</p></center>
+
+<hr><center><h2>What's been on ma mind?<img src="/images/svg/phone.svg"></center></h2>
+
+ <center><p><img src="/images/svg/phone.svg"> Yay! i finally learned how to folder in neocities! <small>(nov - 17 - 2024)</small></p> 
+            
+
+<hr>
+
+            <center><p><img src="/images/svg/phone.svg"> I added a custom scroll bar! and also some funny hover effects! >:3 <small>(nov - 2 - 2024)</small></p> 
+            
+            <hr>
+            
+                     <p><img src="/images/svg/phone.svg"> Wowie! i can hotlink <b>audio</b> Thanks for 600+ views! I love ALL of you! :3 Also yes <a href="https://scratch.mit.edu/users/Ch3vPuppy" target="_blank">@Ch3vDog</a>  is me.   <small>(nov - 1 - 2024)</small></p> </center>
+                     
+    <hr>
+
+<center><p><h6>neocities websites i linked!! :D </h6></p>
+
+<a href="https://vidapon.net/"><img  src="/images/gif/Astertrail_button.gif"></a>
+<a href="https://thenri.neocities.org/"><img src="https://vidapon.net/global/netgraphics/thenributton.gif"></a>
+<a href="https://iwasarob0t.neocities.org/"><img src="https://iwasarob0t.neocities.org/images/iwasarob0tbutton.gif"></a> <a href="https://cinnamuff.space/" >
+  <img src="https://cinnamuff.neocities.org/cinnamuffbtn.png"></a>
+			<a href="https://qrunchy.space/">
+           
+           <img src="https://vidapon.net/global/netgraphics/pizzer.gif"></a> <a href='https://blinkies.cafe' target='_blank'>
+             <img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' ></a><a href="https://lilithdev.neocities.org/">
+               <img src="https://lilithdev.neocities.org/buttons/lilithdevbtn.gif"></a>
+             <a href="https://fulvern.neocities.org/"><img src="https://fulvern.neocities.org/Images/FulvernButton.gif"></a>
+             <a href="https://dimden.dev/"><img src="https://dimden.dev/images/88x31.gif" ></a>
+               <a href="https://districts.nekoweb.org/"><img src="https://districts.nekoweb.org/img/districts002.png"></a>
+               <a href="https://joosh .nekoweb.org/"><img src="https://joosh.nekoweb.org/img/icon.gif"></a>
+               <a href="https://fan.nekoweb.org"><img src="https://fan.nekoweb.org/images/button.gif" width="88px">	</a>
+		<a href="https://mimiya.nekoweb.org"><img src="https://mimiya.nekoweb.org/button.png" width="88" height="31"></a>
+		 <a href="https://koinuko.pink/"><img src="https://scourgescloset.neocities.org/img/bttn/koinuko2.gif"></a>
+          <a href="https://arandomsite.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/88x31.gif" /></a>
+          <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.png"></a>
+          <a href="https://sugarforbrains.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/sugarOG.gif"></a>
+          <a href="https://y2kid.xyz/"><img src="https://scourgescloset.neocities.org/img/bttn/anotherone.gif"></a>
+          <a href="https://chipsfunfun.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/THESILLY.PNG"></a>
+           <a target="_blank" href="https://troy-sucks.neocities.org/"><img src="https://troy-sucks.neocities.org/images/troysucksstripes.gif"/>
+          <a href="https://vaje.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/vajebutton.gif"></a>
+          <a href="https://skykristal.art/"><img src="https://scourgescloset.neocities.org/img/bttn/lui-button-september-new.gif"></a>
+          <a href="https://webgore.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/sitebutton.gif"></a>
+          <a href="https://cinni.net/"><img src="https://scourgescloset.neocities.org/img/bttn/cinni-button-retro.png"></a>
+          <a href="https://atomicgothic.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/dont-touch-me.gif"></a>
+             <a target='_blank' href="https://fieldofhate.neocities.org/"><img src="https://fieldofhate.neocities.org/fields/MEDIA/FIELDOFHATE-BUTTON.gif" width=88px></a>
+             <a href="https://digibun.neocities.org" target="_blank"><img src="https://digibun.neocities.org/img/digibun.png"></a>
+          <a href="https://odditycommoddity.neocities.org/"><img src="https://scourgescloset.neocities.org/img/bttn/mebuttonaiden.gif"></a>
+             <a href="https://g0reh0unds.neocities.org/"><img src="https://g0reh0und.neocities.org/graphics/site%20buttons/gorehound%20new%20button%20.gif"></a>
+          <a href="https://dannarchy.com/"><img src="https://scourgescloset.neocities.org/img/bttn/d_now.gif"></a><a href="https://zumi.neocities.org/"><img src="https://zumi.neocities.org/_assets/8831.png" alt="Zumi website tag"></a><a href="https://omni.vi"><img src="https://omni.vi/assets/omnibutton.gif"></a>
+          <a href="https://lazybones.neocities.org/"><img src="https://lazybones.neocities.org/EXTRAS/buttons/lazybgif.gif"/></a>
+          <a href="https://kakashi.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/kakashi button.gif"></a> 
+<a href="https://pleurodelinae.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/button_pleurodelinae.png"></a> 
+<a href="https://absentlydepart.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/gifntext-gif.gif"></a> 
+<a href="https://irony-machine.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/irony-machine.png"></a> 
+<a href="https://mle-s-paint.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/MLESLINK1.gif"></a> 
+<a href="https://mars2027.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/mars2021sitebutton-static2.png"></a> 
+<a href="https://frogpondblues.neocities.org/" target=blank> <img src="https://lazybones.neocities.org//EXTRAS/buttons/frogpondblues_button.png"></a> 
+<a href="https://cyberneticdryad.neocities.org//" target=blank> <img src="https://lazybones.neocities.org/EXTRAS/buttons/cdbutton.png"></a> 
+<a href="https://duck.fyi"><img src="https://duck.fyi/buttons/88x31.gif" /></a></center>
+     
+        
+
+
+
+
+  <h6> (psst.. this was made using <a href="https://goblin-heart.net/sadgrl/projects/layout-builder/">theesss..</a> :>) </h6>              
+
+
+</main>
+                
+            </div>
+                
+            </div>
+            
+        </div>
+         <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+                --body-bg-image: url('https://sadhost.neocities.org/images/tiles/anisnow.gif');
+
+                /* colors */
+                --content: #000000;
+            }
+
+            /* if you have the URL of a font, you can set it below */
+            /* feel free to delete this if it's not your vibe */
+
+            /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #000000;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                color: #fceaff;
+                background: url('https://sadhost.neocities.org/images/tiles/anisnow.gif') fixed;
+                background-color: #000000;
+                background-size: 65px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 1000px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #ED64F5;
+                font-weight: bold;
+                text-decoration: none;
+                transition-duration: 0.5s;
+                border: 1px dotted transparent;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+           
+
+            #header {
+                width: 100%;
+                background-color: #e0ecff;
+                /* header color here! */
+                height: 150px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+           {
+                height: 40px;
+                background-color: #e0ecff;
+                /* navbar color */
+                width: 100%;
+            }
+
+           ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+             li a {
+                color: #645c7d;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+             li a:hover {
+                color: #e0ec44;
+                text-decoration: bold;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #e0ecff;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                border-radius: 1%;
+                background-color: #031524;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #ffffff;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #ffffff;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #ebfE65;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #03256E;
+                border: 1px solid #03256E;
+                padding: 10px;
+                border-radius: 1px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+              border-radius: 5%;
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #100000;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 1000px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+              
+              a {
+  color: #f29bfa;
+}
+
+a:hover {
+  transition-duration: 0.5s;
+  background-color: #131524;
+  text-decoration: italic;
+  color: #f29bfa;
+  border: 1px dotted #131524;
+  
+}
+
+
+html {
+	scrollbar-width: thin;
+	scrollbar-color: #DB4186 black;
+	border-radius: 10px;
+	
+
+
+
+</style>
+          
+         
+            
+         
+           
+          
+         
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flex</title>
+    <style>
+       body {
+         background-color: #010208;
+         color: #677;
+         font-family: monospace;
+         }
+         
+         html { scrollbar-color: #1e2940 #010208; scrollbar-width: thin }
+    
+    	.flex {
+    	 display: flex;	
+    	 width: 550px;
+    	 position: absolute;
+    		top: 0px;
+    		left: 0%;
+    	 padding:20px;
+    	 flex-wrap: wrap;
+    	 row-gap: 10px;
+    	 column-gap: 10px;
+    	}
+    	
+ .flex div, nav {
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(30, 41, 64, 0.3);
+    background: #001;
+    scrollbar-width: thin;
+    scrollbar-color: #1e2940 transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+
+    	 	.flex .box {
+    		width: 200px;
+    		height: 200px;
+    		text-align: center;
+    	}
+    	
+    	 	 	.flex .main {
+    		width: 454px;
+    		height: 400px;
+    		text-align: center;
+    	}
+    	
+    		 	.flex .extra {
+    		width: 250px;
+    		height: 400px;
+    		text-align: center;
+    	}
+    	
+    	nav {
+    		width: 170px;
+    		height: 77%;
+    		text-align: center;
+    		position: fixed;
+    		top: 19px;
+    		left: 525px;
+    		padding-top: 30px;
+    	}
+    	
+    	a { text-decoration: none; color: magenta; }
+    	a:hover { text-decoration: underline dotted rgba(255, 255, 0, 0.1); color: pink; }
+    	
+    	.link {
+    	  width: 100%;
+    	  background: rgba(30, 41, 64, 0.5);
+    	  display: block;
+    	  border-radius: 5px;
+    	}
+    	
+    	h1, b, h2 {
+    	  color: slateblue;
+    	}
+    	
+  
+    </style>
+    </head>
+    <body><br>
+    	<div class="flex">
+    		<div class="main">
+    		  <h1>Welcome To My Website!</h1>
+    		  <p>Hello!
+    		  Welcome to my layout stuff, 
+    		  I did this today and just thought this is really cool.
+    		  You can change nothing to everything but you still need to credit me!</p>
+    		  <p>If you plan to add it to a seperate page it's totally fine!</p>
+    		  <p>Your free to check out and edit every single line. inculding changing the class names.</p>
+    		</div>
+    		<div class="box">
+    		  <b>Bold</b> <!-- This has a lot of tags that do the same thing! like <strong>. -->
+    		  <i>Italic</i>
+    		  <u>Underline</u>
+    		  <strike>Strike</strike> <!-- This has a lot of tags that do the same thing! like <del>. -->
+    		  <small>Small</small>
+    		  <sub>Subscript</sub>
+    		  <sup>Superscript</sup>
+    		  <a href="#">This is how you make a link.</a>
+    		  <p>Paragraph text, use this for seperate lines.</p>
+    		  <p>Check out <a href="//www.w3schools.com">w3school</a>'s tutorials <small><b>(HTML and CSS)</b></small> 
+    		  for more!</p>
+    		</div>
+    		<div class="box">
+    		  
+    		</div>
+    		<div class="box">
+    		  
+    		</div>
+    		<div class="box">
+    		  
+    		</div>
+    	</div>
+    	<nav>
+    	  <h2>Navigation</h2>
+    	  <br>
+    	    <a href="#" class="link">Link</a><br>
+    	    <a href="#" class="link">Link</a><br>
+    	    <a href="#" class="link">Link</a><br>
+    	    <a href="#" class="link">Link</a><br>
+    	    <a href="#" class="link">Link</a><br>
+    	
+    	  
+    	</nav>
+    	
+    </body>
+</html>

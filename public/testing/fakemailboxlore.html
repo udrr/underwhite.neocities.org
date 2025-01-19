@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+     .mailbox {
+       text-align: center;
+width: 600px;
+height: 556px;
+border-radius: 3%;
+--color1: #5a3fb0;
+--color2: slateblue;
+background: repeating-linear-gradient(
+45deg,
+var(--color1),
+var(--color1) 30px,
+var(--color2) 30px,
+var(--color2) 60px
+
+);
+z-index: 2;
+position: relative;
+animation: clip2 0.5s infinite, flicker 0.01s infinite;
+animation-timing-function: steps(4);
+left: 4px;
+     }
+     .mailbox .inner {
+       width: 540px;
+       height: 450px;
+       
+       background: black;
+      position: relative;
+      top: 10px;
+      border-radius: 2%;
+      font-family: 'ms', sans-serif;
+      letter-spacing: -0.5px;
+      color: white;
+      padding: 20px;
+      padding-top: 10px;
+      font-size: 12px;
+      animation: none;
+      overflow-y: scroll;
+      overflow-x: hidden;
+     }
+      .buttoncontain {
+       display: flex;
+  flex-wrap: nowrap;
+  background: transparent;
+  position: relative;
+  left: 50px;
+  z-index: 999;
+     }
+     
+      .button {
+       background: repeating-linear-gradient(
+-45deg,
+#5a3fb0,
+slateblue 50%
+);
+width: 80px;
+height: 20px;
+display: block;
+border: 5px solid black;
+border-radius: 20px;
+position: relative;
+top: -50px;
+left: 380px;
+margin-left: 20px;
+box-shadow: 4px 8px 0 1px rgba(0, 0, 0, 0.6);
+     }
+     
+         .button:active {
+          border-color: #100324;
+       top: -47px;
+       left: 382px;
+       box-shadow: 2px 4px 0 2px rgba(0, 0, 0, 0.6);
+     }
+      
+  
+.inner {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+  scrollbar-color: slateblue #5a3fb0;
+  scrollbar-width: thin;
+}
+
+	
+@keyframes clip2 {
+    0% {
+
+    background: repeating-linear-gradient(
+45deg,
+var(--color1),
+var(--color1) 30px,
+var(--color2) 30px,
+var(--color2) 60px
+);
+box-shadow: 0px 0 15px 0 var(--color1);
+    }
+    
+       100% {
+        
+
+    background: repeating-linear-gradient(
+45deg,
+var(--color2),
+var(--color2) 30px,
+var(--color1) 30px,
+var(--color1) 60px
+);
+box-shadow: 0px 0 15px 0 var(--color2);
+    }
+}
+
+
+      /* <div class="hr"></div> */
+     .mailbox .hr {
+      
+       width: 100%;
+       height: 1px;
+       background: var(--color2);
+     }
+     
+     
+     @font-face { font-family: "tp"; src: url("https://underwhite.neocities.org/fonts/thickPixels.otf");}
+@font-face { font-family: "hh"; src: url("https://underwhite.neocities.org/fonts/hh.ttf");}
+@font-face { font-family: "muh"; src: url("https://underwhite.neocities.org/fonts/my.otf");}
+@font-face { font-family: "cs"; src: url("https://underwhite.neocities.org/fonts/cat.ttf");}
+@font-face { font-family: "sg"; src: url("https://underwhite.neocities.org/fonts/Skygraze.otf");}
+@font-face { font-family: "a"; src: url("https://underwhite.neocities.org/fonts/alphys.ttf");}
+@font-face { font-family: "ms"; src: url("https://underwhite.neocities.org/fonts/modeseven.ttf");}
+
+
+p {
+    word-break: break-all;
+    white-space: normal;
+}
+
+@keyframes flicker { 0% { opacity: 0.63 }; 1% { opacity: 0.46 }; 2% { opacity: 0.95 }; 3% { opacity: 0.37 }; 4% { opacity: 0.78 }; 5% { opacity: 0.41 }; 6% { opacity: 1.14 }; 7% { opacity: 0.9 }; 8% { opacity: 0.43 }; 9% { opacity: 1.17 }; 10% { opacity: 0.48 }; 11% { opacity: 0.94 }; 12% { opacity: 0.91 }; 13% { opacity: 0.92 }; 14% { opacity: 0.86 }; 15% { opacity: 0.73 }; 16% { opacity: 0.76 }; 17% { opacity: 1.04 }; 18% { opacity: 0.42 }; 19% { opacity: 0.99 }; 20% { opacity: 0.53 }; 21% { opacity: 0.76 }; 22% { opacity: 1.12 }; 23% { opacity: 1.22 }; 24% { opacity: 0.79 }; 25% { opacity: 0.36 }; 26% { opacity: 0.8 }; 27% { opacity: 0.57 }; 28% { opacity: 1.28 }; 29% { opacity: 1.05 }; 30% { opacity: 0.38 }; 31% { opacity: 0.85 }; 32% { opacity: 1.23 }; 33% { opacity: 1.07 }; 34% { opacity: 0.41 }; 35% { opacity: 0.64 }; 36% { opacity: 0.4 }; 37% { opacity: 0.63 }; 38% { opacity: 0.97 }; 39% { opacity: 1.03 }; 40% { opacity: 0.84 }; 41% { opacity: 1.34 }; 42% { opacity: 0.78 }; 43% { opacity: 0.69 }; 44% { opacity: 1.17 }; 45% { opacity: 0.64 }; 46% { opacity: 1.04 }; 47% { opacity: 1.02 }; 48% { opacity: 0.65 }; 49% { opacity: undefined }; 50% { opacity: 1 }; 
+        }
+        
+        @keyframes flicker2 { 0% { opacity: 0.1 }; 1% { opacity: 0.2 }; 2% { opacity: 0.12 }; 3% { opacity: 0.1 }; 4% { opacity: 0.1}; 5% { opacity: 0.11 }; 6% { opacity: 0.14 }; 7% { opacity: 0 }; 8% { opacity: 0.403 }; 9% { opacity: 0.17 }; 10% { opacity: 0.18 }; 11% { opacity: 0.14 }; 12% { opacity: 0.11 }; 13% { opacity: 0.1  }; 14% { opacity: 0.1  }; 15% { opacity: 0.13 }; 16% { opacity: 0.16 }; 17% { opacity: 0.04 }; 18% { opacity: 0.02 }; 19% { opacity: 0.04 }; 20% { opacity: 0.03 }; 21% { opacity: 0.36 } 22% { opacity: 0.12 }; 23% { opacity: 0.1  }; 24% { opacity: 0.09 }; 
+        }
+        
+        h1 {
+          color: #7f07d5; 
+ background-image: linear-gradient(45deg, #8d6fed 50%, var(--color2) 50%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+ font-size: 30px;
+
+        }
+        
+        h2 {
+          color: #7f07d5; 
+ background-image: linear-gradient(45deg, var(--color1) 50%, #8d6fed 50%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+ font-size: 20px;
+        }
+        
+        /** Text Gradient Example */ 
+
+        
+        h1, h2, h3, h4, h5, h6 { font-family: "sg", sans-serif;}
+        
+        button {
+          border: 2px solid var(--color2);
+          background: black;
+          padding: 10px;
+          width: fit-content;
+          text-align: center;
+          height: 38px;
+          color: var(--color2);
+          font-family: "tp";
+          cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+          transition: 1s;
+        }
+        button:hover {
+          cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+          border: 2px solid var(--color1);
+          color: var(--color1);
+          box-shadow: 0 0 40px 0 rgba(106, 90, 205, 0.2);
+        transition: 1.3s;
+        }
+        
+        
+        button::after {
+          content: " »";
+        }
+        
+        a {
+          color: #7f07d5; 
+ background-image: linear-gradient(45deg, var(--color1) 50%, #8d6fed 50%); 
+ background-clip: text; 
+ -webkit-background-clip: text; 
+ -webkit-text-fill-color: transparent; 
+ text-decoration: none;
+        }transition: 1.3s;
+        }
+        
+        a:hover {
+transition: 1.3s;
+ background-image: linear-gradient(45deg, var(--color2) 50%, var(--color1) 50%); 
+ filter: brightness(90%);
+
+        }
+        
+        b, strong  {
+          color: slateblue;
+        }
+        
+        i {
+          color: slateblue;
+          opacity: 0.6;
+          font-size: 7px;
+          
+        }
+        
+        underline {
+          font-weight: bold;
+          
+        }
+   </style>
+  </head>
+  <body style="overflow-y: scroll; overflow-x: hidden;">
+   <center> 
+   <div class="mailbox"><center>
+     <div class="inner">
+       <h1>
+       Title
+        </h1>
+        <i style="font-size: 10px;">Description Of Title</i>
+        <br><br>
+        
+        <h2>Lorem Ipusm</h2>
+        <i style="font-size: 10px;">Lorem Ipsum is dummy text for testing purposes. It does not mean anything. Description of Heading 2</i>
+        <br><br>
+        <div class="hr"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere vehicula quam vitae laoreet. Proin sed diam rutrum elit efficitur porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla lacinia ac risus et facilisis. Pellentesque dignissim rhoncus dui ac cursus. Fusce in quam pretium, cursus risus sed, semper dui. Nunc mattis rutrum volutpat.
+<br><br>
+Donec eu molestie ligula. Aliquam odio enim, finibus eu lorem vel, luctus porta leo. Integer malesuada lobortis eleifend. Aenean venenatis faucibus turpis vitae lacinia. Proin nec mauris ac metus scelerisque faucibus. Quisque viverra in est at consectetur. Curabitur eget eleifend elit, ac gravida enim. Quisque efficitur interdum dapibus. Nunc molestie nibh purus, ac facilisis ex vestibulum nec.
+<br><br>
+Quisque maximus neque porta molestie commodo. Sed viverra ex sed massa accumsan, nec aliquam nisi condimentum. Vestibulum volutpat sapien at sagittis mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam vitae est non orci laoreet condimentum. Maecenas auctor faucibus diam, vitae efficitur magna aliquam eget. Donec id scelerisque nulla, quis volutpat ex.
+<br><br>
+Aliquam imperdiet in urna et pharetra. Aliquam iaculis quis orci non placerat. In hac habitasse platea dictumst. Donec urna felis, pulvinar quis erat ut, pretium sollicitudin nibh. Praesent congue ipsum et felis elementum tempor. Morbi euismod suscipit est vel vehicula. Vivamus eget orci eget ipsum sollicitudin volutpat consequat ac purus. Donec felis leo, commodo vel lacus semper, cursus gravida mauris. Nullam pretium varius metus eget mattis. Mauris eros mauris, facilisis eget ullamcorper vitae, tempus eu nunc. Vivamus luctus nisi leo, et sodales enim dapibus sed.
+<br><br>
+Sed porttitor laoreet lorem. Donec bibendum scelerisque nulla, id aliquam augue. Sed dapibus mauris vitae mauris tristique, eu auctor lacus fringilla. Duis pharetra metus in lacus laoreet cursus. In finibus pulvinar lorem vel tincidunt. Cras mattis orci et urna ullamcorper volutpat. Nam sollicitudin est sit amet libero pellentesque, consectetur eleifend felis mollis. Ut at ipsum quis tortor ullamcorper consectetur dignissim nec nulla. Nullam et nisl in ante rutrum tempor eu eu risus. Mauris lobortis nibh at tellus sodales, a egestas sem mollis. Aliquam convallis purus lorem, nec imperdiet massa accumsan vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+<br><br>
+Etiam congue commodo velit vel rutrum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ullamcorper lacinia lacus, et scelerisque dolor. Quisque imperdiet pulvinar augue vitae luctus. Proin lectus neque, mattis eu varius sed, tincidunt a magna. Nulla facilisis purus ut lacus congue ultricies. Nulla ultricies, lectus non convallis congue, mauris erat scelerisque odio, et fermentum leo justo id lacus. Etiam lacinia tortor a porta condimentum. Ut finibus neque mi, eu varius mi congue vel. Aenean aliquet felis quam, facilisis porta velit efficitur ac. Proin hendrerit nisl dui, et condimentum mauris vestibulum sed. Fusce in quam tempus turpis scelerisque egestas.
+<br><br>
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras auctor est id nisi efficitur, vitae commodo lacus bibendum. Proin pharetra sodales tellus, sit amet dapibus ipsum tristique id. Proin.</p><br><br>
+<div class="hr"></div>
+<br><br>
+<h2>Element Test</h2>
+<i style="font-size: 10px;">Always the divs.</i><br><br>
+
+<div class="hr"></div>
+       <br><br><h3>Links</h3>
+       <a href="#">Link</a>
+         <br><br><br><br>
+         <button style=""><a href="#">Button</a></button>
+         <br><br><br><br><br>
+         <b>Bold</b>
+         <i>Italic</i>
+         <strong>Important</strong>
+       
+       
+       
+     </div>
+     </center>
+    
+   </div>
+    <div class="buttoncontain" style="opacity: 1;"><div class="button"></div> <div class="button"></div> <div class="button"></div> <div class="button"></div></div>
+  
+
+   </center>
+  </body>
+</html>

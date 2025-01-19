@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of underwhite</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style> 
+    @font-face {font-family:'hello';src: url("/fonts/000webfont.ttf");}
+    @font-face {font-family:'hello2';src: url("/fonts/modeseven.ttf");}
+    
+    :root {
+  --animation-time: 2s; 
+}
+    
+    
+    body {
+      font-family: "hello";
+      margin: auto;
+      text-align: center;
+      animation: fade var(--animation-time) infinite;
+      
+    }
+    
+    @keyframes fade {
+      from {
+        opacity: 0.9;
+      }
+      
+      to {
+        opacity: 1;
+      }
+    }
+     
+      .a {
+        background: white;
+        color: black;
+        width: calc(100% - 600px);
+        text-align: center;
+        height: 20px;
+        display: block;
+        margin: auto;
+        text-decoration: none;
+        font-family:'hello2';
+        padding-top: 10px;
+        font-size: 10px;
+      }
+      .a:hover {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>how did you find this?</h2>
+    <p>this is not afferminded with my website ok it's something else, only testing. if it's made by chatgpt it's only testing. it doesn't fall into the "this is part of the website lol" thing..</p>
+    <p>alright ig.. here's sometheifngs. (i hid some, YOU find it :D)</p>
+   
+      <a href="construction.html" class="a">construction page for later</a><br>
+      <a href="code" class="a">vinyl recorder 404 page inspired by tobyfox</a><br>
+      <a href="eeeeeeeedddddd" class="a">phone, took from lazybones</a><br>
+      <a href="fakemailboxlore" class="a">newsletter/unfinished layout inspired by mailboxes</a><br>
+      <a href="flashlight" class="a">flashlight</a><br>
+      <a href="not_found" class="a">gateway</a><br>
+      <a href="old" class="a">arcived layout</a><br>
+      <a href="passbad" class="a">passbad by chatgpt</a><br>
+      <a href="test" class="a">test by chatgpt</a><br>
+      <a href="new" class="a">whitebox by chatgpt</a><br>
+      <a href="ferret" class="a">ferretosan</a><br>
+    <script>
+     var red = document.querySelector('body');
+
+function setProperty(duration) {
+  red.style.setProperty('--animation-time', duration +'s');
+}
+
+function changeAnimationTime() {
+  var animationDuration = Math.random();
+  setProperty(animationDuration);
+}
+
+setInterval(changeAnimationTime, 1000);
+    </script>
+  </body>
+</html>

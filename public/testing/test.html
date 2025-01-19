@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>msuci!!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .music-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative;
+        }
+        .music-box .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: none;
+        }
+        .box:before {
+            content: '🎶'; /* Music note to represent the music box */
+            font-size: 2em;
+        }
+        .controls {
+            margin-top: 100px; /* Updated margin-top to 100px */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .volume {
+            margin-top: 10px;
+        }
+        .controls input[type="range"] {
+            width: 100%;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            float: left;
+            transition: background 0.3s;
+        }
+        .controls input[type="range"]:hover {
+            background: #bbb;
+        }
+        .controls input[type="range"]::-webkit-slider-thumb {
+            width: 15px;
+            height: 15px;
+            background: #007BFF;
+            cursor: pointer;
+        }
+        .controls input[type="range"]::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #007BFF;
+            border-radius: 50%;
+            cursor: pointer;
+            
+        }
+        audio {
+            display: none; /* Hide the audio player */
+        }
+        
+          .audio-container {
+      text-align: center;
+    }
+    .audio-controls {
+      margin-top: 20px;
+    }
+    #time-display {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .audio-controls input[type="range"] {
+      width: 80%;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="music-box">
+        <div class="box" id="music-box"></div> <!-- Music box visual -->
+        <audio id="audio-player" controls>
+            <!-- Default audio will be loaded first -->
+            <source id="audio-source" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="controls">
+            <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
+        </div>
+
+        <!-- Horizontal Volume Control -->
+        <div class="volume">
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.005" value="1" oninput="changeVolume(this)">
+        </div>
+
+    <div class="audio-controls">
+      <input type="range" id="time-slider" min="0" value="0" step="0.1">
+      <div id="time-display">00:00 / 00:00</div>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio-player');
+    const timeSlider = document.getElementById('time-slider');
+    const timeDisplay = document.getElementById('time-display');
+
+    // Update the slider and time display based on audio progress
+    audio.addEventListener('timeupdate', () => {
+      const currentTime = audio.currentTime;
+      const duration = audio.duration;
+
+      // Update slider position
+      timeSlider.value = currentTime;
+
+      // Format current time and total duration
+      const currentFormatted = formatTime(currentTime);
+      const durationFormatted = formatTime(duration);
+
+      // Display current time and total duration
+      timeDisplay.textContent = `${currentFormatted} / ${durationFormatted}`;
+    });
+
+    // Update audio time when the slider is changed
+    timeSlider.addEventListener('input', () => {
+      audio.currentTime = timeSlider.value;
+    });
+
+    // Format time as MM:SS
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    // Set the slider max value when the audio metadata is loaded
+    audio.addEventListener('loadedmetadata', () => {
+      timeSlider.max = audio.duration;
+    });
+  </script>
+
+    </div>
+
+    <script>
+        // Array of available audio files (replace these with actual paths or URLs)
+        const songs = [
+            
+            "https://files.catbox.moe/23jdra.mp3",  // Replace with actual paths or URLs
+        ];
+            
+
+        let isPlaying = false; // To track play/pause state
+        const audioPlayer = document.getElementById("audio-player");
+        const audioSource = document.getElementById("audio-source");
+        const playPauseBtn = document.getElementById("play-pause-btn");
+        const musicBox = document.getElementById("music-box");
+
+        let rotationAngle = 0;  // Variable to track current rotation
+
+        // Function to load a random song and play it
+        function loadRandomSong() {
+            const randomIndex = Math.floor(Math.random() * songs.length); // Random index
+            audioSource.src = songs[randomIndex];  // Set new source
+            audioPlayer.load();                    // Load the new audio file
+            if (isPlaying) {
+                audioPlayer.play(); // Automatically play if already playing
+            }
+        }
+
+        // Function to toggle between play and pause
+        function togglePlayPause() {
+            if (isPlaying) {
+                audioPlayer.pause(); // Pause the audio
+                playPauseBtn.innerText = "Play"; // Change button text
+                // Stop the rotation, but retain the last angle
+                musicBox.style.animation = "none";
+            } else {
+                audioPlayer.play(); // Play the audio
+                playPauseBtn.innerText = "Pause"; // Change button text
+                // Restart the rotation animation from the current angle
+                musicBox.style.animation = `rotateBox 6s linear infinite`;
+            }
+            isPlaying = !isPlaying; // Toggle play state
+        }
+
+        // Function to simulate continuous spinning
+        function updateRotation() {
+            if (isPlaying) {
+                rotationAngle += 1; // Increment the rotation angle
+                musicBox.style.transform = `translateX(-50%) rotate(${rotationAngle}deg)`; // Apply the new rotation
+            }
+        }
+
+        // Function to change the volume of the audio player
+        function changeVolume(slider) {
+            const volume = slider.value; // Get slider value
+            audioPlayer.volume = volume; // Set audio volume based on slider value
+        }
+
+        // Load a random song when the page first loads
+        window.onload = function() {
+            loadRandomSong();
+            setInterval(updateRotation, 16); // Update rotation every frame (about 60fps)
+        };
+    </script>
+
+</body>
+</html>
+

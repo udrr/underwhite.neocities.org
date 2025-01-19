@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose.</title>
+    <style>
+    
+    			body:before {
+        content: "";
+        position: fixed;
+        opacity: 0.3;
+        left: 0;
+        top: 0;
+        width: 1000%;
+        height: 1000%;
+        background-size: 50px;
+        pointer-events: none;
+        z-index: 1000;
+        background-image: url(https://augar.nekoweb.org/images/background/overlay.png);
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+    }
+    
+    
+@keyframes Static {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -8px;
+    }
+}
+
+  
+html, a, a:hover {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+}
+  
+    @font-face {
+      font-family: 'Nunito';
+      src: url("https://underwhite.neocities.org/fonts/modeseven.ttf")
+    }
+    
+     @font-face {
+      font-family: 'skygraze';
+      src: url("https://underwhite.neocities.org/fonts/bitwise.ttf")
+    }
+    
+    body {
+      background: black;
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+        .text-container {
+            font-size:10px;
+        }
+
+        .hover-text {
+            color: blue;
+            cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+            font-weight: bold;
+            margin-right: 0px;
+        }
+
+         #main-text {
+            font-size: 18px;
+            margin-top: 20px;
+            font-family: 'skygraze';
+        }
+
+       
+        .color-1 {
+            color: red;
+        }
+
+        .color-2 {
+            color: green;
+        }
+
+        .color-3 {
+            color: purple;
+        }
+        
+         .color-4 {
+            color: blue;
+        }
+        
+        .play {
+        
+        width: 160px;
+        height: 40px;
+        background: #07011c;
+        color: white;
+        border-radius: 20px;
+        line-height: 45px;
+        
+        }
+        
+        .inner {
+          
+           max-width: 600px; 
+           position: relative; 
+           top: 25%; 
+           left: 27%; 
+           border: 4px double purple;
+           background: black; 
+           border-radius: 20px;
+           text-align: center;
+          
+        }
+        
+        
+        .hr { color:purple; }
+    </style>
+</head>
+<body><br><br><br><br><br><br><br><br><br>
+  <div class="inner"><p> Choose someone.</p>
+  <br><br>
+    <div class="text-container">
+        <span class="hover-text" id="hover-text-1">1</span>
+        <span class="hover-text" id="hover-text-2">2</span>
+        <span class="hover-text" id="hover-text-3">3</span>
+        <span class="hover-text" id="hover-text-4">4</span><center><br>
+        <p class="hr">----------------------------------------------------------------------------------------------------</p><br><br>
+        <div class="play"><p id="main-text"> </p><br><br><br>
+        </div></div></div>
+
+</center>
+   <script>
+      // i finally learned javascruptz
+        // get the elements
+        const hoverText1 = document.getElementById('hover-text-1');
+        const hoverText2 = document.getElementById('hover-text-2');
+        const hoverText3 = document.getElementById('hover-text-3');
+        const hoverText4 = document.getElementById('hover-text-4');
+        const mainText = document.getElementById('main-text');
+
+        // define the new texts for each hover element
+        const newText1 = "THIS";
+        const newText2 = "IS";
+        const newText3 = "COOL";
+        const newText4 = "LOL";
+
+        // store the original text of the main text for later use
+        const originalText = mainText.textContent;
+
+        // event listeners for each hoverable text
+        hoverText1.addEventListener('mouseenter', () => {
+            mainText.textContent = newText1;  // change to text 1
+            mainText.classList.remove('color-2', 'color-3' , 'color-4'); // remove other color classes
+            mainText.classList.add('color-1');  // change text color to red
+        });
+
+        hoverText1.addEventListener('mouseleave', () => {
+            mainText.textContent = originalText;  // revert to original text
+        });
+
+        hoverText2.addEventListener('mouseenter', () => {
+            mainText.textContent = newText2; 
+            mainText.classList.remove('color-1', 'color-3', 'color-4'); 
+            mainText.classList.add('color-2'); 
+        });
+
+        hoverText2.addEventListener('mouseleave', () => {
+            mainText.textContent = originalText; 
+        });
+
+        hoverText3.addEventListener('mouseenter', () => {
+            mainText.textContent = newText3; 
+            mainText.classList.remove('color-1', 'color-2', 'color-4'); 
+            mainText.classList.add('color-3'); 
+        });
+
+        hoverText3.addEventListener('mouseleave', () => {
+            mainText.textContent = originalText;  
+        });
+        
+         hoverText4.addEventListener('mouseenter', () => {
+            mainText.textContent = newText4; 
+            mainText.classList.remove('color-1', 'color-2', 'color-3'); 
+            mainText.classList.add('color-4'); 
+        });
+
+        hoverText4.addEventListener('mouseleave', () => {
+            mainText.textContent = originalText;  
+             
+        });
+        
+    </script>
+</body>
+ </html>

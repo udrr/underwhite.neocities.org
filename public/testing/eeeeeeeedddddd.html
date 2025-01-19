@@ -1,0 +1,1098 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<meta name="credit" content="base by weiman, instagram base by minna, cameraroll taken from templatesss and updated with hover by tentacool, everything else and updated to iOS 11 by morley">
+
+
+<title>phone</title>
+<link rel="shortcut icon" href="https://i.imgur.com/zkgCrD3.png">
+
+<link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+/* ---- GENERAL ---- */
+
+p {
+    text-indent: 10px;
+}
+
+body {
+  background-image: url(https://plus.unsplash.com/premium_photo-1672944876342-4090164e1c04?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFwZXIlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww);  
+  overflow-y: hidden;
+  overflow-x: hidden;
+    
+}
+
+#container {
+  width: 450px;
+  height: 500;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: transparent;
+}
+
+#s-m-t-tooltip {
+  max-width:200px;
+  padding:3px 5px;
+  margin:5px 0px 0px 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: helvetica, sans-serif;
+  font-size:8px;
+  font-weight:light;
+  letter-spacing:+1px;
+  text-align: justify;
+  color:white;
+  z-index:999999999999999999;
+  -moz-box-shadow: 2px 2px 40px rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+::-webkit-scrollbar-buttons {
+  background-color: grey;
+  display: block;
+}
+
+
+
+			body:before {
+        content: "";
+        position: fixed;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 80px;
+        pointer-events: none;
+        z-index: 1000;
+        background-image: url(https://dimden.dev/images/overlay.png);
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+    }
+    
+    
+@keyframes Static {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -8px;
+    }
+}
+
+
+
+
+
+html, a, a:hover {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+}
+
+#options {
+  float: left;
+  margin-top:150;
+  height:610;
+  width:130;
+}
+
+#telephone {
+  float: right;
+  height:610;
+  overflow: hidden;
+  width:292;
+}
+
+.icons {
+  width:50;
+  padding:5px;
+}
+
+
+
+/*
+WHITE PHONE - https://i.imgur.com/zWl7dfF.png
+BLACK PHONE - https://i.imgur.com/ko1Eftl.pngu
+REPLACE LINK BELOW WITH LINK YOU WANT
+*/
+.phone {
+  background: url(https://i.imgur.com/zWl7dfF.png) no-repeat;
+  width: 292;
+  height: 610;
+  overflow: hidden;
+}
+
+
+/*
+THIS IS THE INSIDE OF YOUR PHONE SCREEN
+THIS CAN BE ANY IMAGE YOU WANT RESIZED TO 256x465
+*/
+#inside {
+  background: url(https://underwhite.neocities.org/images/png/phone.png) no-repeat;
+  display: inline-block;
+  position: absolute;
+  visibility:visible;
+  margin-left:18px;
+  top:101px;
+  overflow:hidden;
+  z-index:-2;
+  width:256px;
+  background-size: 254px;
+  overflow: scroll;
+  height:465px;
+    }
+  
+  textarea {
+  outline: none;
+  resize: none;
+  }
+
+.a, .b, .c, .d, .e, .f, .g, .h {
+  width: 253;
+  height: 462;
+  margin: 0;
+  padding: 1px;
+  display: none;
+  overflow: hidden;
+  background-color: #000;
+  margin: 71 0 0 176;
+  position: fixed;
+  
+}
+
+
+/* ---- VOICEMAIL ---- */
+.vmcontent {
+  width: 256;
+  height: 345;
+  overflow: auto;
+  margin: 0;
+  padding:2px;
+  background-color: #fff;
+  font-family: helvetica, arial, sans serif;
+  font-size:12px;
+  line-height:14px;
+  text-transform:none;
+  text-align:left;
+}
+
+.vmheader {
+  margin: 0;
+  height: 65;
+  width: 254;
+  padding:3px;
+  background-color: #f2f2f4;
+  font-family: helvetica, arial, sans serif;
+  font-size:12px;
+  font-weight:bold;
+  text-align: center;
+  text-transform: none;
+  border-bottom:1px solid #ccc;  
+}
+
+.vmsender {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+  height:30;
+}
+
+.vmfrom {
+  padding-left:5;
+  padding-right:5;
+  font-size:13px;
+  color: #000;
+  float: left;
+  font-weight:bold;
+}
+
+.vmstats {
+  padding-left:5;
+  padding-right:5;
+  padding-bottom:5;
+  font-size:12px;
+  color: #8f8e94;
+  float: left;
+}
+
+.vminfo {
+  float: right;
+  margin-top:-15px;
+}
+
+.vmplay {
+  padding:5px;
+  height:15;
+  margin-top:0px;
+  font-size:11px;
+  margin-bottom:10px;
+  color:#8f8e94;
+}
+
+.vmbuttons {
+  padding-left:10;
+  padding-right:15;
+  font-size:12px;
+  font-weight: none;
+  text-align:center;
+  margin-bottom:10px;  
+}
+
+.vmbreak {
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  width: 85%;
+  background-color: #ececec;
+}
+
+.vmtranscript {
+  padding:10px;
+  padding-top:10px;
+  color:#8f8e94;
+}
+
+.vmbottom {
+  height:36px;
+  width:256px;
+  background:#F1F1F3;
+  padding-top:5px;
+  border-top:1px solid #ccc;
+  margin: 0;
+}
+
+
+/* ---- NOTES ---- */
+.notesheader {
+  height: 25;
+  width: 256;
+  padding-top: 5px;
+  background-color: #f7f7f7;
+  font-family: helvetica, arial, sans serif;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:;
+  color: #e4af0a;
+}
+
+.notescontent {
+  width: 234;
+  height: 407;
+  padding-left:10px;
+  padding-right:10px;
+  overflow: auto;
+  background-color: #f7f7f7;
+  font-family: helvetica, arial, sans serif;
+  color: #454545;
+  font-size:12px;
+  font-weight:normal;
+  line-height:14px;
+  text-transform:none;
+  text-align:left;
+}
+
+.notesbottom {
+  height:25px;
+  background:#222326;
+  text-align:center;
+  margin:0;
+}
+
+/* ---- MUSIC (UPDATED 25/07/16) ---- */
+.musicheader {
+  margin: 0;
+  height: 55;
+  width: 248px;
+  padding:3px;
+  background-color: #181818;
+  color:#fff;
+  font-family: arial, roboto;
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  text-transform: none;  
+}
+.musiccontent {
+  width: 254;
+  height: 350px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #181818;
+  font-family: helvetica, arial, sans serif;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: none;
+  text-align: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+a {color: #fff; text-decoration: none;
+}
+  
+.musictitle {
+  padding-left:5;
+  background-color: #181818;
+  color: #fff;
+  font-family: arial;
+  font-size:13px;
+  text-transform: none;
+}
+.musicbottom {
+  height:55px;
+  width:248px;
+  padding:3px;
+  color: #fff;
+  font-family:arial;
+  font-size:12px;
+  background:#222326;
+  text-align:center;
+  border-top:1px solid #888;
+  margin: 0;
+}
+
+/* ---- INSTAGRAM (ADDED 25/07/16) ---- */
+.instacontent {
+  width: 258;
+  height: 400;
+  overflow: auto;
+  margin: 0;
+  padding:2px;
+  background-color: #fff;
+  font-family: helvetica, arial, sans serif;
+  font-size:12px;
+  line-height:14px;
+  text-transform:none;
+  text-align:left;
+}
+
+.instaheader {
+  margin: 0;
+  height: 25;
+  width: 250;
+  padding:3px;
+  background-color: #FAFAFA;
+  font-family: grand hotel;
+  font-size:20px;
+  font-weight:bold;
+  text-align: center;
+  text-transform: none;
+  border-bottom:1px solid #ccc;  
+}
+
+.instauser {
+  height: 25;
+  padding-left: 10px;
+  width: 225;
+  background-color: #fff;
+  font-family: roboto;
+  font-size: 11px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.instapic {
+  margin: 0;
+  padding-bottom: 5px;
+  overflow: none;
+}
+
+.instabar {
+  padding-right: 3px;
+  border-bottom: 1px solid #ccc;
+  overflow: none;
+}
+
+.instafriends{
+  width: 235;
+  padding-left: 10px;
+  padding-top: 6px;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-family: roboto;
+  font-size: 11px;
+  overflow: none; !important
+ 
+}
+
+.instacaption{
+  width: 235;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-family: roboto;
+  font-size: 11px;
+  overflow: none; !important
+
+}
+
+.instacomment{
+  width: 235;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-family: roboto;
+  font-size: 11px;
+  overflow: none; !important
+}
+
+.instatime{
+  width: 235;
+  padding-left: 10px;
+  color: #ccc;
+  font-size: 8px;
+  font-family: roboto;
+  overflow: none; !important
+}
+
+.instafooter {
+  height:30px;
+  width:258px;
+  background:#f7f7f7;
+  padding-top:0px;
+  border-top:1px solid #ccc;
+  margin: 0;
+}
+
+/* ---- TEXT ---- */
+.textcontent {
+  width: 250;
+  height: 361;
+  overflow: auto;
+  margin: 0;
+  padding:2px;
+  background-color: #fff;
+  font-family: helvetica, arial, sans serif;
+  font-size:12px;
+  line-height:14px;
+  text-transform:none;
+  text-align:left;
+}
+
+.textfrom {
+  margin:10px 20px 10px 10px;
+  width:80%;
+  padding-left:4px;
+  background:url('https://i.imgur.com/bCM6Iww.png')bottom left no-repeat;
+}
+
+.textfrom2 {
+  background:#E5E5EA;
+  padding:5px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+}
+
+.textto {
+  margin:10px 10px 10px 40px;
+  width:80%;
+  padding-right:4px;
+  background:url('https://i.imgur.com/TvzLmoA.png')bottom right no-repeat;
+}
+
+.textto2 {
+  background:#00A7FF;
+  color: #ffffff;
+  padding:5px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+}
+
+.imgfrom {margin:10px 20px 10px 10px;}
+
+.imgto {margin:10px 10px 10px 90px;}
+
+.textheader {
+  margin: 0;
+  height: 50;
+  width: 248;
+  padding:3px;
+  background-color: #f9f9f9;
+  font-family: helvetica, arial, sans serif;
+  font-size:12px;
+  font-weight:;
+  text-align:center;
+  text-transform: none;
+  border-bottom:1px solid #ccc;  
+}
+
+.textbottom {
+  height:35px;
+  width:254px;
+  background:#fff;
+  padding-top:5px;
+  border-top:1px solid #ccc;
+  margin: 0;
+}
+
+.textcompose {
+  font-family: helvetica,arial,sans-serif;
+  font-size:12px;
+  line-height:20px;
+  width:165px;
+  height:25px;
+  margin-left:5px;
+  padding-left:5px;
+  border:none;
+  -webkit-border-radius:7px;
+  border-radius:10px;
+  -webkit-box-shadow:inset 0 0 3px 1px #bbb;
+  box-shadow:inset 0 0 3px 1px #bbb;
+}
+
+.textbutton {
+  float:left;
+  width:45px;
+  background:;
+  text-align:center;
+  font-size: 11px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:5px;
+  height:25px;
+  line-height:25px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#fff;
+  text-shadow:1px 1px 0 #444;
+  font-family: helvetica, arial, sans serif;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+/* ---- CAMERAROLL ---- */
+
+.cameraheader {
+  margin: 0;
+  height: 35px;
+  width: 252px;
+  padding:3px;
+  background-color: #f2f2f4;
+  font-family: helvetica neue, roboto;
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  text-transform: none;
+  border-bottom: 1px solid #ccc;  
+}
+
+.cameracontent {
+  width: 252px;
+  height: 378px;
+  overflow: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 1px;
+  padding-top: 6px;
+  background-color: #fff;
+  text-transform:none;
+  font-family: helvetica neue, roboto;
+  font-size: 12px;
+  text-align:left;
+  position: relative;
+}
+
+.camerabottom {
+  margin: 0;
+  height: 30px;
+  width: 252px;
+  padding:3px;
+  background-color: #f2f2f4;
+  font-family: helvetica neue, roboto;
+  font-size:9px;
+  font-weight:normal;
+  text-align:left;
+  text-transform: none;
+  color: #ccc;
+  border-top: 1px solid #ccc;
+}
+
+.zoom {
+  transition: transform .6s; /* Animation */
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+</style>
+
+
+<!-- THIS IS THE SCRIPT FOR A FANCY HOVER -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    <script>
+    (function($){
+    $(document).ready(function(){
+    $("a[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:90,
+    tip_fade_speed:0,
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+    </script>
+
+<!-- THIS IS THE SCRIPT FOR YOUR BOXES APPEARING AND HIDING; MAKE SURE TO EDIT THIS ACCORDING TO HOW MANY LINKS/BOXES YOU NEED -->
+<script src="http://code.jquery.com/jquery-1.10.0.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $(".one").click(function(){
+    $(".a").toggle();
+    $(".b,.c,.d,.e,.f,.g,.h").hide();
+  });
+  $(".two").click(function(){
+    $(".b").toggle();
+    $(".a,.c,.d,.e,.f,.g,.h").hide();
+  });
+  $(".three").click(function(){
+    $(".c").toggle();
+    $(".d,.e,.f,.g,.h,.a,.b").hide();
+  });
+  $(".four").click(function(){
+    $(".d").toggle();
+    $(".e,.f,.g,.h,.a,.b,.c").hide();
+  }); 
+  $(".five").click(function(){
+    $(".e").toggle();
+    $(".f,.g,.h,.a,.b,.c,.d").hide();
+  });   
+  $(".six").click(function(){
+    $(".f").toggle();
+    $(".e,.d,.g,.h,.a,.b,.c").hide();
+  }); 
+  $(".seven").click(function(){
+    $(".g").toggle();
+    $(".e,.d,.f,.h,.a,.b,.c").hide();
+  }); 
+  $(".eight").click(function(){
+    $(".h").toggle();
+    $(".e,.f,.g,.d,.a,.b,.c").hide();
+  });    
+});
+</script>
+
+</head>
+
+<body>
+<div id="container">
+<div id="options">
+    
+    <!--
+    THESE ARE YOUR SIDE ICONS TO ADD MORE JUST C/P 
+    MORE LINES AND CHANGE THE NUMBER CLASSES UP TO 
+    EIGHT WHEN C/PING THE DIV CLASS INFO BELOW USE 
+    THE CORRESPONDING LETTER ONE-A TWO-B THREE-C ETC 
+    -->
+    
+<a href="#" class="one"  title="notes"><img src="https://i.imgur.com/G8nnT7X.png" class="icons"></a>
+<a href="#" class="two" title="voicemail"><img src="https://i.imgur.com/NIZfEAi.png" class="icons"></a>
+<a href="#" class="three" title="text messages"><img src="https://i.imgur.com/k66T2ZW.png" class="icons"></a>
+<a href="#" class="four" title="instagram"><img src="http://i.imgur.com/HhJIwpb.png" class="icons"></a>
+<a href="#" class="five" title="spotify"><img src="http://i.imgur.com/cqcQEeG.png" class="icons"></a>
+<a href="#" class="six" title="camera roll"><img src="https://i.imgur.com/hUThws9.png" class="icons"></a>
+<BR>
+</div>
+
+<div id="telephone">
+<div class="phone"></div>
+<div id="inside"></div>
+</div>
+  
+<!--SECTION-->
+<div class="a">
+<div class="notesheader">
+<div style="float:left; padding-left: 5px;"><img src="http://i.imgur.com/BydvA4W.png" width="10" align="left">Notes</div>
+<div style="float:right;"><img src="http://i.imgur.com/rbuquCf.png" width="40" align="right" style="padding-right:15px;"></div></div>
+<div class="notescontent"><center><small><font color=#aeaeae>Last Updated on November 4, 2024 at 8:34AM.</font></small></center><br>
+<h2>A Rocket To Insanity</h2>
+<p style="background-color: lightyellow;">“AAAAAAAAAAAAAAAAAH! AAAAAAAAHH, AAAAAAAAAAAH!”
+</p><p>Screams echoed through the cloud palace of Rainbow Dash's home, the filly startled wide awake in a cold sweat, terror surging through her veins.
+</p><p>Nightmares. Again.
+</p><p>The seventh time this month, and it was always the same one. The one with the 'cupcakes'. Flashes of memory lanced through her head. Wings being hacked off, then ripped from their sockets. Needles plunged into her beating heart, adrenaline injected into her body to keep her awake and alert at the torture went on. The smell of her own flesh cooking, the sight of her own blood and gore spilling from her surgically incised belly, the mastermind behind her terror toying with those glistening organs like they were party favors.
+</p><p>She knew in her heart that Pinkie-Pie would never be capable of doing such a gruesome act, but that thought didn't help to make the dreams any less vivid. The pegasus pony sobbed openly, curling up in her blanket and rocking back and forth as her body trembled with fear. She hadn't told anyone about the dreams. About the lingering feeling of steel piercing flesh and blade cutting bone.
+</p><p>Her work had suffered because of the constant night terrors, the nightmares being so powerful that she was simply afraid of going back to sleep, some nights staying up altogether in an attempt to stave off the horrors for just one more night. And every pony wondered why she spent most of her day napping, in the open, in the daylight. Because in the shining brilliance of the sun, it was the only way she could actually rest. But even then, the black clutches of her fear-addled subconscious had begun to creep even into that relative safety, following her through the dreaming world.
+</p><p>Dash whimpered as tears streaked down her face, staining the fur of her cheeks as wide eyes darted around the darkened scenery of her room, heart pounding in her chest as breath came before hiccuping sobs, her wings clinging tight against her form as paranoia began to clutch at the edges of her mind. Shadows lurched and moved in her peripheral vision, routine natural noises becoming distorted and echoing within her mind, as adrenaline surged through her shivering form.
+</p><p>This wasn't healthy. Her mind was slowly breaking under the horrors of her subconscious mind, things that no pony should ever even have the slightest thought about chipping away at her psyche.
+</p><p>She was starting to crack.
+</p><p>“Rainbow Dash? Rainbow Dash! Hey, has anypony seen Rainbow Dash around?” Applejack trotted through the streets of Ponyville, looking high and low for the towns resident speedster pony. Bystanders just shook their head and shrugged.
+</p><p>“Horsefeathers! Figures that pony's nowhere t'be seen when you really need her!” The cowpony sighed and continued on through town, hoofbeats kicking up dust as she looked to the sky for the pegasus pony. “Consarnit! Rainbow Dash, where in the wild world of Equestria are you?!” A long yawn from the branches of a tree behind her met her answer, the pony in question dipping a head down and gazing at Applejack from an upside-down position. “Nhf. What, Applejack? What is it that is so important that you've got to interrupt my napping?” The western pony stamped a hoof on the ground, scowling at the pegasus.
+</p><p>“Now you know just why I'm making a fuss in findin' you! You said you were gonna bring over a little rainstorm for the crops at Sweet Apple Acres nearly two hours ago! Instead I find you out here, in a tree, snoozin' your little behind off!” Dash gave a groan, slipping out of the tree and landing on her hooves, shaking her head.
+</p><p>She looked more disheveled than usual, her mane a mess, dark bags under her eyes from many a sleepless night. She looked pale, sickly almost, yet still tried to put on an air of cheerfulness.. She heaved a yawn before giving a dismissive wave to Applejack. “Yeah yeah...keep yer saddle on...*yawn*...I'll get to it right now...sorry 'n stuff.” As the pegasus pony turned and spread her wings to take off, Applejack tilted her head to the side and gave a little frown. “Uh, Dash? You feelin' okay? You look a little...aheh...under the weather.” Dash grumped, shrugging her shoulders as she gave her wings a little test flap. “M'fine.” Was the only response from the pegasus. The cowpony behind her stepped forward, giving Dash's side a little nudge with her snout. “You sure about tha-” She was cut off by the Pegasus suddenly jerking away from Applejack, darting up into the air as her eyes went wide. “DON'T...don't...touch me. I'm fine...honest. Just...” She nearly spilled the beans right then and there...but refrained. She couldn't take the chance that the other pony might think different of her because she was being scared out of her mind every night by some stupid nightmare.
+</p><p>Her body gave a little shiver, as Applejack looked on with concern. “I uh...I mean...uh...gottago!” Before Applejack could say anything further, Dash was off like a rocket towards Sweet Apple Acres, leaving the cowpony to just scratch her head in confusion. “...That girl ain't right...”
+</p><p>Another terror-filled night. Dash lay curled upon the floor of her cloud house, blankets swathed around her shivering form. It was worse this time. She had been flayed open, set upon the dining table of the pink earth pony, as slabs of her own meat, dripping with her life fluids was sheared from her flanks, served to all of her friends – Herself still somehow alive enough to be aware of the entire situation.
+</p><p>Hearing the laughter as they devoured her living form, as fork and knife dug into her innards, tearing her apart. She was nothing more than a slab of meat for her friends enjoyment. Hiccups punctured through heavy sobs as the pegasus pony clutched at her head, the visions that her nightmares had been visiting upon her ingrained within her memory. Every horrible detail, from the fiery pain of rended flesh to the sickening sound of innards being torn and ripped out of her belly was cast in vivid depiction.
+</p><p>She whined as she lay curled tightly upon the floor, sniffling as tears gushed from her eyes. “Just leave me alone...why wont you leave me alone...” She hiccuped, rocking back and forth. “I don't deserve this, just stay out, stay out of my head, get out of my head please just get out of my head!” Fear turned to anger, Dash beating her hoofs against her temples. “Get out get out get out GET OUT GET OUT!” She weeped openly, grinding her forehead against the floor of her room, hoofs pounding and pounding at her head, bruising the flesh as pent up frustration and sleep deprivation erupted in an agonized scream of rage and sorrow. Another night. Another crack in the window.
+</p><p>Everypony had noticed it. It was in the way she walked. The way she talked. Her body language just screamed it. Gone was Rainbow Dash, that cheerful, brash speedster, replaced by...some hollow shell. She drifted aimlessly about over Ponyville, as weeks of interrupted sleep had taken its toll upon her. All of her friends knew that something was up, but none of them knew exactly what to do.
+</p><p>She had pushed them away when they had tried to confront her, lashing out like a wounded animal any time they tried to console her or plead her to get help. “Too headstrong” some would say. “Too proud” others still. But none of them realized the gravity of the situation until that one, fateful day. The day that Rainbow Dash finally snapped. 
+It had been an unseasonably warm spring day in Ponyville. Everypony was out enjoying the temperate weather, from foals to colts and then some, as everypony went about their business. Lyra and Bon-Bon chatting it up beneath their usual table at the cafe. Applejack selling the first harvest from Sweet Apple Acres, as ponies lined up for those ruby delectables.
+</p><p>And within the Candy Corner, Pinkie-Pie was busy darting to and fro in the kitchen, baking up a storm. She glanced at the clock every now and then, frowning each time before the bell to the door finally rang open, a haggard looking Rainbow Dash entering the shop. “Rainbow! You're finally here! Oh I've been so worried about you! You've been all mopesy-dopesy so I thought I'd ask you to come visit me so I could make you feel extra-super-special and cheer you up! But then you didn't show up when I thought you were going to and I was all sad that you were going to stay cooped up in your house all day but then you came in and now you're here and now we can have some fun!”
+</p><p>Dash merely looked at her blankly, before shaking her head and stumbling forward. “Whatever, Pinkie. What did you want me here for?” The energetic earth pony bounced about the kitchen, over towards one of the many ovens of the Candy Corner before pulling the door down, reaching in and pulling out a tray of puffy, fluffy cupcakes with a generous slathering of icing upon them. She spun around, grinning widely as she showed the baked goods off to Dash.
+</p><p>“I made you cupcakes!”
+</p><p>Dash paled. Mind flashed back to the earliest of those nightmares. The most vivid. The most intense. A tray of cupcakes. Tasting it. Finding motor skills rapidly deteriorating, stumbling as her body shut down under the effects of some unknown drug. Pinkie-Pie looming over her with that trademark grin, eyes gleaming as the world dimmed around her. And here it was. Happening for real. Vision became hazed as the world began to spin around her, the pegasus stumbling back and shaking her head, whispering under her breath.
+</p><p>“No...no...nonononononoNONONONO!” She backed up, eyes wide with fear as she shook her head violently, looking around frantically for a way out, any way out. The window? The door? “N-no...no, I don't want 'em. Not gonna l-let you...lemme out of here, LET ME OUT OF HERE!” Pinkie merely tilted her head to the side quizzically, setting the tray down and lifting a few of the cakes out and plating them, bouncing over to the shivering Rainbow Dash and offering the plate to the pegasus.
+</p><p>Dash stared at them. They were the same color. Same kind.
+</p><p>Run.
+</p><p>A voice in her head said.
+</p><p>Run, run you idiot, RUN.
+</p><p>A hoof lashed out, smacking the plate out of Pinkie-Pie's hooves. “I SAID I DON'T WANT THEM! I know what you're doing, it's not going to work!” Pinkie-Pie frowned at the discarded cupcakes, but in typical Pinkie fashion she just shrugged and went about cleaning them out, humming to herself. “Maybe you don't like avocado icing? That's okay! I made plenty more so we can make some to your liking! Is that okay, Rainbow? Dash?” She glanced back, the pegasus pony letting out panicked whimpering noises, eyes fixated on the pony before her, pupils nearly pinpricks as fear and adrenaline coursed through her veins.
+</p><p>She was pinned between Pinkie and the wall behind her, chest heaving with heavy gasps, her sleep deprived, horror filled mind played the scene from her nightmares over and over again. Of the saw rending through flesh, cutting through bone.
+</p><p>Run. “Get away...”
+</p><p>Scalpel piercing her breast, dragging through her flesh down to her groin, flaying her open like some sick sort of pinata.
+</p><p>Move. “...just get away, getawaygetaway...”
+</p><p>She was hyperventilating by now, no longer seeing a long-time friend, but a horrific, sadistic butcher. DO SOMETHING. And then she saw it. That shining, sharp protector, just sitting there on the table next to her. The voice within her mind whispered to her like a seductive lover, sounding so wrong but so right at the same time. 
+Kill her.
+</p><p>Dash hesitated. Part of her wanted to scream. Another, to run. But yet another, considered the request. Kill her. Before she kills you. Her mind was a maelstrom of conflicting thoughts, the pegasus feeling sick to her stomach, weak in the knees, the beat of her own heart pounding within her head. 
+Take the knife.
+</p><p>She stared at it. Hoof slowly stretching out, trembling as part of her still warred, still tried to reason.
+</p><p>Take it. Take. The knife.
+</p><p>Tears streamed down her face, as her hoof hovered above the handle of the tool turned weapon, as if the last frayed strands of her sanity knew what was happening, knew that it was fighting a battle it was going to lose. 
+TAKE IT.
+</p><p>She snatched it up, holding it in front of her at Pinkie-Pie with shaky hooves, her ears splayed back against her head, hiccuping between sobs. “Just leave me alone...please, Pinkie-Pie...just *hic* leave me alone!” Pinkie-Pie looked at the knife being wielded by her friend for a moment, before giggling and bouncing over towards Dash, whose heart sank as the filly rapidly approached. “Oh Dash, you silly filly! You got me good with that one! Never one to turn down an opportunity to prank, hu-”
+</p><p>She didn't think. Her body acting on its own. A gasp, Pinkie-Pie looking thunderstruck as Dash heaved, frozen in mid-strike, the silvery blade of the knife dripping with red ichor. Pinkie-pie brought a hoof up to her cheek, dabbing at the wide cut, looking at her own blood stained hoof.
+</p><p>“D-dash...wh-...” “I told you *hic* to stay away...WHY COULDN'T YOU JUST STAY AWAY!?” 
+Kill her.
+</p><p>“N-no, she's my f-friend...I c-can't...I...I”
+</p><p>KILL her...and the hurting will stop.
+</p><p>“P-please...P-pinkie...run...just run...oh god, PLEASE don't make me do this!” 
+KILL HER. KILL HER KILL HER KILL HER KILLHERKILLHERKILLHE-
+</p><p>What happened next was a blur, the memories fuzzy in Dash's mind. As Pinkie-Pie tried to make sense of the sudden attack upon her person, Dash let out a chilling mix between a wail and a scream, catching the earth pony off-guard as the blade darted forward, slashing through her neck, severing vein and artery as a gout of crimson issued forth from the wound.
+</p><p>Shock and surprise registered on Pinkie-Pie's face as she gurgled, blood hemorrhaging from that wound, staining her pink fur with the red hue of her life essence. Again and again that silver blade struck out, Dash's speed not restricted to her flight as she plunged that blade into the filly before at rapid pace, sobbing hysterically as she carved the squirming and flailing filly up.
+</p><p>Through breast, through bone, Pinkie-Pie's struggles slowly faded as her blood was spilt onto the floor of the Candy Corner's kitchen, pooling around her, splattering the pegasus atop her with that hot red fluid. “JUST LEAVE ME ALONE!” She screamed out, fear turning to rage.
+</p><p>“YOU COULDN'T JUST GO AWAY, COULD YOU?! YOU HAD TO KEEP COMING BACK!” Pinkie's struggles grew weaker and weaker, her eyes wide with terror as tears streamed down her face, visage frozen in a mix of fear and anguish.
+</p><p>What did she do? Was it the icing? Did she use salt instead of sugar? Why?
+</p><p>As those slowly glazing eyes stared up at Dash, the strikes of the blade grew slower and slower, the pegasus finally plunging the implement deep into Pinkie's chest, spearing through the filly's heart, ending her party once and for all. Dash heaved for breath, limbs shaking as she looking down upon her handiwork.
+</p><p>Blood stained her fur and feathers, painting her a deep crimson, wearing the life force of her former friend like some macabre outfit. She sobbed, letting out a wail of anguish as she realized the gravity of what she had just done. Arms wrapped around the butchered filly, Dash holding the still warm corpse of her friend tight. “No..nononoNONONO! I didn't...oh Celestia, no...what have I done?! WHAT DID I DO!?”
+</p><p>Dash's body shook as her chest heaved with each gut-wrenching cry of anguish, suddenly letting go of Pinkie's body and letting out an ear-piercing shriek of terror as she looked at her own hooves.
+</p><p>Blood and viscera coated them, dripping down through her fur, the scene straight from a horror movie laid before her eyes. She skittered backwards, slipping in the pool of blood of her own creation, slamming cheekfirst into the pile of gore before finally gaining purchase and dragging herself over against the farthest wall from Pinkie's still form, her stomach mutinying on her as she emptied its contents upon the floor next to her. Her mind raced, thoughts running a mile a minute as she hiccuped, wide, terror filled eyes staring at the scene made by her own hoof.
+</p><p>Murder.
+</p><p>She had committed murder. On one of her own friends. It was unheard of.
+</p><p>Nopony had murdered another in hundreds of years. Voices within her mind clawed and whispered to her, the world spinning around her as time seemed to stand still for her, the last vestiges of her sanity being plucked apart, one by one...until that final thread finally snapped.
+</p><p>Hooves grasped at her head, matting her rainbow-colored mane down with blood and ichor, the pegasus rocking back and forth in the blooded kitchen as a crazed grin spread across her muzzle, humming disjointedly to herself.
+</p><p>“...g-giggle at the ghastly...heehee...s-snortle at the spooOOooky...haha...heheheeheeeehaha! HAHAH! AHAHAHAHA! HAAAAAAAAHAHAHA!” Dash threw her head back, curling legs against her chest as forelimbs wrapped around them, psychotic laughter issuing forth from the speedster pegasus as her world shattered around her, psyche and spirit broken and splintered.
+</p>
+</div>
+<div class="notesbottom"><img src="https://i.imgur.com/zE93rqN.png" width="256"></div>
+</div>
+<!--/SECTION-->
+
+<!--SECTION-->
+<div class="b">
+<div class="vmheader">
+<div style="float:left; margin-left:10px;">
+<font style="color:#ccc; font-weight:normal;">Greeting</font>
+</div>
+<div style="float:right; margin-right: 10px;"><font style="color:#ccc; font-weight:normal;">Edit</font>
+</div>
+<br><br>
+<div style="float:left; margin-left:10px;">
+<font style="font-size:25px;">Mail</font></div>
+</div>
+<div class="vmcontent">
+<div class="vmsender">
+<div class="vmfrom">underwhite <span style="font-weight: bold; color: white; border-radius: 2px; background-color: darkgrey; width: 110px;">1 year ago</span></div>
+
+
+<div class="vmstats">
+
+  
+    <div class='feed-reader'>you funz u know dat? :D</div>
+    
+
+</div>
+
+<div class="vminfo"><img src="https://i.imgur.com/jeCINSJ.png" width=45></div>
+</div>
+<br>
+<div class="vmtranscript">
+<a href="https://status.cafe/users/lazybones">log</a>
+</div>
+
+<div class="vmplay">
+<img src="https://i.imgur.com/vVeCKU7.png" width="245">
+<div style="float:left; margin-top:-10px; margin-left:20px; position: absolute; z-index: 1;">0:00</div><div style="float:right; margin-top:-10px; margin-left:210px; position:absolute; z-index:2;">-0:22</div>
+</div>
+<div class="vmbuttons">
+<div style="float:left;"><font style="color:#007aff;">Speaker</font></div><font style="color:#007aff;">Call Back</font><div style="float:right;"><font style="color:#ff3a31;">Delete</font></div>
+</div>
+<div class="vmbreak"></div>
+</div>
+
+<div class="vmbottom"><img src="https://i.imgur.com/EW7yRj3.png" width=256></div>
+
+
+
+</div>
+<!--/SECTION-->
+
+<!--SECTION-->
+<div class="c">
+<div class="textheader">
+
+<div style="float:left; margin-right:10px;">
+<img src="https://i.imgur.com/uhIJvnw.png" align=left></div>
+<img class="img-circle" src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" width="30">
+<div style="float:right;"><img src="https://i.imgur.com/T2hdNX4.png" align=right></div>
+<div style="center; margin-top:2px;">neocities</div>
+</div>
+
+<div class="textcontent">
+<iframe src="https://www3.cbox.ws/box/?boxid=3512210&boxtag=5zMH4k" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+
+
+</div>
+<div class="textbottom">
+<div class="textbutton"><img src="https://i.imgur.com/VQqiBgI.png"></div>
+</div></div>
+<!--/SECTION-->
+
+<!--SECTION-->
+<div class="d">
+<div class="instaheader">
+<div style="float:left; margin-right:-5px;">
+<img src="https://i.imgur.com/JytozMg.png" height="15" style="padding-top: 6px; padding-left: 5px;" align="left">
+</div>
+<font style="color:#000;">Instagram</font>
+<div style="float:right;"><img src="https://i.imgur.com/qACjKUj.png" height="15" style="padding-top: 6px; padding-right: 5px;" align="right">
+</div>
+</div>
+<div class="instacontent">
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic1.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">liked by <b>doggient, atmoic_spork, rockangel86</b> and 1452 others</div>
+<div class="instacaption"><b>lazybones</b> what happened <font color="#125688">#nature #viral</font></div>
+<div class="instacomment"><font color="#ccc">View all 742 comments</font><br>
+<b>shyeyes2006</b> a small mercy lies ahead, what with the future yet to come <br>
+<b>pmpbtch101</b> sixty-four says hello<br>
+</div>
+<div class="instatime">3 MINUTES AGO</div>
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic2.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">224 likes</div>
+<div class="instacaption"><b>lazybones</b> another day has its world rocked by trees (or rocks)</div>
+<div class="instacomment"> <font color="#ccc">View all 32 comments</font><br>
+<b>sum_plan</b> a flailing monkey tests the thesis that your theorem would unleash<br>
+<b>shay23</b> <b><font color="#125688">@lawnmower_elf</font></b> A setback of the heart loves a good joke! <br>
+</div>
+<div class="instatime">2 HOURS AGO</div>        
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic3.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">liked by <b>shyeyes2006, pmpbtch101, sum_plan</b> and 65 others</div>
+<div class="instacaption"><b>lazybones</b> A classical composition likes to take a walk in the park.</div>
+<div class="instacomment"><font color="#ccc">View all 76 comments</font><br>
+<b>sum_plan</b> A sound you heard sickens me.<br>
+<b>shyeyes2006</b> Lucky number slevin sat down once more.<br>
+</div>
+<div class="instatime">6373 MINUTES AGO</div>
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic4.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">6 likes</div>
+<div class="instacaption"><b>lazybones</b> A sickingly prodigous profile loves to love.</div>
+<div class="instacomment"> <font color="#ccc">View all 486 comments</font><br>
+<b>peterl90</b> woof<br>
+<b>migioto</b> lol<br>
+</div>
+<div class="instatime">7 WEEKS AGO</div>        
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic5.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">liked by <b>babephat, koolep, above7zine</b> and 56 others</div>
+<div class="instacaption"><b>lazybones</b>  As the rental car rolled to a stop on the dark road, her fear increased by the moment.</div>
+<div class="instacomment"><font color="#ccc">View all 39 comments</font><br>
+<b>aprillsen</b> So long and thanks for the fish. <br>
+<b>studchik</b> The blinking lights of the antenna tower came into focus just as I heard a loud snap.<br>
+</div>
+<div class="instatime">281 DAYS AGO</div>
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic6.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">6755 likes</div>
+<div class="instacaption"><b>lazybones</b> Utter nonsense is not enough. </div>
+<div class="instacomment"> <font color="#ccc">View all 56 comments</font><br>
+<b>peedails</b> Enqoyism ever stuns the onlooker. <br>
+<b>upself83</b> Rock music set a treehouse on fire. <br>
+</div>
+<div class="instatime">345 DAYS AGO</div>        
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic7.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">liked by <b>iamlabs, ianshag, broodin25</b> and 67 others</div>
+<div class="instacaption"><b>lazybones</b> Tomorrow rains heavily. <font color="#125688">#ootd #ditl</font></div>
+<div class="instacomment"><font color="#ccc">View all 56 comments</font><br>
+<b>dressytale3</b> A late night tests the thesis that your theorem would unleash. <br>
+<b>proz3</b> Nihilism tenderly sees to her child. <br>
+</div>
+<div class="instatime">2 MONTHS AGO</div>
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic8.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">7654 likes</div>
+<div class="instacaption"><b>lazybones</b> Stupidity is Finer than frog hair </div>
+<div class="instacomment"> <font color="#ccc">View all 256 comments</font><br>
+<b>everparis</b> Passion or serendipity is a storyteller without equal. <br>
+<b>p0dtrill2</b> Stew and rum sat down once more.  <br>
+</div>
+<div class="instatime">4 MONTHS AGO</div>        
+<!--/instagram post-->
+
+<!--instagram post-->
+<div class="instauser"><img src="https://lazybones.neocities.org/deadjournal/AIicon.JPG" height="25" style="-webkit-border-radius:100px;" align="left"><div style="padding-left:8px; padding-top:7px;"><b>lazybones</b></div></div>
+<div class="instapic"><img src="https://lazybones.neocities.org/fauxfb/pic9.gif" width="250"></div> 
+<div class="instabar"><img src="http://i.imgur.com/juQ8vK8.png" height="18" style="padding-bottom: 7px;"></div>
+<div class="instafriends">liked by <b>frogramp, gutzlyz, animetown</b> and 142 others</div>
+<div class="instacaption"><b>lazybones</b> Organisational culture wanted the TRUTH! </div>
+<div class="instacomment"><font color="#ccc">View all 423 comments</font><br>
+<b>mcdard</b> Passion or serendipity is a storyteller without equal.  <br>
+<b>gossipkaptain</b> Style could please even the most demanding follower of Freud. <br>
+</div>
+<div class="instatime">8 YEARS AGO</div>
+<!--/instagram post-->
+
+
+
+</div>
+<div class="instafooter"><img src="http://i.imgur.com/p2JoN5g.png" height="30" style="padding-bottom: 11px;"></div>
+</div>
+<!--/SECTION-->
+
+<!--SECTION-->
+<div class="e">
+<div class="musicheader">
+<div style="float:left; margin-right:-5px;">
+<img src="https://i.imgur.com/7x9nadi.png" width=10 align=left style="padding-top: 11px;">
+</div>
+Alyce's Playlist
+<div style="float:right;"><img src="http://i.imgur.com/8vV6Q4J.png?1" align=right style="padding-top: 11px; padding-right: 5px;"></div>
+<br>
+<center><a href="https://www.last.fm/user/milktooth22" target="_blank"><img src="http://i.imgur.com/VoKkbzm.png" width="190"></a></center>
+</div>
+<div class="musiccontent">
+<div class="musictitle">
+
+<a href="https://www.last.fm/user/milktooth22"><img src="https://lastfm-recently-played.vercel.app/api?user=milktooth22&t={{current_timestamp}}" height="auto" width="auto"/></a>
+
+
+</div></div>
+<div class="musicbottom">
+<div style="float:left; margin-right:-5px;"><img src="http://i.imgur.com/3LNstzo.png" width="15" align="left" style="padding-top:5px;"></div>
+<center>Alyce's • <font color="#888">playlist</font>
+<div style="float:right;"><a href="https://www.youtube.com/playlist?list=PLofht4PTcKYnaH8w5olJCI-wUVxuoMHqM" target="_blank"><img src="http://i.imgur.com/eVWS1Gy.png" width="20" align=right style="padding-right: 5px;"></a></div>
+<img src="http://i.imgur.com/MxAd2eM.png" width="248">
+</center></div>
+</div>
+<!--/SECTION-->
+
+<!--SECTION-->
+<div class="f">
+<div class="cameraheader">
+<div style="float:left; margin-right:-5px;">
+<img src="http://i.imgur.com/nj9rM4t.png" width="11" align="left" style="margin-top: 11px;"> <font style="color:#0072ff; font-weight:normal; position: relative; top: 12px;">Albums</font>
+</div>
+
+<font style="font-family: roboto;font-size: 12px;font-weight: bolder;margin-left: 2px;position: relative;top: 11px;">All Photos</font>
+
+<div style="float:right; margin-right: 5px; position: relative;top: 12px; padding-right:10px;">
+<font style="color:#0072ff; font-weight:normal;">Select</font>
+</div>
+</div>
+
+<div class="cameracontent">
+
+<img src="https://lazybones.neocities.org/iphonefotos/1.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/2.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/3.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/4.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/5.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/6.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/7.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/8.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/9.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/10.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/11.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/12.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/13.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/14.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/15.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/16.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/17.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/18.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/19.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/20.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/21.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/22.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/23.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/24.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/25.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/26.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/27.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/28.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/29.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/30.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/31.jpeg" class="zoom">
+<img src="https://lazybones.neocities.org/iphonefotos/32.jpeg" class="zoom">
+
+</div>
+<div class="camerabottom">
+<img src="https://i.imgur.com/lWoMU1j.png">
+</div>  
+</div>
+
+<!--/SECTION-->
+
+
+
+</div>
+</body>
+</html>

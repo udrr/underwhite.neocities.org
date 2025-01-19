@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: "ms";
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "ms";
+}
+.container {
+  margin: auto;
+  border-radius: 20px;
+     width: 600px; /* Set width to 200px */
+            cursor: cell; /* Shows a hand cursor */
+}
+.row {
+  padding: 10px;
+  background: #000;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+}
+
+.column {float: left;}
+
+.left {width: 15%;}
+
+.right {width: 10%;}
+
+.middle {width: 75%;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot:active {
+  margin-top: 4px;
+  height: 11px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.1;
+  transition: 0.1s;
+}
+
+
+
+input[type=text] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #111;
+  padding: 5px;
+}
+
+
+
+.content {
+  padding: 10px;
+  background: #031524;
+   border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-family: "ms";
+}
+
+ @keyframes flicker { 0% { opacity: 0.63 }; 
+ 1% { opacity: 0.46; }; 
+ 2% { opacity: 0.95; }; 
+ 3% { opacity: 0.37; }; 
+ 4% { opacity: 0.78; }; 
+ 5% { opacity: 0.41; }; 
+ 6% { opacity: 1.14; }; 
+ 7% { opacity: 0.9;  }; 
+ 8% { opacity: 0.43; }; 
+ 9% { opacity: 1.17; }; 
+ 10% { opacity: 0.48;}; 
+ 11% { opacity: 0.94;}; 
+ 12% { opacity: 0.91;}; 
+ 13% { opacity: 0.92;};
+ 14% { opacity: 0.86;}; 
+ 15% { opacity: 0.73;}; 
+ 16% { opacity: 0.76;}; 
+ 17% { opacity: 1.04;}; 
+ 18% { opacity: 0.42;}; 
+ 19% { opacity: 0.99;}; 
+ 20% { opacity: 0.53;}; 
+ 21% { opacity: 0.76;}; 
+ 22% { opacity: 1.12;}; 
+ 23% { opacity: 1.22;}; 
+ 24% { opacity: 0.79;}; 
+ 25% { opacity: 0.36;}; 
+ 26% { opacity: 0.8; }; 
+ 27% { opacity: 0.57;}; 
+ 28% { opacity: 1.28;}; 
+ 29% { opacity: 1.05;}; 
+ 30% { opacity: 0.38;}; 
+ 31% { opacity: 0.85;}; 
+ 32% { opacity: 1.23;}; 
+ 33% { opacity: 1.07;}; 
+ 34% { opacity: 0.41;}; 
+ 35% { opacity: 0.64;}; 
+ 36% { opacity: 0.4; }; 
+ 37% { opacity: 0.63;}; 
+ 38% { opacity: 0.97;}; 
+ 39% { opacity: 1.03;}; 
+ 40% { opacity: 0.84;}; 
+ 41% { opacity: 1.34;}; 
+ 42% { opacity: 0.78;}; 
+ 43% { opacity: 0.69;}; 
+ 44% { opacity: 1.17;}; 
+ 45% { opacity: 0.64;}; 
+ 46% { opacity: 1.04;}; 
+ 47% { opacity: 1.02;}; 
+ 48% { opacity: 0.65;}; 
+ 49% { opacity: 0;   }; 
+ 50% { opacity: 1;   }; 
+ 
+        }
+  
+  #e {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    cursor: cell;
+  }
+  
+  .hi { color: lightgrey; cursor: cell; text-decoration: none;}
+  .hi:hover { color: darkgrey; cursor: cell;}
+  
+  @font-face { font-family: "tp"; src: url("https://underwhite.neocities.org/fonts/thickPixels.otf");}
+@font-face { font-family: "hh"; src: url("https://underwhite.neocities.org/fonts/hh.ttf");}
+@font-face { font-family: "muh"; src: url("https://underwhite.neocities.org/fonts/my.otf");}
+@font-face { font-family: "cs"; src: url("https://underwhite.neocities.org/fonts/cat.ttf");}
+@font-face { font-family: "sg"; src: url("https://underwhite.neocities.org/fonts/Skygraze.otf");}
+@font-face { font-family: "a"; src: url("https://underwhite.neocities.org/fonts/alphys.ttf");}
+@font-face { font-family: "ms"; src: url("https://underwhite.neocities.org/fonts/modeseven.ttf");}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row" id="draggableDiv">
+    <div class="column left">
+      <span class="dot" style="background:blue; box-shadow: 0 0 8px 0 blue; animation: flicker 0.1s infinite;" onclick="play()"></span>
+      <span class="dot" style="background:dodgerblue; box-shadow: 0 0 7px 0 dodgerblue; animation: flicker 0.25s infinite;" onclick="play()"></span>
+      <span class="dot" style="background:cyan; box-shadow: 0 0 8px 0 cyan; animation: flicker 0.124s infinite;" onclick="play()"></span>
+    </div>
+    <div class="column middle">
+      <input type="text" value="underwhite.neocities.org/microblog" readonly>
+    </div>
+    <div class="column right">
+      <div style="float:right; color:white;" id="e">
+        - □ <a href="/home" style="" class="hi">X</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" style="height: 400px;">
+   <iframe name="contant" width="100%" height="100%" src="inside" style="border: 2px ridge black; overflow-x: hidden; overflow-y: scroll; border-radius: 4px;"></iframe>
+  </div>
+</div>
+  <audio src="https://files.catbox.moe/enl1y9.wav" id="audioPlayer">
+  </audio>
+
+
+<script>
+  let audioPlayer = document.getElementById('audioPlayer');
+  function play(){
+    audioPlayer.load(); // reload the audio player so that the audio restarts from the beginning on each click
+    audioPlayer.play();
+  }
+</script>
+</body>
+</html> 

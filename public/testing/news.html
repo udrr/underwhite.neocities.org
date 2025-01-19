@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+  
+  <link rel="stylesheet" href="https://unpkg.com/7.css" />
+  <body>
+  <div id="wrapper">
+       <div id="sticky"><h4>TIPS:</h4>
+         <p style="margin-top: 5px; transform: skewY(5deg);">you can <b>drag</b>, <b>open</b>, and <b>close</b> windows! You may need to <b>click twice</b>. if it doesn't let you, click the icon again to close it.</p>
+         <p>Best viewed on <b>75%/80%</b> zoom. Firefox/Google 1824x1234..</p>
+         <p>I took this and it was originally made by <a href="https://sugarforbrains.neocities.org" target="_blank">sugarforbrains/benny</a>
+        </div>
+      <div id="container">
+        <div id="icon"><div class="flex">
+            <div><div class="ico" onclick="xdOpen()">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_thing.png">
+                <p class="name">XD</p>
+              </div>
+              <div class="ico" onclick="mainOpen()">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_abt.png">
+                <p class="name">About</p></div>   
+              <div class="ico" onclick="faqOpen()">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_faq.png">
+                <p class="name">FAQ</p></div>    
+              <div class="ico"  onclick="webOpen()">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_webm.png">
+                <p class="name">Webdog</p></div>
+              <div class="ico"  onclick="askOpen()">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_ask.png">
+                <p class="name">Askbox</p></div>
+              <div class="ico"  onclick="musicOpen()">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_media.png">
+                <p class="name">Windows Media Player</p></div></div>
+            <div>
+              <a href="/home"><div class="ico" id="reig">
+                <img src="https://sugarforbrains.neocities.org/about/img/ico_r.png">
+                <p class="name">Back</p></div></a></div>
+          </div></div>
+        
+        <div id="main" class="window glass active draggable">
+          <div class="title-bar"><div class="title-bar-text">about.exe</div>
+          <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close" onclick="mainOpen()"></button></div></div>
+          <div class="window-body has-space">
+            <div id="main-head"><h1>about the site</h1></div>
+            <div id="main-p"><span style="color:#e15ab6;">SUGAR</span>FOR<span style="color:#ba135e;">BRAINS</span> is the personal site of BENNY. The green haired person with dog ears. The one writing this.
+                <p>This website exists for me to be creative and a place where I can put whatever I want. That's it. I'm just here to party!</p>
+                <p>You can find things such as my art, original characters (soon), flash games and animations, and a whole bunch of other shit here. I hope you like whatever you come across.  </p>
+                <p>It is always a work in progress, if you couldn't tell. It will never be "finished" as I have so much I want to add to it, and because I'm lazy. But still, have fun exploring!</p>
+              </div>
+            <div id="main-b"><h1>
+              <a onclick="faqOpen()">&gt; view faq <br></a>
+              <a onclick="askOpen()">&gt; ask questions</a>
+              </h1></div></div></div>
+        
+        <div id="webm" class="window glass active draggable">
+          <div class="title-bar"><div class="title-bar-text">CLICK 2 LEARN MOAR!</div>
+          <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close" onclick="webOpen()"></button></div></div>
+          <div class="window-body has-space"><a href="me.html"><div id="webm-b"></div></a>
+           <div id="webm-link"><a href="https://sugarforbrains.neocities.org/about/me">How? ...Just Watch <br> The Free Video&gt; </a></div></div></div>
+        
+        <div id="faq" class="window glass active draggable">
+          <div class="title-bar"><div class="title-bar-text">FAG / Frequently Asked Questions</div>
+       <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close" onclick="faqOpen()"></button></div></div>
+          <div class="window-body has-space">
+            <div class="head"><h4 style="font-weight:normal; margin-top: 10px;display:inline-block">frequently / commonly asked questions!</h4></div>
+            <div class="faqs">
+            <div class="q"><b>Q:</b> Why don't the buttons on the homepage work?</div>
+            <div class="a"><b>A:</b> They don't link to anything yet. They will eventually!</div>
+            <div class="q"><b>Q:</b> How did you code [specific thing]?</div>
+            <div class="a"><b>A:</b> You can ask me in my askbox or guestbook but I recommend looking up whatever you want to know <i>before</i> asking.</div>
+            <div class="q"><b>Q:</b> How did you learn to code?</div>
+            <div class="a"><b>A:</b> Looking at code from other sites, searching up exactly what I wanted to code, coding every day until I got better.</div>
+            <div class="q"><b>Q:</b> Do you have any social media?</div>
+            <div class="a"><b>A:</b> I only use <a href="https://www.youtube.com/@bennyshaped" target="blank">YouTube</a> really. I have a <a href="https://bennyshaped.tumblr.com/" target="blank">tumblr</a> but it's not very active. I do not use any other social media.</div>
+            <div class="q"><b>Q:</b> Can I take inspo from your site?</div>
+            <div class="a"><b>A:</b> Yeah sure! I'd love to see what you make.</div>
+            <div class="q"><b>Q:</b> Can you code my site?</div>
+            <div class="a"><b>A:</b> No. I might make free templates someday though.</div></div>
+            <div id="abox">If you have a question that wasn't answered here, see the askbox.</div></div></div>
+      
+        <div id="music" class="window glass active draggable">
+          <div class="title-bar"><div class="title-bar-text">Windows Media Player</div>
+          <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close" onclick="musicOpen()"></button></div></div>
+          <div class="window-body has-space"><iframe src="https://sugarforbrains.neocities.org/about/music.html"></iframe></div></div>
+        
+        <div id="askbox" class="window glass active draggable">
+          <div class="title-bar"><div class="title-bar-text">Askbox</div>
+         <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close" onclick="askOpen()"></button></div></div>
+          <div class="window-body has-space"><iframe src="https://sugarforbrains.neocities.org/about/askbox"></iframe></div></div>
+        
+        <div id="xd" class="window glass active draggable">
+          <div class="title-bar"><div class="title-bar-text">WHY WOULD YOU CLICK THIS???</div>
+        <div class="title-bar-controls"><button aria-label="Minimize"></button><button aria-label="Maximize"></button><button aria-label="Close" onclick="xdOpen()"></button></div></div>
+          <div class="window-body has-space"><img src="https://sugarforbrains.neocities.org/about/img/fuckyou.gif" title="this gif is so fucking old"></div>
+        </div>
+        
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function menuOpen() {
+        var x = document.getElementById("menu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function mainOpen() {
+        var x = document.getElementById("main");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      function faqOpen() {
+        var x = document.getElementById("faq");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      function webOpen() {
+        var x = document.getElementById("webm");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      
+      function rmOpen() {
+        var x = document.getElementById("rm");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      } 
+      
+      function xdOpen() {
+        var x = document.getElementById("xd");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      } 
+      
+      function askOpen() {
+        var x = document.getElementById("askbox");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+      
+      function musicOpen() {
+        var x = document.getElementById("music");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+      
+      `use strict`;
+function refreshTime() {
+  const timeDisplay = document.getElementById("time");
+  const dateString = new Date().toLocaleString();
+  const formattedString = dateString.replace(", ", " ");
+  timeDisplay.textContent = formattedString;
+}
+  setInterval(refreshTime, 1000);
+      
+      
+      (function (document) {
+    // Enable ECMAScript 5 strict mode within this function:
+    'use strict';
+
+    // Obtain a node list of all elements that have class="draggable":
+    var draggable = document.getElementsByClassName('draggable'),
+        draggableCount = draggable.length, // cache the length
+        i; // iterator placeholder
+
+    // This function initializes the drag of an element where an
+    // event ("mousedown") has occurred:
+    function startDrag(evt) {
+
+        // The element's position is based on its top left corner,
+        // but the mouse coordinates are inside of it, so we need
+        // to calculate the positioning difference:
+        var diffX = evt.clientX - this.offsetLeft,
+            diffY = evt.clientY - this.offsetTop,
+            that = this; // "this" refers to the current element,
+                         // let's keep it in cache for later use.
+
+        // moveAlong places the current element (referenced by "that")
+        // according to the current cursor position:
+        function moveAlong(evt) {
+            that.style.left = (evt.clientX - diffX) + 'px';
+            that.style.top = (evt.clientY - diffY) + 'px';
+        }
+
+        // stopDrag removes event listeners from the element,
+        // thus stopping the drag:
+        function stopDrag() {
+            document.removeEventListener('mousemove', moveAlong);
+            document.removeEventListener('mouseup', stopDrag);
+        }
+
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('mousemove', moveAlong);
+    }
+
+    // Now that all the variables and functions are created,
+    // we can go on and make the elements draggable by assigning
+    // a "startDrag" function to a "mousedown" event that occurs
+    // on those elements:
+    for (i = 0; i < draggableCount; i += 1) {
+        draggable[i].addEventListener('mousedown', startDrag);
+    }
+}(document));
+      
+      function openTab(tabName) {
+        var i;
+        var x = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+
+      function checkPswd() {
+        var confirmPassword = "cha cha slide";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+          window.location.replace('https://www.youtube.com/watch?v=NCUYhn0ZPnU');
+        }
+        /* Cache the password input. */
+        var pswd = document.getElementById("pswd");
+        /* Call 'checkPswd' when the 'Enter' key is released. */
+        pswd.onkeyup = function(e) {
+          if (e.which == 13) checkPswd();
+        };
+        /* Prevent the form from submitting. */
+        pswd.parentElement.onsubmit = function() {
+          return false;
+        };
+      }
+
+    </script>
+    </body>
+    </html>
+
+<style>
+
+body {
+  margin: 0;
+  background-image: url('https://sugarforbrains.neocities.org/about/img/wip.png');
+  
+}
+
+.flex {
+  display: flex;
+  
+}
+
+#wrapper {
+  border: 1px solid transparent; 
+  width: 1300px; 
+  margin-top: 10px; 
+  height: 800px;
+  
+}
+
+#container {
+  overflow: hidden;
+  background: url(https://sugarforbrains.neocities.org/about/img/winbg.png);
+    background-size: cover;
+  border: 4px solid #5f4846; 
+  margin-left: 95px;
+  margin-top: 75px; 
+  width: 1010px; 
+  height: 650px; 
+  position: relative;
+}
+
+#sticky {
+  position: absolute; 
+  left: 970px; 
+  top: 55px; 
+  margin: 0;
+  z-index: 99; 
+  width: 234px; 
+  height: 202px; 
+  background-size: 234px;
+  background-image: url('https://sugarforbrains.neocities.org/about/img/sticky.png')}
+  
+#sticky h4 {
+  margin-top: 12px; 
+  margin-left: 10px; 
+  margin-bottom: 0; 
+  transform: rotate(3deg)
+  
+}
+
+#sticky p { 
+  width: 200px; 
+  margin-left: 8px;
+  transform: skewY(6deg);
+  transform: rotate(-2deg)
+  font-size: 10px;
+}
+
+#icon { 
+  width: 80px; 
+  height: 600px; 
+  margin-left: 10px;
+  
+}
+
+.ico {width: 76px;  
+border: 1px solid transparent; 
+border-radius: 5px; 
+margin: auto; 
+      
+    margin-top: 15px;
+    text-align: center; 
+    color: white; 
+    text-shadow: 2px 1px 2px black, 2px 1px 2px black ;
+  
+}
+
+.ico img {
+  width: 48px; 
+  height: 48px;
+  margin-top:13px;
+  
+}
+
+.ico:hover {
+  
+  border: 1px solid lightgray;
+  background: rgba(255, 255, 255, 0.1);
+  
+}
+
+.ico p {
+  
+  margin-top: 3px; 
+  margin-bottom: 1px;
+  
+}
+
+#main {
+  
+  position: absolute; 
+  top: 20px; 
+  left: 50px; 
+  width: 550px; 
+  height: 550px; 
+  display: block;
+  
+}
+
+#main .window-body {
+  height: 500px; 
+  padding: 0px; 
+  padding-bottom: 0px;
+background-image: url('https://sugarforbrains.neocities.org/about/img/maig.png'), 
+repeating-linear-gradient(-55deg, #feb1d0, #feb1d0 10px, #f086b2 10px, #f086b2 20px);
+  
+}
+
+#main-head, #main-b {
+  font-family: 'Fredoka One'; 
+  text-align: center; 
+  border: 1px solid transparent; 
+  width: 390px; 
+  margin-left: 220px;
+  
+}
+
+#main-head h1, #main-b h1 {
+  
+  font-size: 30px; 
+  
+} 
+
+#main-head {
+  margin-top: 25px;
+  
+} 
+
+#main-head {
+  
+  color: transparent;
+  
+}
+
+#main-p {
+  border: 1px solid transparent; 
+  height: 300px;  
+  width: 300px; 
+  font-family: fingerlinger; 
+
+  font-size: 19px; 
+  overflow-y: auto; 
+  margin-left: 213px; 
+  padding-right: 3px;} 
+  
+  #main-b a {
+    
+    color: purple;
+    cursor: pointer;
+    
+  }
+
+#webm {
+  
+  width: 260px; 
+  height: 390px; 
+  position: absolute; 
+  right: 160px; 
+  top: 50px;
+  
+} 
+
+#webm .window-body {
+  height: 340px;
+  background-image: url('https://sugarforbrains.neocities.org/about/img/ugly.png');
+  
+}
+
+#webm .window-body a {
+  display:inline-block;
+  
+}
+
+#webm-b {
+  width: 120px; 
+  height: 149px; 
+  background: transparent;
+  
+}
+
+#webm-link {
+  color: blue; 
+  width: 255px; 
+  position: absolute; 
+  left: 0; 
+  bottom: 5px; 
+  height: 70px; 
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+#webm-link a:hover {
+  color: red;
+  
+}
+
+#faq {
+  display: none;
+  position: absolute; 
+  width: 460px; 
+  height: 340px; 
+  bottom: 60px; 
+  left: 60px; 
+  padding: none;
+  
+}
+
+#faq .window-body {
+  position: relative; 
+  overflow-y: auto; 
+  height: 300px; 
+  padding: 0; 
+  background: url('https://sugarforbrains.neocities.org/about/img/faq-bg.png');
+  
+}
+
+#faq .head {
+  z-index: 99;
+  position: relative; 
+  margin: 0; 
+  font-family: 'Fredoka One'; 
+  font-weight: normal; 
+  font-size: 23px; 
+  color:#6a3e7d; 
+  text-align: center; 
+  width: 429px; 
+  height:120px; 
+  background: url('https://sugarforbrains.neocities.org/about/img/hbg.png');
+  
+}
+
+.faqs {
+  margin-top: -30px; 
+  position: relative;
+  
+}
+
+.q, .a {
+  position: relative; 
+  background:#f0f0f0; 
+  color: #42215a;
+  font-size: 13px; 
+  border: 2px solid #6a3e7d; 
+  border-radius: 10px; 
+  padding: 7px; 
+  width: 350px;
+  margin: 5px; 
+  margin-left: 53px;
+  }
+  
+.q:after{
+  content: url(https://sugarforbrains.neocities.org/about/img/aicon.png); 
+  position: absolute; 
+  left: -50px; 
+  top: 0px; 
+  
+}
+
+.a:after{
+  content: url(https://sugarforbrains.neocities.org/about/img/bicon.png); 
+  position: absolute; 
+  left: -50px; 
+  top: 0px; 
+  
+}
+
+#abox {
+  font-family: 'Fredoka One'; 
+  color: white; 
+  font-size: 20px; 
+  text-align: center; 
+  margin: auto; 
+  width: 400px; 
+  
+}
+
+#askbox {
+  display: none; 
+  width: 700px; 
+  height: 500px; 
+  position: absolute; 
+  top: 50px; 
+  left: 70px;
+  
+}
+
+#askbox .window-body {
+  height: 450px; 
+  padding: 0;
+  
+} 
+
+#askbox iframe {
+  width: 100%; 
+  border: none; 
+  height: 100%;
+  
+}
+
+#music {
+  width: 390px; 
+  padding: 0; 
+  height: 135px; 
+  position: absolute; 
+  right: 15px; 
+  bottom: 65px;
+  
+} 
+
+#music .window-body {
+  padding: 0; 
+  height: 100px;
+  
+}
+
+  #music iframe {
+    width:376px;
+    border: none;
+    height: 100px;
+    
+  }
+  
+#xd {
+  display: none; 
+  position: absolute; 
+  top: 120px;
+  right: 160px;
+  width:414px;
+  
+} 
+
+#xd .window-body {
+  padding: 0;
+  
+}
+
+#menu {
+  display: none;
+  position: absolute; 
+  bottom: 41px; 
+  border-bottom-left-radius: 0px;  
+  border-bottom-right-radius: 0px; 
+  width: 410px; 
+  height: 410px; 
+  background: linear-gradient(rgba(50, 123, 165, 0.75), rgba(46, 75, 90, 0.75) 50%, rgba(92, 176, 220, 0.75));
+  font-family: Segoe UI, Arial, Sans-Serif; 
+  font-size: 12px;
+  z-index: 100;
+  
+}
+
+#menu-nav {
+  background: white; 
+  width: 210px; 
+  border-radius: 4px; 
+  height: 385px; 
+  margin-left: 1px; 
+  margin-top: 7px;
+  
+}
+
+#menu-nav hr {
+  border-top: #d6e5f5; 
+  margin-top: 1px;
+  
+}
+
+#menu-nav img {
+  float: left;
+  width: 30px;
+  margin-top: 5px;
+  margin-right: 5px;
+  
+} 
+
+  #menu-nav p {
+    margin-left: 15px;
+    
+  }
+
+.nav-link {
+  height: 40px; 
+  width: 99%; 
+  padding: 1px; 
+  border: 1px solid white; 
+  border-radius: 3px; 
+  margin: auto; 
+  margin-left: -2px; 
+  margin-top: 1px; 
+  
+}
+
+.nav-link:hover { 
+  border:solid 1px #7da2ce;
+
+-moz-border-radius:3px; -webkit-border-radius:3px;
+             box-shadow: inset 0 0 1px #ffffff; -moz-box-shadow: inset 0 0 1px #ffffff; -webkit-box-shadow: inset 0 0 1px #ffffff;
+             background-color:#cfe3fd;
+             background: -moz-linear-gradient(top, #dcebfd, #c2dcfd);
+             background: -webkit-gradient(linear, center top, center bottom, from(#dcebfd), to(#c2dcfd));
+  
+}
+
+#searchb {
+  background: #f1f5fb;
+  border-top: 1px solid #cddae9; 
+  height: 23px; 
+  margin-left: -6px;
+  width: 202px;
+  padding: 10px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  
+}
+
+#searchb button {
+  background: none; 
+  border: none; 
+  min-width: 20px; 
+  min-height: 17px; 
+  padding: 0; 
+  box-shadow: none;
+  position: absolute; 
+  bottom: 28px; 
+  left: 180px;
+  
+}
+
+#searchb button img {
+  width: 20px; 
+  height: 17px;
+  
+}
+
+#menu-icon {
+  width: 85px;
+  image-rendering: pixelated;
+  position: absolute;
+  top: -20px;
+  right: 55px;
+  
+}
+
+#menu-links {
+  color: white;
+  font-size: 13px;
+  
+} 
+
+#menu-links div {
+  margin-left: 10px;
+  
+} 
+
+#menu-links hr {
+  width: 150px;
+  margin-left: 13px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  
+}
+
+#shutdown {
+  margin-left: 10px;
+  background:linear-gradient(rgba(255, 255, 255, 0.3), rgba(92, 176, 220, 0.75), rgba(50, 123, 165, 0.75)), rgba(255, 255, 255, 0.3);
+  color: white; 
+  
+}
+
+#taskbar {
+  position: absolute; 
+  bottom: 0; 
+  width: 100%; 
+  
+}  
+
+#border {
+  width: 100%; 
+  top: 1px; 
+  left: 0;
+  border-top: 1px solid #fffd; 
+position: absolute;}
+
+#taskbar .title-bar {
+  box-shadow: none; 
+  border-left: none; 
+  border-right: none; 
+  border-bottom: none; 
+  border-radius: 0; 
+  height: 36px; 
+  border-top: 1px solid rgba(0, 0, 0, .7);
+background: var(--window-background-glass-stripes), rgba(69,128,196,0.6);
+  
+}
+
+#taskbar img {
+  width: 37px; 
+  height: 37px; 
+  margin-top: 3px;
+  
+} 
+  
+  #taskbar button { 
+    height: 42px; 
+    margin: 1px; 
+    width: 20px;
+    margin-top: 6px; 
+    padding: 0; 
+    border: none; 
+    background: none; 
+    box-shadow: none;
+    
+  }
+
+#date {
+  width: 90px; 
+  text-align: center; 
+  color: white;
+  margin-top: 6px;
+  
+}
+  
+#menubutton {
+  background: none;
+  border: none; 
+  box-shadow: none; 
+  width: 45px; 
+  margin-left: -14px;
+  
+}
+
+@font-face {
+  font-family: "digidisc"; 
+  src: url('https://sugarforbrains.neocities.org/fonts/DigitalDisco.ttf') 
+  format("truetype");
+  
+}
+
+@font-face {
+  font-family: "minipix"; 
+  src: url('https://sugarforbrains.neocities.org/fonts/mini_pixel-7.ttf') 
+  format("truetype");
+  
+}
+
+@font-face {font-family: "fingerlinger"; 
+src: url('https://sugarforbrains.neocities.org/fonts/fingerlinger.ttf') 
+format("truetype");
+  
+}
+
+@font-face {font-family: "nendo"; 
+src: url('https://sugarforbrains.neocities.org/fonts/nendo.ttf') 
+format("truetype");
+  
+}
+
+@font-face {
+  font-family: "animeace"; 
+  src: url('https://sugarforbrains.neocities.org/fonts/animeace.ttf') 
+  format("truetype");
+  
+}
+
+
+html { 
+  cursor: url("https://sugarforbrains.neocities.org/img/cursor.png"), default;
+  
+}
+
+a:hover, button:hover, input:hover, .pointer:hover, area {
+  
+  cursor: url("https://sugarforbrains.neocities.org/img/pointer.png"), default;
+  
+}
+
+.clickable:hover {
+   cursor: url("https://sugarforbrains.neocities.org/img/pointer.png"), default;
+}
+
+.no-sel {
+  -moz-user-select:none;
+-webkit-user-select:none;
+user-select: none;
+  
+}
+
+</style>

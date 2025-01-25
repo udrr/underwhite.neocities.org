@@ -16,3 +16,5 @@ since I can't update in school hours due to neocities being blocked, i've decide
 ✅ yes you can ask me questions via comments (requires github account), might not respond..
 
 // have a wonderful day, and a happy time! 💮🎂
+
+note: merged commit didn't work

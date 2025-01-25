@@ -5,6 +5,7 @@
 <title>Underwhite</title>
    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/dark-stylesheet.css" id="theme" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/loader.css" id="theme" rel="stylesheet" type="text/css" media="all">
  <meta property="title" content="Underwhite">
    <meta property="image" content="https://underwhite.neocities.org/images/png/hi.png">
     <meta property="image:type" content="image/svg">
@@ -17,11 +18,11 @@
    <!-- oh just inspecting, okkk.. if you take code i will kill you. :P -->
    </head>
 <body>
-   
+   <div id="loader"></div>
 <div class="grid-container">
   <div class="header">
   
-    <p style="text-align: center; top: 10px; font-size: 30px; font-weight: bold; position: relative;" class="squish">Underwhite <i class="fa fa-star" aria-hidden="true"></i></p><i><p id="msg" style="position: relative; top: -20px; opacity: 0.3;" onclick="document.getElementById('msg').innerText = blurbs[Math.floor(Math.random() * blurbs.length)]"></p></i>
+    <p style="text-align: center; top: 10px; font-size: 30px; font-weight: bold; position: relative;" class="squish">Underwhite <img src="/images/assets/warpstar.png" id="what"></p><i><p id="msg" style="position: relative; top: -20px; opacity: 0.3;" onclick="document.getElementById('msg').innerText = blurbs[Math.floor(Math.random() * blurbs.length)]"></p></i>
     <marquee scrollamount="6" style="text-align: center; top: 4px; font-size: 30px; font-weight: bold; position: relative; z-index: 1;  background: rgba(255, 255, 255, 0.05); animation: flicker 0.3s infinite; height: 30px;" onmouseover="this.stop();" onmouseout="this.start();">
      <img src="/images/blinkies/big_shot.gif">
      <img src="/images/blinkies/beware_of_dog.gif">
@@ -54,6 +55,17 @@ color: white;
 .e {
   height: fit-content;
 }
+
+#what {
+animation: what 0.5s steps(1) infinite;
+top: 0px;
+	position: relative;
+}
+
+@keyframes what {
+50% { top: -2px; }
+}
+
 </style>
 <div class="warn">WARNING: DO NOT EAT WEBSITE!!1!11</div>
 
@@ -90,8 +102,9 @@ color: white;
     
     <p id="personal"><i class="fa fa-star"></i> offsite</p>
     <div class="link-maybeinvaild"><a href="https://underwhite.straw.page/">strawpage</a></div><br>
-     <div class="link-maybeinvaild" style="font-size: 8px;"><a href="/strawpage">artbox</a></div><br>
-     <div class="link-maybeinvaild"><a href="//neocities.org/site/underwhite">neocities</a></div><br>
+     <div class="link-vaild" style="font-size: 8px;"><a href="/strawpage">artbox</a></div><br>
+     <div class="link-vaild"><a href="//neocities.org/site/underwhite">neocities</a></div><br>
+	    <div class="link-vaild"><a href="https://github.com/udrr/underwhite.neocities.org">source code (github)</a></div><br>
     </div>
       <p>Once i finish a page, i'll add it here!</p>
     <br><br>
@@ -112,7 +125,7 @@ color: white;
                     <p>well hello there fellow traveler, call me undey! i'm just looking to see what <strong>HTML/CSS</strong> is!</p>
                     
                     
-                    <p>i do stuff for fun, mainly Scratch. (got permabanned for alt account). I also do art, and probably some javascript/css too. </p>
+                    <p>i do stuff for fun, mainly <strong>HTML</strong>. I also do art, and probably some javascript/css too. </p>
                     
                     
                     <p>so, deciding to make a website for my personal stuff. (not being limited to a profile and banner). i found out about neocities, and gave it a shot. <br> 
@@ -151,7 +164,7 @@ color: white;
             }
         }
         </script>
-        <p>current modes: dark, light.</p>
+        <p>current modes: dark, light</p>
         <hr><br>
         <!-- button shower -->
    <marquee scrollamount="3"  style="background: rgba(255, 255, 255, 0.1); animation: flicker 0.1s infinite;" onmouseover="this.stop();" onmouseout="this.start();" >
@@ -187,7 +200,7 @@ color: white;
   <audio id="audio" src="https://files.catbox.moe/tlpdz9.mp3" preload="auto"></audio>
   <div class="button">
     <label style="cursor:url(http://i.imgur.com/ONVDMqu.png), default">
-      <p class="easteregg">Background music: <input type="checkbox" id="playPauseCheckbox" checked></p>
+      <p class="easteregg">background music: <input type="checkbox" id="playPauseCheckbox" checked></p>
     </label>
   </div>
   <script>
@@ -221,7 +234,7 @@ color: white;
   </div>
   </div>
   <!-- homemade footer -->
- <center style="position: relative; top: 120px;"> <p style="font-size: 7.6px; text-align: center;">made by underwhite with love on care on <a href="https://neocities.org/" id="n">neocities</a><img src="https://neocities.org/img/neocitieslogo.svg" width="10px">. <br>2024-2025.</p> 
+ <center style="position: relative; top: 120px;"> <p style="font-size: 7.6px; text-align: center;">made by underwhite with love on care on <a href="https://neocities.org/" id="n">neocities</a> ** <a href="//github.com/udrr/underwhite.neocities.org/">source code</a><img src="https://neocities.org/img/neocitieslogo.svg" width="10px">. <br>2024-2025.</p> 
 <img src="/images/misc/disk.png" style="position: relative; top: -600px; width:270px; height:250px; right: -470px; z-index: 1; animation: rotation 2s infinite linear; object-fit: cover;">
   </center>
   
@@ -517,10 +530,19 @@ color: white;
               "GET AWAY",
               "I HAVE LORE",
               "I'M GONNA BLOG",
-              "no pear you can't have the ice cream"
+              "no pear you can't have the ice cream",
+	      "neocities is da best",
+	      "what are those reddit tts stories I keep seeing on youtube??"
               ]
               
               document.getElementById("msg").innerText = blurbs[Math.floor(Math.random() * blurbs.length)]
+
+              var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+
+
             </script>
   <!-- basic styling for buttons -->
    <style>

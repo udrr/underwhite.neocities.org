@@ -3,23 +3,24 @@ on: ["push", "pull_request"]
 name: Test Coveralls
 
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.x
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
 
-    - name: npm install, make test-coverage
-      run: |
-        npm install
-        make test-coverage
+      - name: Install dependencies
+        run: npm install
 
-    - name: Coveralls
-    - run: npm test -- --coverage
-      uses: coverallsapp/github-action@v2
+      - name: Run tests with coverage
+        run: npm test -- --coverage
+
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

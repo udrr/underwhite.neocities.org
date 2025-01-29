@@ -13,4 +13,7 @@
     "type": "git",
     "url": "https://github.com/udrr/underwhite.neocities.org.git"
   }
+  "scripts": {
+  "test": "jest --coverage"
+}
 }

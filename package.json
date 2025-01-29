@@ -1,0 +1,16 @@
+{
+  "sideEffects": false,
+  "name": "@underwhite/packagesite",
+  "types": "dist/index.d.ts",
+  "description": "neocities site background + coverall support",
+  "version": "0.20",
+  "homepage": "https://github.com/udrr/underwhite.neocities.org",
+  "author": {
+    "name": "underwhite",
+    "url": "https://github.com/udrr/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/udrr/underwhite.neocities.org.git"
+  }
+}

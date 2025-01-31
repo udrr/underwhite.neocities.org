@@ -2,7 +2,7 @@
   "sideEffects": false,
   "name": "@underwhite/packagesite",
   "types": "dist/index.d.ts",
-  "description": "neocities site background code + coverall support",
+  "description": "neocities site background code",
   "version": "0.20",
   "homepage": "https://github.com/udrr/underwhite.neocities.org",
   "author": {

@@ -138,7 +138,31 @@ src: url(https://dl.dropbox.com/s/cfcp07kvx3qut4s/starlight.ttf);
   opacity: 1;
 }
 
-#toggleImage {
+@media only screen and (max-width: 992px) {
+  #toggleImage {
+  animation: flicker 0s infinite;
+  line-height: 0px; 
+  transform: rotate(-13deg); 
+  border-radius: 100%; 
+  position: absolute; 
+  margin: 0px;
+  top: 66px;
+  left: 10px; 
+  z-index:1;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#t {
+  position: relative; left: -8px; top: 77px; transform: rotate(18deg); z-index: 1; }
+}
+}
+
+@media only screen and (min-width: 992px) {
+  #toggleImage {
   animation: flicker 0.1s infinite;
   line-height: 0px; 
   transform: rotate(-13deg); 
@@ -147,7 +171,19 @@ src: url(https://dl.dropbox.com/s/cfcp07kvx3qut4s/starlight.ttf);
   top: 56px;
   left: 353px; 
   z-index:1;
+
 }
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#t {
+  position: relative; left: 178px; top: 77px; transform: rotate(18deg); z-index: 1; }
+}
+}
+
+
 #t {transition-duration: 0.2s;}
 #t:hover {
   
@@ -160,6 +196,8 @@ src: url(https://dl.dropbox.com/s/cfcp07kvx3qut4s/starlight.ttf);
   filter: brightness(60%) contrast(70%);
   
 }
+
+
 
 #wires {
   
@@ -280,7 +318,7 @@ flex {
 
   </style>
   </head>
-  <body style="overflow: hidden;">
+  <body>
    <script>
         function toggleImage() {
             var img = document.getElementById("t");
@@ -298,7 +336,7 @@ flex {
 
 <br><br>
   <img src="https://underwhite.neocities.org/images/assets/welcome.gif" width="150px" style=""  id="toggleImage">
-  <img id="t" title="Turn off backlight." src="https://dimden.dev/images/electricity_on.png" onclick="toggle();toggleImage()" alt="Image" width="35" style="position: relative; left: 178px; top: 77px; transform: rotate(18deg); z-index: 1;">
+  <img id="t" title="Turn off backlight." src="https://dimden.dev/images/electricity_on.png" onclick="toggle();toggleImage()" alt="Image" width="35">
     <div id="box">
       <div id="warning">
         <div class="caution">CAUTION RADIOACTIVE AIR CAUTION RADIOACTIVE AIR CAUTION </div>

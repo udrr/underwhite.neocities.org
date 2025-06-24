@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>r/whoosh</title>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsC8qAP+EAACzh1cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAACAAAAAAAAEiAAAAADAAAiAAAAAAMzAiAAAAAAAAMzAAAAAAAAAiMzMAAAAAAAADAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+<style>
+body {
+ background: black;
+ }
+</style>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br>
+<center><img src="https://file.garden/Z5tLc-9b0gezaMou/upload/test/dog-piano-playing-1.png" style="width: 50px" id="toggleImage" ></center>
+<!-- Your audio -->
+<audio id="myAudio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/test/r_whoosh.ogg"></audio>
+
+<script>
+  const img = document.getElementById("toggleImage");
+  const audio = document.getElementById("myAudio");
+
+  let isPlaying = false;
+
+  img.addEventListener("click", () => {
+    if (!isPlaying) {
+      audio.play();
+      img.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/ezgif-57e87314a687d5.gif"; // Image changes when audio plays
+    } else {
+      audio.pause();
+      img.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/dog-piano-playing-1.png"; // Back to play image
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+</body>
+</html>

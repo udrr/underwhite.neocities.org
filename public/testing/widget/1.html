@@ -19,21 +19,44 @@
 #quot3 {
   color: #fff;
   font-size: 18px;
-  max-width: 40ch;
-  text-align: center;
+  text-align: left;
   font-family: "huh", sans-serif;
   font-size: 13px;
   margin: auto;
 }
 #quot3 {
-  --r: 1.2em; /* the radius */
+  --r: 4px; /* the radius */
   --b: 2px; /* border width  */
   --c2: black; /* background */
   padding: 1em;
-  border-radius: 1.2em;
+  border-radius: var(--r);
+  border-width: var(--b);
+  background: var(--c2);
+  position: relative;
+}
+#quot4 {
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+  font-family: "huh", sans-serif;
+  font-size: 13px;
+  margin: left;
+}
+#quot4 {
+  --r: 4px; /* the radius */
+  --b: 2px; /* border width  */
+  --c2: black; /* background */
+  border-radius: var(--r);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 10px;
+  bottom: 10px;
+  height: 10px;
+  border-width: var(--b);
   padding-bottom: 0.2em;
   background: var(--c2);
   position: relative;
+  padding: 1em;
 }
 
 
@@ -52,21 +75,21 @@
 
 @keyframes ani {
 50% {
-top: 4px;
+top: -24px;
 }
 }
 .tri {
   animation: ani 0.5s infinite;
   animation-timing-function: steps(1);
-  top: 0;
+  top: -20px;
   font-family: monospace;
   color: darkgrey;
   display: block;
   width: fit-content;
-  margin: auto;
+  margin: left;
   position: relative;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   opacity: 1;
   background: transparent;
@@ -75,7 +98,7 @@ top: 4px;
 }
 
 .tri:hover { color: white; }
-.tri:active { color: grey; }
+.tri:active { color: darkgrey; }
 
 
   </style>
@@ -86,35 +109,6 @@ top: 4px;
 
 const params = new URLSearchParams(url.search);
 
-const name = "<span style='color: yellow'>" + params.get('name') + "</span>";
-    // OK noww you can edit.. Here's quotes!
-const quotes = [
-  "Zzz..",
-  "Nice to meet you!",
-  "How are you doing?",
-  "Do you have anything to eat?",
-  "How's your day?",
-  "You're looking sharp today!",
-  "Remember to be happy!",
-  "Have you wondered about dreams?",
-  "Do you have anything to drink?",
-  "What's your name?",
-  "Nice computer you got there!",
-  "Who are you?",
-  "Can I give you a hug? Please?",
-  "Love you!",
-  "Woah..",
-  "Nice website there!",
-  "I love my new home!"
-  // You can add some iframe fourth-wall breaking by addressing the website theme too, like:
-  // "Why is it so cold? I'm freezing!", 
-  // "Haha! I love playing with snow!", 
-  // "Tooo pink.." 
-  // "Birdies!"
-  // "Leafs leafs, I love playing in orange leafs!"
-  // Yes, you can add anything if it's not breaking US law or is just foul in general.
-  // For more ideas, feel free to contact me!
-];
 // DO NOT EDIT BELOW THIS COMMENT! unless you're a javascript expert.
 function index() {
   const randomIndex = Math.floor(Math.random() * quotes.length); 
@@ -123,6 +117,38 @@ function index() {
    var audio = document.getElementById("audio");
         audio.play();
 }
+
+const name ="<span style='color: yellow'>" + "NAME" + "</span>";
+    // OK noww you can edit.. Here's quotes!
+const quotes = [
+  "* Zzzz...",
+  "* Nice to meet you.",
+  "* How are you doing?",
+  "* Do you have anything to eat?",
+  "* How is your day?",
+  "* You're looking sharp today.",
+  "* Please remember to be happy.",
+  "* Have you wondered about dreams?",
+  "* Do you have anything to drink?",
+  "* Oh.",
+  "* What's your name?",
+  "* Nice device, may I have it?",
+  "* Who are you?",
+  "* Could I give you a hug?",
+  "* I like you.",
+  "* Woah..",
+  "* Nice website there.",
+  "* I like my new home.",
+  // You can add some iframe fourth-wall breaking by addressing the website theme too, like:
+  "* Why is it so cold? I'm freezing here.", 
+  "* Huh, Snow.", 
+  "* Way too pink, Change it up a bit.",
+  "* Ooo, birds.",
+  "* I like playing in orange leafs."
+  // Yes, you can add anything if it's not breaking US law or is just foul in general.
+  // For more ideas, feel free to contact me!
+];
+
   </script>
   </head>
   <body>
@@ -131,15 +157,14 @@ function index() {
       <span id="quote">
         <script>
           // This is the introduction using query stuff! Feel free to edit.
-document.write("Hello, I'm ".concat(name, "!"));
-</script>
-      </span>
-      <!-- Triangle, you can change. -->
-      <br><div class="tri" onclick="index();">▾</div>
-    </div><br><br>
+document.write("* Hello, I am ".concat(name, "."));
+</script></span>
+    </div><div id="quot4"><!-- Triangle, you can change. -->
+      <br><div class="tri" onclick="index();">▾</div></div><br><br>
     
     </div>
-    <audio id="audio" src="https://files.catbox.moe/vh7rqo.mp3"></audio>
+    <!-- if you want, you could also change the button sound here using catbox.moe or filegarden.com, or remove it entirely. -->
+    <audio id="audio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/vh7rqo.mp3"></audio>
     
   </body>
 </html>

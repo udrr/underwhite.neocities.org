@@ -71,6 +71,9 @@
   border: 1px dotted black;
   border-radius: 20px;
   padding: 20px;
+  background: url(https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D);
+  background-size: 280px;
+  background-position: 25% 100%;
 }
 
 @keyframes ani {
@@ -99,6 +102,25 @@ top: -24px;
 
 .tri:hover { color: white; }
 .tri:active { color: darkgrey; }
+
+
+#jukeBox {
+  position: relative;
+  top: 110px;
+  right: -180px;
+  transition-duration: 0.2s;
+}
+
+#jukeBox:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
+  transition-duration: 0.2s;
+}
+
+#jukeBox:active {
+  filter: brightness(1.15);
+  transition-duration: 0.4s;
+}
 
 
   </style>
@@ -141,10 +163,11 @@ const quotes = [
   "* I like my new home.",
   // You can add some iframe fourth-wall breaking by addressing the website theme too, like:
   "* Why is it so cold? I'm freezing here.", 
-  "* Huh, Snow.", 
+  "* Huh, snow.", 
   "* Way too pink, Change it up a bit.",
   "* Ooo, birds.",
-  "* I like playing in orange leafs."
+  "* I like playing in orange leafs.",
+  "* Huh, a jukebox."
   // Yes, you can add anything if it's not breaking US law or is just foul in general.
   // For more ideas, feel free to contact me!
 ];
@@ -161,10 +184,26 @@ document.write("* Hello, I am ".concat(name, "."));
 </script></span>
     </div><div id="quot4"><!-- Triangle, you can change. -->
       <br><div class="tri" onclick="index();">▾</div></div><br><br>
-    
+    <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/PngItem_1119842.png" height="70" id="jukeBox" />
     </div>
     <!-- if you want, you could also change the button sound here using catbox.moe or filegarden.com, or remove it entirely. -->
     <audio id="audio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/vh7rqo.mp3"></audio>
-    
+    <!-- This is part of the Jukebox update, Change the music link here! >:D -->
+    <audio id="myAudio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/C%2016-bit_(by%20nobonoko).mp3" loop></audio>
+
+<script>
+  const img = document.getElementById("jukeBox");
+  const audio = document.getElementById("myAudio");
+  let isPlaying = false;
+  
+  img.addEventListener("click", () => {
+    if (!isPlaying) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
   </body>
 </html>

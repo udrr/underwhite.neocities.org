@@ -189,7 +189,7 @@ document.write("* Hello, I am ".concat(name, "."));
     <!-- if you want, you could also change the button sound here using catbox.moe or filegarden.com, or remove it entirely. -->
     <audio id="audio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/vh7rqo.mp3"></audio>
     <!-- This is part of the Jukebox update, Change the music link here! >:D -->
-    <audio id="myAudio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/C%2016-bit_(by%20nobonoko).mp3" loop></audio>
+    <audio id="myAudio" controls loop hidden></audio>
 
 <script>
   const img = document.getElementById("jukeBox");
@@ -204,6 +204,17 @@ document.write("* Hello, I am ".concat(name, "."));
     }
     isPlaying = !isPlaying;
   });
+  
+const hour = new Date().getHours();
+
+// This changes the music if it's night or day
+if (hour >= 6 && hour < 18) {
+  // Morning to evening
+  audio.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/C%2016-bit_(by%20nobonoko).mp3";
+} else {
+  // Evening to morning
+  audio.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/CH16B%20but%20night.mp3";
+}
 </script>
   </body>
 </html>

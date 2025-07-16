@@ -2,228 +2,263 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>room</title>
+    <title>msuci!!</title>
     <style>
-    *{
-    padding:0;
-    margin:0;
-    font-family: 'thickPixels', sans-serif;
-    color: #111;
-}
-
-@font-face {
-  font-family: 'thickPixels';
-  src: url('https://underwhite.neocities.org/fonts/thickPixels.otf')
-}
-
-body{
-    background-color: #000;
-    overflow: hidden;
-    text-align: center;
-}
-.player{
-    background-color: #d52831;
-    width:330px;
-    height: 190px;
-    position:absolute;
-    transform: translate(-50%,-50%);
-    left:50%;
-    top:50%;
-    border-radius: 10px;
-
-}
-.record{
-    width:175px;
-    height: 175px;
-    position:absolute;
-    border-radius: 50%;
-    top:10px;
-    left:20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.label{
-    height: 15px;
-    width: 15px;
-    background-color: #181312;
-    border:20px solid #ff8e00;
-    border-radius: 50%;
-    content: '';
-}
-.tone-arm{
-    height:90px;
-    width:6px;
-    background-color: #ffffff;
-    position:absolute;
-    top:25px;
-    right:95px;
-    transform:1s;
-    transform-origin:top;
-
-}
-
-.control{
-    background-color: #181312;
-    width:17px;
-    height:17px;
-    border:10px solid #2c2c2c;
-    border-radius: 50%;
-    position:absolute;
-    top:-16px;
-    left:-16px;
-}
-.tone-arm:before{
-    content:" ";
-    position: absolute;
-    height: 40px;
-    width:6px;
-    background-color: #ffffff;
-    transform: rotate(30deg);
-    bottom:-36px;
-    right:10px;
-}
-.tone-arm:after{
-    content:" ";
-    position: absolute;
-    height: 0px;
-    width:10px;
-    border-top:18px solid #b2aea6;
-    border-left:2px solid transparent;
-    border-right:2px solid transparent;
-    top:108px;
-    right:14px;
-    border-radius: 2px;
-    transform: rotate(30deg);
-    
-}
-.btn{
-    width: 28px;
-    height:28px;
-    background-color: #ed5650;
-    border-radius: 50%;
-    position: absolute;
-    bottom:25px;
-    right:30px;
-    border:none;
-    border:3.5px solid rgb(190,39,42);
-    outline:none;
-    box-shadow: 0px 7px 0 0.1px rgb(195,39,42);
-    cursor: pointer;
-}
-
-.btn:active{
-    width: 28px;
-    height:28px;
-    background-color: #ed5650;
-    border-radius: 50%;
-    position: absolute;
-    bottom:20px;
-    right:30px;
-    border:none;
-    border:3.5px solid rgb(190,39,42);
-    outline:none;
-    box-shadow: 0px 2px 0 0.05px rgb(195,39,42);
-    cursor: pointer;
-}
-.slider{
-    -webkit-appearance: none;
-    appearance: none;
-    transform: rotate(-90deg);
-    width: 90px;
-    height:7px;
-    position: absolute;
-    left:233px;
-    top:60px;
-    background-color: #be272a;
-    outline: none;
-    border-radius: 5px;
-    border: 6px solid #ed5650;
-}
-.slider::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    appearance:none;
-    width:10px;
-    height:12px;
-    background-color: #ffffff;
-    cursor: pointer;
-    border-radius: 5px;
-
-}
-.play{
-    transform:rotate(30deg);
-    transform-origin: top;
-    transition: 1s;
-}
-.on{
-    animation: spin 10s 1s linear infinite ;
-}
-@keyframes spin{
-    0%{
-        transform:rotate(0deg);
+        body {
+            font-family: mono;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .music-box {
+            text-align: left;
+            padding: 20px;
+            background-image: url(https://underwhite.neocities.org/testing/ferret/dither_it_e.jpg);
+            width: 300px;
+            position: relative;
+        }
+        .music-box .box {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(0deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: none;
+        }
+        .box:before {
+            content: '🎶'; /* Music note to represent the music box */
+            font-size: 2em;
+        }
+        .controls {
+            margin-top: 100px; /* Updated margin-top to 100px */
+        }
+        button {
+            padding: 8px 17px;
+            font-family: mono;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .volume {
+            margin-top: 10px;
+            border-radius: none;
+        }
+        .controls input[type="range"] {
+            width: 100%;
+            height: 5px;
+            background: #ddd;
+            outline: none;
+            border-radius: none;
+            float: left;
+            transition: background 0.3s;
+        }
+        .controls input[type="range"]:hover {
+            background: #bbb;
+            border-radius: none;
+        }
+        .controls input[type="range"]::-webkit-slider-thumb {
+            width: 15px;
+            border-radius: none;
+            height: 15px;
+            background: #007BFF;
+            cursor: pointer;
+        }
+        .controls input[type="range"]::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #007BFF;
+            cursor: pointer;
+            
+        }
+        audio {
+            display: none; /* Hide the audio player */
+        }
+        
+          .audio-container {
+      text-align: center;
     }
-    100%{
-        transform:rotate(360deg);
+    .audio-controls {
+      margin-top: 20px;
     }
-}
+    #time-display {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .audio-controls input[type="range"] {
+      width: 80%;
+    }
     
+    #song-image {
+      width: 200pt;
+    }
+    #volume::-webkit-slider-thumb, #time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#volume::-moz-range-thumb, #time-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#volume, #time-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
     </style>
 </head>
 <body>
-    <div class="player">
-        <div class="record">
-            <div class="label"><img src="/images/misc/disk.png" style="position: relative; bottom: 103px; right: 103px; width: 220px;" preload="auto"></div>
+
+    <div class="music-box">
+        <div class="box" id="music-box"></div> <!-- Music box visual -->
+        <audio id="audio-player" controls>
+            <!-- Default audio will be loaded first -->
+            <source id="audio-source" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="controls">
+            <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
         </div>
-        <div class="tone-arm">
-            <div class="control"></div>
-        </div>
-        <button class="btn"></button>
-        <div class="slider-container">
-            <input type="range" class="slider" min="0" max="1" step="0.05" value="0.7">
-        </div>
+        <p id="text">Now playing: Nothing yet.</p>
+  <div class="audio-controls">
+      <input type="range" id="time-slider" min="0" value="0" step="0.1">
+      <div id="time-display">00:00 / 00:00</div>
     </div>
-  
-<br>where did you come from?
-    <audio loop class="my-song" src="https://deltarune.com/assets/audio/results.mp3" preload="auto"></audio>
-    
+        <!-- Horizontal Volume Control -->
+        <div class="volume">
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.005" value="1" oninput="changeVolume(this)">
+        </div>
+<img id="song-image" src="default.png" alt="image" width="100">
+  </div>
+  <script>
+      // Array of available audio files (replace these with actual paths or URLs)
+const songs = [
+  "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/C%2016-bit_(by%20nobonoko).mp3",
+  "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/CH16B%20but%20night.mp3"
+];
 
+let isPlaying = false; // To track play/pause state
+const audioPlayer = document.getElementById("audio-player");
+const audioSource = document.getElementById("audio-source");
+const playPauseBtn = document.getElementById("play-pause-btn");
+const musicBox = document.getElementById("music-box");
+const timeSlider = document.getElementById("time-slider");
+const timeDisplay = document.getElementById("time-display");
+const songImage = document.getElementById("song-image");
+const text = document.getElementById("text");
 
+let rotationAngle = 0;  // Variable to track current rotation
 
+// Function to load a random song and play it
+function loadRandomSong() {
+  const randomIndex = Math.floor(Math.random() * songs.length); // Random index
+  const selectedSong = songs[randomIndex];
+  audioPlayer.src = selectedSong;
+  audioPlayer.load();
 
-    <script>
-    let state = false;
-let btn = document.querySelector(".btn");
-let record = document.querySelector(".record");
-let toneArm = document.querySelector(".tone-arm");
-let song = document.querySelector(".my-song");
-let slider = document.querySelector(".slider");
+  // 🎨 Update image and text based on selected song
+  if (selectedSong.includes("C%2016-bit")) {
+    songImage.src = "https://t4.ftcdn.net/jpg/01/43/42/83/240_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg";
+    text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit DAY .ver)";
+  } else if (selectedSong.includes("CH16B%20but%20night")) {
+    songImage.src = "https://t4.ftcdn.net/jpg/01/77/29/77/240_F_177297734_b1tghhUiRWIyXdg1cqrrrmUen6NIOzlq.jpg";
+    text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit NIGHT .ver)";
+  } else {
+    songImage.src = "default.png";
+    text.innerText = "Now playing: Unknown track";
+  }
 
-btn.addEventListener("click", () => {
-    if(state == false){
-        record.classList.add("on");
-        toneArm.classList.add("play");
-        setTimeout(() => {
-            song.play();
-        },1000);
+  if (isPlaying) {
+    audioPlayer.play(); // Automatically play if already playing
+  }
+}
 
-    }
-    else{
-        record.classList.remove("on");
-        toneArm.classList.remove("play");
-        song.pause();
+// Function to toggle between play and pause
+function togglePlayPause() {
+  if (isPlaying) {
+    audioPlayer.pause();
+    playPauseBtn.innerText = "Play";
+    musicBox.style.animation = "none";
+  } else {
+    audioPlayer.play();
+    playPauseBtn.innerText = "Pause";
+    musicBox.style.animation = `rotateBox 6s linear infinite`;
+  }
+  isPlaying = !isPlaying;
+}
 
-    }
-    state = !state;
-    
+// Function to simulate continuous spinning
+function updateRotation() {
+  if (isPlaying) {
+    rotationAngle += 1;
+    musicBox.style.transform = `translateX(-50%) rotate(${rotationAngle}deg)`;
+  }
+}
+
+// Function to change the volume of the audio player
+function changeVolume(slider) {
+  audioPlayer.volume = slider.value;
+}
+
+// Format seconds into mm:ss
+function formatTime(seconds) {
+  if (isNaN(seconds)) return "00:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+// Set total duration once it's ready
+audioPlayer.addEventListener("loadedmetadata", () => {
+  timeSlider.max = audioPlayer.duration;
+  timeDisplay.textContent = `00:00 / ${formatTime(audioPlayer.duration)}`;
 });
 
-slider.addEventListener("input",(e) => {
-    song.volume = Number(e.target.value);
+// Update slider and time as the song plays
+audioPlayer.addEventListener("timeupdate", () => {
+  timeSlider.value = audioPlayer.currentTime;
+  timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
 });
-</script>
+
+// Allow seeking
+timeSlider.addEventListener("input", () => {
+  audioPlayer.currentTime = timeSlider.value;
+});
+
+// Load a random song when the page first loads
+window.onload = function() {
+  loadRandomSong();
+  setInterval(updateRotation, 16); // Update rotation every frame (about 60fps)
+};
+  </script>
 </body>
 </html>

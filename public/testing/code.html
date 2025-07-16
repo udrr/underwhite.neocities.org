@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>msuci!!</title>
-    <style>
-        body {
-            font-family: mono;
-            display: flex;
-            justify-content: left;
-            align-items: left;
-            height: 100vh;
-            margin: 0;
-            color: white;
-        }
-        .music-box {
-            text-align: left;
-            padding: 20px;
-            background-image: url(https://underwhite.neocities.org/testing/ferret/dither_it_e.jpg);
-            width: 300px;
-            position: relative;
-        }
-        .music-box .box {
-            width: 100px;
-            height: 100px;
-            background-color: black;
-            border-radius: 50%;
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%) rotate(0deg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: none;
-        }
-        .box:before {
-            content: '🎶'; /* Music note to represent the music box */
-            font-size: 2em;
-        }
-        .controls {
-            margin-top: 100px; /* Updated margin-top to 100px */
-        }
-        button {
-            padding: 8px 17px;
-            font-family: mono;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .volume {
-            margin-top: 10px;
-            border-radius: none;
-        }
-        .controls input[type="range"] {
-            width: 100%;
-            height: 5px;
-            background: #ddd;
-            outline: none;
-            border-radius: none;
-            float: left;
-            transition: background 0.3s;
-        }
-        .controls input[type="range"]:hover {
-            background: #bbb;
-            border-radius: none;
-        }
-        .controls input[type="range"]::-webkit-slider-thumb {
-            width: 15px;
-            border-radius: none;
-            height: 15px;
-            background: #007BFF;
-            cursor: pointer;
-        }
-        .controls input[type="range"]::-moz-range-thumb {
-            width: 15px;
-            height: 15px;
-            background: #007BFF;
-            cursor: pointer;
-            
-        }
-        audio {
-            display: none; /* Hide the audio player */
-        }
-        
-          .audio-container {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>msuci!!</title>
+  <style>
+    body {
+      font-family: mono;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+    .music-box {
+      text-align: left;
+      padding: 20px;
+      background-image: url(https://underwhite.neocities.org/testing/ferret/dither_it_e.jpg);
+      width: 300px;
+      position: relative;
+    }
+ .music-box .box {
+  width: 120px;
+  height: 120px;
+  background-color: transparent; /* remove black */
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#disc-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+    .controls {
+      margin-top: 100px;
+    }
+    button {
+      padding: 8px 17px;
+      font-family: mono;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .volume {
+      margin-top: 10px;
+    }
+    .controls input[type="range"] {
+      width: 100%;
+      height: 5px;
+      background: #ddd;
+      outline: none;
+      float: left;
+      transition: background 0.3s;
+    }
+    .controls input[type="range"]:hover {
+      background: #bbb;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .audio-container {
       text-align: center;
     }
     .audio-controls {
@@ -102,163 +89,243 @@
     .audio-controls input[type="range"] {
       width: 80%;
     }
-    
+
     #song-image {
       width: 200pt;
     }
-    #volume::-webkit-slider-thumb, #time-slider::-webkit-slider-thumb {
+
+#time-slider, #volume {
   -webkit-appearance: none;
   appearance: none;
-  width: 10px;
-  height: 10px;
-  background: #04AA6D;
-  cursor: pointer;
+  width: 100%;
+  height: 14px;
+  background: white;
+  outline: none;
 }
 
-#volume::-moz-range-thumb, #time-slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
-  cursor: pointer;
-}
-
-#volume, #time-slider {
+/* Thumb styling (so it's visible) */
+#volume::-webkit-slider-thumb, #time-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  opacity: 100%;
+  background: white;
+  border: 2px solid #eccafc;
+  border-radius: 25%;
+  cursor: pointer;
+  bottom: 5px;
+  position: relative;
+  z-index: 3;
+}
+
+#time-slider::-webkit-slider-thumb, #volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #eccafc;
+  cursor: pointer;
+  top: 0;
+  border-radius: 25%;
+  margin-top: -1px; /* This centers it vertically */
+  position: relative;
+  z-index: 3;
+}
+
+#time-slider::-moz-range-thumb, #volume::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: skyblue;
+  cursor: pointer;
+}
+
+
+
+#time-slider, #volume {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 10px;
-  background: #d3d3d3;
+  background: linear-gradient(to right, #abd1e0 0%, #abd1e0 0%, #abd1e0 0%, #abd1e0 100%);
+  border-radius: 5px;
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
-    </style>
+
+#volume::-webkit-slider-thumb {
+  margin-top: 0;
+}
+
+
+
+  </style>
 </head>
 <body>
+  <div class="music-box">
+    <div class="box" id="music-box">
+  <img src="https://underwhite.neocities.org/images/misc/disk.png" id="disc-img" />
+</div>
+    <audio id="audio-player" controls>
+      <source id="audio-source" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
 
-    <div class="music-box">
-        <div class="box" id="music-box"></div> <!-- Music box visual -->
-        <audio id="audio-player" controls>
-            <!-- Default audio will be loaded first -->
-            <source id="audio-source" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-
-        <div class="controls">
-            <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
-        </div>
-        <p id="text">Now playing: Nothing yet.</p>
-  <div class="audio-controls">
-      <input type="range" id="time-slider" min="0" value="0" step="0.1">
+    <div class="controls">
+      <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
+    </div>
+    <p id="text">Now playing: ?????</p>
+    <div class="audio-controls">
+     <div class="progress-wrapper">
+  <input type="range" id="time-slider" min="0" value="0" step="0.1">
+  <div class="progress-fill" id="progress-fill"></div>
+</div>
       <div id="time-display">00:00 / 00:00</div>
     </div>
-        <!-- Horizontal Volume Control -->
-        <div class="volume">
-            <label for="volume">Volume</label>
-            <input type="range" id="volume" min="0" max="1" step="0.005" value="1" oninput="changeVolume(this)">
-        </div>
-<img id="song-image" src="default.png" alt="image" width="100">
+
+    <div class="volume">
+      <label for="volume">Volume</label>
+      <input type="range" id="volume" min="0" max="1" step="0.005" value="1" oninput="changeVolume(this)" />
+    </div>
+<br><br>
+<center><img id="song-image" src="default.png" alt="image" width="100" /></center>
   </div>
+
   <script>
-      // Array of available audio files (replace these with actual paths or URLs)
-const songs = [
-  "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/C%2016-bit_(by%20nobonoko).mp3",
-  "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/CH16B%20but%20night.mp3"
-];
+    const songs = [
+      "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/C%2016-bit_(by%20nobonoko).mp3",
+      "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/CH16B%20but%20night.mp3"
+    ];
 
-let isPlaying = false; // To track play/pause state
-const audioPlayer = document.getElementById("audio-player");
-const audioSource = document.getElementById("audio-source");
-const playPauseBtn = document.getElementById("play-pause-btn");
-const musicBox = document.getElementById("music-box");
-const timeSlider = document.getElementById("time-slider");
-const timeDisplay = document.getElementById("time-display");
-const songImage = document.getElementById("song-image");
-const text = document.getElementById("text");
+    let isPlaying = false;
+    const audioPlayer = document.getElementById("audio-player");
+    const audioSource = document.getElementById("audio-source");
+    const playPauseBtn = document.getElementById("play-pause-btn");
+    const musicBox = document.getElementById("music-box");
+    const timeSlider = document.getElementById("time-slider");
+    const timeDisplay = document.getElementById("time-display");
+    const songImage = document.getElementById("song-image");
+    const text = document.getElementById("text");
+    const volume = document.getElementById("volume");
 
-let rotationAngle = 0;  // Variable to track current rotation
+    let rotationAngle = 0;
 
-// Function to load a random song and play it
-function loadRandomSong() {
-  const randomIndex = Math.floor(Math.random() * songs.length); // Random index
-  const selectedSong = songs[randomIndex];
-  audioPlayer.src = selectedSong;
-  audioPlayer.load();
+    function loadRandomSong() {
+      const randomIndex = Math.floor(Math.random() * songs.length);
+      const selectedSong = songs[randomIndex];
+      audioPlayer.src = selectedSong;
+      audioPlayer.load();
 
-  // 🎨 Update image and text based on selected song
-  if (selectedSong.includes("C%2016-bit")) {
-    songImage.src = "https://t4.ftcdn.net/jpg/01/43/42/83/240_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg";
-    text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit DAY .ver)";
-  } else if (selectedSong.includes("CH16B%20but%20night")) {
-    songImage.src = "https://t4.ftcdn.net/jpg/01/77/29/77/240_F_177297734_b1tghhUiRWIyXdg1cqrrrmUen6NIOzlq.jpg";
-    text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit NIGHT .ver)";
-  } else {
-    songImage.src = "default.png";
-    text.innerText = "Now playing: Unknown track";
-  }
+      if (selectedSong.includes("C%2016-bit")) {
+        songImage.src = "https://t4.ftcdn.net/jpg/01/43/42/83/240_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg";
+        text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit DAY .ver)";
+      } else if (selectedSong.includes("CH16B%20but%20night")) {
+        songImage.src = "https://t4.ftcdn.net/jpg/01/77/29/77/240_F_177297734_b1tghhUiRWIyXdg1cqrrrmUen6NIOzlq.jpg";
+        text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit NIGHT .ver)";
+      } else {
+        songImage.src = "default.png";
+        text.innerText = "Now playing: Unknown track";
+      }
 
-  if (isPlaying) {
-    audioPlayer.play(); // Automatically play if already playing
-  }
+      if (isPlaying) {
+        audioPlayer.play();
+      }
+    }
+
+    function togglePlayPause() {
+      if (isPlaying) {
+        audioPlayer.pause();
+        playPauseBtn.innerText = "Play";
+        musicBox.style.animation = "none";
+      } else {
+        audioPlayer.play();
+        playPauseBtn.innerText = "Pause";
+        musicBox.style.animation = `rotateBox 6s linear infinite`;
+      }
+      isPlaying = !isPlaying;
+    }
+
+    function updateRotation() {
+      if (isPlaying) {
+        rotationAngle += 1;
+        musicBox.style.transform = `translateX(-50%) rotate(${rotationAngle}deg)`;
+      }
+    }
+
+    function changeVolume(slider) {
+      audioPlayer.volume = slider.value;
+    }
+
+    function formatTime(seconds) {
+      if (isNaN(seconds)) return "00:00";
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    audioPlayer.addEventListener("loadedmetadata", () => {
+      timeSlider.max = audioPlayer.duration;
+      timeDisplay.textContent = `00:00 / ${formatTime(audioPlayer.duration)}`;
+    });
+
+    audioPlayer.addEventListener("timeupdate", () => {
+      const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+document.getElementById("progress-fill").style.width = `${percent}%`;
+      timeSlider.value = audioPlayer.currentTime;
+      timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
+    });
+
+    timeSlider.addEventListener("input", () => {
+      audioPlayer.currentTime = timeSlider.value;
+    });
+
+    window.onload = function () {
+      loadRandomSong();
+      setInterval(updateRotation, 16);
+    };
+    
+function updateSliderBackground() {
+  const value = (timeSlider.value / timeSlider.max) * 100;
+  timeSlider.style.background = `linear-gradient(to right, #bfedff 0%, #b4cefa ${value}%, white ${value}%, white 100%)`;
 }
 
-// Function to toggle between play and pause
-function togglePlayPause() {
-  if (isPlaying) {
-    audioPlayer.pause();
-    playPauseBtn.innerText = "Play";
-    musicBox.style.animation = "none";
-  } else {
-    audioPlayer.play();
-    playPauseBtn.innerText = "Pause";
-    musicBox.style.animation = `rotateBox 6s linear infinite`;
-  }
-  isPlaying = !isPlaying;
+function updateSliderBackground2() {
+  const value2 = (volume.value / volume.max) * 100;
+  volume.style.background = `linear-gradient(to right, #bfedff 0%, #b4cefa ${value2}%, white ${value2}%, white 100%)`;
 }
 
-// Function to simulate continuous spinning
-function updateRotation() {
-  if (isPlaying) {
-    rotationAngle += 1;
-    musicBox.style.transform = `translateX(-50%) rotate(${rotationAngle}deg)`;
-  }
-}
-
-// Function to change the volume of the audio player
-function changeVolume(slider) {
-  audioPlayer.volume = slider.value;
-}
-
-// Format seconds into mm:ss
-function formatTime(seconds) {
-  if (isNaN(seconds)) return "00:00";
-  const mins = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60);
-  return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-}
-
-// Set total duration once it's ready
-audioPlayer.addEventListener("loadedmetadata", () => {
-  timeSlider.max = audioPlayer.duration;
-  timeDisplay.textContent = `00:00 / ${formatTime(audioPlayer.duration)}`;
-});
-
-// Update slider and time as the song plays
+// Update slider fill while audio plays
 audioPlayer.addEventListener("timeupdate", () => {
   timeSlider.value = audioPlayer.currentTime;
   timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
+  updateSliderBackground();
+  updateSliderBackground2()
 });
 
-// Allow seeking
+// Also update it when slider is dragged
 timeSlider.addEventListener("input", () => {
   audioPlayer.currentTime = timeSlider.value;
+  updateSliderBackground();
+  updateSliderBackground2()
 });
 
-// Load a random song when the page first loads
-window.onload = function() {
-  loadRandomSong();
-  setInterval(updateRotation, 16); // Update rotation every frame (about 60fps)
-};
+// Set max value and fill once metadata is loaded
+audioPlayer.addEventListener("loadedmetadata", () => {
+  timeSlider.max = audioPlayer.duration;
+  timeDisplay.textContent = `00:00 / ${formatTime(audioPlayer.duration)}`;
+  updateSliderBackground();
+  updateSliderBackground2()
+});
+
+volume.addEventListener('input', () => {
+  changeVolume(volume); // You already have this function, keep it here to update actual volume
+  updateSliderBackground2(); // Update the slider fill background
+});
   </script>
 </body>
+</html>
+
 </html>

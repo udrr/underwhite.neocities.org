@@ -171,13 +171,13 @@
 </div>
     <audio id="audio-player" controls>
       <source id="audio-source" type="audio/mp3" />
-      Your browser does not support the audio element.
+      your browser no no support audio, fix it!
     </audio>
 
     <div class="controls">
       <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
     </div>
-    <p id="text">Now playing: ?????</p>
+    <p id="text">♬ ?????</p>
     <div class="audio-controls">
      <div class="progress-wrapper">
   <input type="range" id="time-slider" min="0" value="0" step="0.1">
@@ -221,13 +221,13 @@
 
       if (selectedSong.includes("C%2016-bit")) {
         songImage.src = "https://t4.ftcdn.net/jpg/01/43/42/83/240_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg";
-        text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit DAY .ver)";
+        text.innerText = "♬ Plastic Christmas by nobonoko (16-bit DAY .ver)";
       } else if (selectedSong.includes("CH16B%20but%20night")) {
         songImage.src = "https://t4.ftcdn.net/jpg/01/77/29/77/240_F_177297734_b1tghhUiRWIyXdg1cqrrrmUen6NIOzlq.jpg";
-        text.innerText = "Now playing: Plastic Christmas by nobonoko (16-bit NIGHT .ver)";
+        text.innerText = "♬ Plastic Christmas by nobonoko (16-bit NIGHT .ver)";
       } else {
         songImage.src = "default.png";
-        text.innerText = "Now playing: Unknown track";
+        text.innerText = "♬ Unknown track";
       }
 
       if (isPlaying) {

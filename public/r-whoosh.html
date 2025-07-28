@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>r/whoosh</title>
-<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsC8qAP+EAACzh1cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAACAAAAAAAAEiAAAAADAAAiAAAAAAMzAiAAAAAAAAMzAAAAAAAAAiMzMAAAAAAAADAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
-<style>
-body {
- background: black;
- }
+  <title>r/whoosh</title>
+  <link href="data:image/x-icon;base64,..." rel="icon" type="image/x-icon">
+  <script>
+    console.log("toby fox????");
+  </script>
+  <style>
+    body {
+      background: black;
+    }
 
- #toggleImage {
-  position: fixed;
-   absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-   cursor: pointer;
- }
-</style>
+    #toggleImage {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      width: 50px;
+    }
+  </style>
 </head>
 <body>
-<center><img src="https://file.garden/Z5tLc-9b0gezaMou/upload/test/dog-piano-playing-1.png" style="width: 50px" id="toggleImage" cursor="pointer"></center>
-<!-- Your audio -->
-<audio id="myAudio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/test/r-whoosh.ogg" loop></audio>
 
-<script>
-  const img = document.getElementById("toggleImage");
-  const audio = document.getElementById("myAudio");
+  <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/test/dog-piano-playing-1.png"
+       id="toggleImage"
+       onclick="toggleAudio()">
 
-  let isPlaying = false;
+  <audio id="myAudio" loop></audio>
 
-  img.addEventListener("click", () => {
-    if (!isPlaying) {
-      audio.play();
-      img.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/ezgif-57e87314a687d5.gif"; // Image changes when audio plays
+  <script>
+    const img = document.getElementById("toggleImage");
+    const audio = document.getElementById("myAudio");
+    let isPlaying = false;
+
+    // 🎲 Make the rare/normal decision ONCE
+    const chance = Math.random();
+    if (chance < 0.19) {
+      audio.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/mokey2.ogg";
+      console.log("Well, congrats you found the secret audio file..");
     } else {
-      audio.pause();
-      img.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/dog-piano-playing-1.png"; // Back to play image
+      console.log("well, r-whoosh loading...");
+      audio.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/r-whoosh.ogg";
     }
-    isPlaying = !isPlaying;
-  });
-</script>
+
+    // 🎵 Toggle play/pause, without changing the audio
+    function toggleAudio() {
+      if (!isPlaying) {
+        audio.play();
+        img.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/ezgif-57e87314a687d5.gif";
+      } else {
+        audio.pause();
+        img.src = "https://file.garden/Z5tLc-9b0gezaMou/upload/test/dog-piano-playing-1.png";
+      }
+
+      isPlaying = !isPlaying;
+    }
+  </script>
+
 </body>
 </html>

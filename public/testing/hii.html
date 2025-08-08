@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Underwhite</title>
+        <style>
+    
+        body {
+      
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                color: #fceaff;
+               }
+  
+  
+            @font-face {
+                font-family: 'Nunito';
+                src: url('https://underwhite.neocities.org/fonts/thickPixels.otf');
+            }
+
+            @font-face {
+                font-family: 'Nunito';
+                src: url('https://underwhite.neocities.org/fonts/cat.ttf');
+                font-weight: bold;
+            }
+   
+            
+                @font-face {
+                font-family: 'me';
+                src: url('https://underwhite.neocities.org/fonts/my.otf');
+              
+            }
+
+    body {
+     background-image: url('https://sadhost.neocities.org/images/tiles/anisnow.gif');
+     background-size: 80px;
+     background-color: #000001;
+     }
+     
+     		body:before {
+        content: "";
+        position: fixed;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        width: 1000%;
+        height: 1000%;
+        background-size: 80px;
+        pointer-events: none;
+        z-index: 1000;
+        background-image: url(https://dimden.dev/images/overlay.png);
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+    }
+    
+    
+@keyframes Static {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -8px;
+    }
+}
+
+  ::-webkit-scrollbar {
+            width: 1px !important;
+            transition-duration: 0.5s !important;
+        }
+        
+        
+    
+
+        ::-webkit-scrollbar-track {
+            background: transparent !important;
+        }
+
+       ::-webkit-scrollbar-thumb {
+            background: magenta !important;
+            border-radius: 5px;
+             width: 5px !important;
+transition-duration: 0.5s !important;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF00Fd !important;
+            width: 10px !important;
+            transition-duration: 0.5s !important;
+        }
+
+          ::-webkit-scrollbar-button {
+            display: none !important;
+        }
+  
+
+  a {
+  color: #f29bfa;
+  text-decoration: none;
+  color: #ED64F5;
+  transition-duration: 0.5s;
+}
+
+a:hover {
+  transition-duration: 0.5s;
+  background-color: #131524;
+  color: #ED64F5;
+  letter-spacing: 0.9px;
+ 
+}
+
+.moreContainer {
+  padding: 10px;
+  max-width: 900px; 
+  position: relative;
+  top: 25%; 
+  left: 21%; 
+  border-radius: 10px;
+  
+}
+
+
+ h1,
+            h2,
+            h3 {
+                color: #ffffff;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #ebfE65;
+            }
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+
+     .kingbox {
+       background: #031524;
+  border: 2px dotted rgb(255, 255, 255, 0.5);
+  padding: 10px;
+  text-align: center;
+  height: 80px;
+   border-radius: 2px;
+     }
+     
+      .kingbox small {
+       top: -40px;
+       position: relative;
+     }
+     
+     .container {
+         display: flex;
+  flex-wrap: nowrap;
+   gap: 0.7em;
+     }
+     
+     .box1 {
+        background: #031524;
+  border: 2px dotted rgb(255, 255, 255, 0.5);
+  border-radius: 2px;
+  width: 20%;
+  padding: 10px;
+  float: left;
+  height: 400px;
+  overflow: scroll;
+  line-height: 9px;
+     }
+      
+     .box2 {
+        background: #031524;
+  border: 2px dotted rgb(255, 255, 255, 0.5);
+  width: 73.7%;
+  padding: 10px;
+   border-radius: 2px;
+     position: relative;
+  bottom: 423px;
+  height: 400px;
+  left: 213px;
+     }
+     
+         .box3 {
+        background: #031524;
+  border: 2px dotted rgb(255, 255, 255, 0.5);
+  width: 73.7%;
+  padding: 10px;
+   border-radius: 2px;
+     position: relative;
+  bottom: 423px;
+  height: 400px;
+  left: 213px;
+     }
+     
+     
+     .box4 {
+       background: #031524;
+  border: 2px dotted rgb(255, 255, 255, 0.5);
+  width: 20%;
+  padding: 10px;
+   border-radius: 2px;
+     position: relative;
+  bottom: 845px;
+  height: 210px;
+  left: 0;
+     }
+     
+       .box5 {
+       background: #031524;
+  border: 2px dotted rgb(255, 255, 255, 0.5);
+  width: 20%;
+  padding: 10px;
+   border-radius: 2px;
+     position: relative;
+  bottom: 845px;
+  height: 148.5px;
+  left: 0;
+     }
+   
+#bookers:hover {
+  transition-duration: 0.5s;
+  background-color: rgba(245, 225, 159, 0.8);
+  border-radius: 50%;
+}
+
+#bookers {
+  transition-duration: 0.5s;
+  position: relative;
+  left: -4px;
+  background-color: none;
+  border-radius: 50%;
+}
+    </style>
+    <style> 
+    /* thanks https://webcode.tools/css-generator */
+.me {
+  height: 250px;
+  width: 250px;
+  background: url(https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/iridescent-bloom-digital-flower-art_191095-78180-Photoroom.png);
+  animation-name: myAnim;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  background-size: 250px;
+  position: relative;
+  top: -700px;
+  left: 700px;
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	40% {
+		transform: translateY(6px);
+	}
+
+	80% {
+		transform: translateY(3px);
+	}
+
+	90% {
+		transform: translateY(0px);
+	}
+}
+</style>
+    </head>
+    <body>
+    <div class="moreContainer">
+    <div class="kingbox"><h1>UNDERWHITE</h1>
+    <br>
+    <small><i><p id="msg" style="position: relative; top: -7px; opacity: 0.3;" onclick="document.getElementById('msg').innerText = blurbs[Math.floor(Math.random() * blurbs.length)]"></p></i></small>
+    <p><marquee scrollamount="6" style="text-align: center; top: -62px; font-size: 30px; font-weight: bold; position: relative; z-index: 1;  background: rgba(255, 255, 255, 0.05); animation: flicker 0.3s infinite; height: 30px;" onmouseover="this.stop();" onmouseout="this.start();">
+     <img src="https://underwhite.neocities.org/images/blinkies/big_shot.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/beware_of_dog.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/kris_why.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/loser_and_proud.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/groovy.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/thank_you.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/clowns.gif">
+     <img src="https://underwhite.neocities.org/images/blinkies/pepsi.gif">
+  </marquee></p>
+    </div>
+    <br>
+    <div class="container">
+    <div class="box1">
+      <h3>navagation:</h3>
+      <p id="personal"><i class="fa fa-heart"></i> personal</p>
+    <br>
+    <div class="link-maybeinvaild"><a href="/credit">credits</a> <img src="/images/assets/caution.gif" width="7px" style="position: relative; top: 1px;"></div><br>
+      <div class="link-vaild"><a href="/about-me">about</a></div><br>
+    <div class="link-vaild"><a href="/journal">journal</a></div><br>
+    <div class="link-vaild" ><a href="/tutorials">tutorials</a></div><br>
+    <div class="link-vaild"><a href="/music">music</a> <img src="/images/assets/caution.gif" width="7px" style="position: relative; top: 1px;"></div><br>
+    <div class="link-vaild"><a href="/shrines">shrines</a></div><br>
+    
+    <p><i class="fa fa-car"></i> sitely</p>
+    <div class="link-vaild"><a href="/sitemap">sitemap</a></div><br>
+    <div class="link-vaild"><a href="/links">cool links</a> <img src="/images/assets/caution.gif" width="7px" style="position: relative; top: 1px;"></div><br>
+	    <div class="link-maybeinvaild"><a href="/newsletter/index.html">newsletter</a></div><br>
+    
+    <p id="personal"><i class="fa fa-star"></i> offsite</p>
+    <div class="link-maybeinvaild"><a href="https://underwhite.straw.page/">strawpage</a></div><br>
+     <div class="link-vaild" style="font-size: 8px;"><a href="/strawpage">artbox</a></div><br>
+     <div class="link-vaild"><a href="//neocities.org/site/underwhite">neocities</a></div><br>
+	    <div class="link-vaild"><a href="https://github.com/udrr/underwhite.neocities.org">source code (github)</a></div><br>
+    </div></div>
+      
+       <div class="box2">
+        <h2>WELCOME!</h2>
+      <p>well hello there fellow traveler, call me udrr! i'm just looking to see what HTML/CSS is!</p>
+
+      <p>i do stuff for fun, mainly HTML. I also do art, and probably some javascript/css too. and some music.</p>
+
+<p>so, deciding to make a website for my personal stuff. (not being limited to a profile and banner). i found out about neocities, and gave it a shot.
+it's a long journey. but i was able to shape my website into something i deeply care about! which is this!</p>
+
+<p>i'm very proud of myself, and i will keep updating this as i love it. <br>this website is also under heavy construction. so tomorrow may feel different and new.</p>
+
+<p>thanks for stopping by, i appreciate it! remember to get a sitemap so you don't get lost.</p>
+<div class="somanycontainers">
+<p><strong>but first</strong>, notes to be careful about:</p>
+<ul>
+<li>this website uses javascript for fun stuff.</li>
+<li>keep in mind this is family friendly.</li>
+<li>my parents are moderating this site.</li>
+<li>i'm a minor, no adult topics please. XD</li>
+<li>Profanity is very seldom on this website, if your very young (5-8), don't visit this please.</li>
+<li>I don't wanna scar you with that.</li>
+</ul>
+</div>
+</div>
+      <br>
+       <div class="box3">
+         e
+       </div>
+       <div class="box4">
+         Visit the guestbook!<br>
+         <a href="/guestbook"><img src="https://i.pinimg.com/originals/ee/7c/43/ee7c4374f599e383ff0d92d5de2f8d60.gif" style="height: 190px;" id="bookers"></a>
+       </div><br>
+       <div class="box5"><center>
+         <p style="font-size: 12px;">Wanna link my button? here is my button:</p>
+      <img style="animation: none;" src="https://underwhite.neocities.org/images/link/button.gif" width="100px"><br>
+      <textarea style="width: 100%; height: 20px; font-family: monospace; background: #111; color: white; font-size: 7px;"><a href="//underwhite.neocities.org"><img src="https://underwhite.neocities.org/images/link/button.gif"></a></textarea><br>
+      <small style="font-size: 5px;">Hotlinking is allowed, if you want to save my bandwidth go <a style="background-color: rgba(255, 255, 0, 0.4); text-decoration: none; color: white; position: relative; top: -9px;" href="https://underwhite.neocities.org/images/link/button.gif" download>save it to your server</a></small><br>
+       </center>
+       <div class="me"></div>
+       </div>
+      </div>
+      </div>
+      <script>
+                   const blurbs = [
+          "the dark blue of neocities", 
+              "vroom vroom car", 
+              "oh no", 
+              "watchs mokey daily so he doesn't break any more bones", 
+              "may be easily a mistake", 
+              "the neocities that neocities", 
+              "mewo site", 
+              "the site of a wolf", 
+              "the javascript master", 
+              "the clone of clones", 
+              "goes sand-ways", 
+              "is the site that blues", 
+              "is the site that uses javascript", 
+              "gave expunged a batch of cookies and regrets it", 
+              "haha dave wheelchair go brrr", 
+              "tooltips go hard", 
+              "rss feeds love me", 
+              "E KRIMAA", 
+              "MOMMY COME PICK ME UP I IZ SCARED", 
+              "so cold lol", 
+              "document.getElementById", 
+              "this message has double the chances of appearing", 
+              "this message has double the chances of appearing", 
+              "''police he wants to kill me police''",
+              "help me",
+              "is gonna start the next new year",
+              "did you know you can click this to randomize to another blurb",
+              "did you know you can click this to randomize to another blurb!",
+              "did you know you can click this to randomize to another blurb!!",
+              "Your file has been saved.",
+              "Your filled with DETERMINATION",
+              "SANDWICHES",
+              "time to get depression wewewewewewewe",
+              "GET AWAY",
+              "I HAVE LORE",
+              "I'M GONNA (probably) BLOG",
+              "no pear you can't have the ice cream",
+	      "neocities is da best",
+	      "what are those reddit tts stories I keep seeing on youtube?? THERE EVERYWHERE",
+	      "r/LodedDiper",
+	      "hehe",
+	      "i've got a cheeseburgerz",
+	      "i loveb being spoiled",
+              "making a geustbook soon, i'm sorry for no updates..!!",
+	      "this aged horriblely",
+	      "dave don't vroom with your wheelchair your gonna fall",
+	      "once got flatted like a pancake by lightin mcqueen",
+	      "the javascript",
+	      "the music",
+	      "makes potions in a witch cauldron",
+	      "buttersotch",
+	      "would kill you but wouldnt",
+	      "will use gaster blasters",
+	      "is talking about why bambi slashed his tires",
+	      "is gonna cause a wormhole",
+	      "MY FRWKIN TIRES",
+	      "KRIMA",
+	      "is going to make bangers",
+	      "raging bolt is one of my favourite pokemon due to it's usage and design",
+	      "is onecompiled"
+              ]
+              
+              document.getElementById("msg").innerText = blurbs[Math.floor(Math.random() * blurbs.length)]
+
+              var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+      </script>
+  </body>
+</html>

@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Underwhite</title>
    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/dark-stylesheet.css" id="theme" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/halloween-stylesheet.css" id="theme" rel="stylesheet" type="text/css" media="all">
     <link href="/css/loader.css" id="theme" rel="stylesheet" type="text/css" media="all">
  <meta property="title" content="Underwhite">
    <meta property="image" content="https://underwhite.neocities.org/images/png/hi.png">
@@ -158,10 +158,10 @@ top: 0px;
 <script>
     function toggleTheme() {
             let theme = document.getElementById('theme');
-            if (theme.getAttribute('href') == '/css/dark-stylesheet.css') {
+            if (theme.getAttribute('href') == '/css/halloween-stylesheet.css') {
                 theme.setAttribute('href', '/css/light-stylesheet.css');
             } else {
-                theme.setAttribute('href', '/css/dark-stylesheet.css');
+                theme.setAttribute('href', '/css/halloween-stylesheet.css');
             }
         }
         </script>
@@ -547,7 +547,8 @@ top: 0px;
 	      "will use gaster blasters",
 	      "is talking about why bambi slashed his tires (not the deer)",
 	      "is gonna cause a wormhole",
-	      "MY TIRES"
+	      "MY TIRES",
+        "ITZA HALLOWEEN"
               ]
               
               document.getElementById("msg").innerText = blurbs[Math.floor(Math.random() * blurbs.length)]

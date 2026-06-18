@@ -40,7 +40,7 @@
   text-align: left;
   font-family: "huh", sans-serif;
   font-size: 13px;
-  margin: left;
+  margin: auto;
 }
 #quot4 {
   --r: 4px; /* the radius */
@@ -97,11 +97,12 @@ top: -24px;
   opacity: 1;
   background: transparent;
   text-shadow: #111 0px 0 2px;
+  filter: sepia(0%);
  
 }
 
 .tri:hover { color: white; }
-.tri:active { color: darkgrey; }
+.tri:active { color: darkgrey; filter: sepia(100%); }
 
 
 #jukeBox {
@@ -109,6 +110,7 @@ top: -24px;
   top: 110px;
   right: -180px;
   transition-duration: 0.2s;
+  z-index: 1111111;
 }
 
 #jukeBox:hover {
@@ -122,10 +124,25 @@ top: -24px;
   transition-duration: 0.4s;
 }
 
+#guy {
+  position: relative;
+  top: -120px;
+  right: 100px;
+  transition-duration: 0.2s;
+  filter: saturate(100%);
+}
+
+
+#guy:active {
+  filter: saturate(120%);
+  transition-duration: 0.4s;
+}
+
+
 
   </style>
   <script>
-    // This is the script for randomizer! and query strings.. //
+ // This is the script for randomizer! and query strings.. //
     // DO NOT EDIT!! only the css stuff in the const "name". //
     const url = new URL(window.location.href);
 
@@ -140,7 +157,7 @@ function index() {
         audio.play();
 }
 
-const name ="<span style='color: yellow'>" + "NAME" + "</span>";
+const name ="<span style='color: yellow'>" + "Guy" + "</span>";
     // OK noww you can edit.. Here's quotes!
 const quotes = [
   "* Zzzz...",
@@ -161,13 +178,20 @@ const quotes = [
   "* Woah..",
   "* Nice website there.",
   "* I like my new home.",
+  "* Arda likes bread.",
+  "* Arda, really, really likes green apples.",
+  "* Consider giving Arda green apples and bread.",
+  "* Vaporeon is huggable.",
+  "* All months are spooky.",
   // You can add some iframe fourth-wall breaking by addressing the website theme too, like:
   "* Why is it so cold? I'm freezing here.", 
   "* Huh, snow.", 
   "* Way too pink, Change it up a bit.",
   "* Ooo, birds.",
   "* I like playing in orange leafs.",
-  "* Huh, a jukebox."
+  "* Huh, a jukebox.",
+  "* You have a chatroom?",
+  "* Why do you have so many tabs open?"
   // Yes, you can add anything if it's not breaking US law or is just foul in general.
   // For more ideas, feel free to contact me!
 ];
@@ -180,15 +204,15 @@ const quotes = [
       <span id="quote">
         <script>
           // This is the introduction using query stuff! Feel free to edit.
-document.write("* Hello, I am ".concat(name, "."));
+document.write("* Hi, I am ".concat(name, "."));
 </script></span>
     </div><div id="quot4"><!-- Triangle, you can change. -->
       <br><div class="tri" onclick="index();">▾</div></div><br><br>
     <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/PngItem_1119842.png" height="70" id="jukeBox" />
+    <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/test/2026_06_18_0sg_Kleki.png" height="250" id="guy" />
     </div>
     <!-- if you want, you could also change the button sound here using catbox.moe or filegarden.com, or remove it entirely. -->
     <audio id="audio" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/vh7rqo.mp3"></audio>
-    <!-- This is part of the Jukebox update, Change the music link here! >:D -->
     <audio id="myAudio" controls loop hidden></audio>
 
 <script>

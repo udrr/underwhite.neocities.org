@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charSet="utf-8" data-next-head=""/><meta charSet="utf-8"/>
+    <link rel="icon" href="https://underwhite.neocities.org/images/png/ff5b8bd5-0632-4563-9a74-6ef3e72e7ad7_removalai_preview.png">
+    <title>TOO MUCH SUMMER</title>
+    <!-- Tns rki lafbkilhm ekcdebz wh mds lkikys vkrx? Zcg'p zhky mdska! -->
+    <style>
+      :root {
+        --junior: #b95dff;
+      }
+    @font-face {
+     font-display:swap;
+     font-family:"8bitOperatorPlus-Bold";
+     font-style:normal;
+     font-weight:400;
+     src:url(https://toby.fangamer.com/assets/fonts/8bitOperatorPlus-Bold.ttf) format("truetype") 
+        }
+    @font-face {
+     font-display:swap;
+     font-family:"8bitOperatorPlus-Regular";
+     font-style:normal;
+     font-weight:400;
+     src: url(https://toby.fangamer.com/assets/fonts/8bitOperatorPlus-Regular.ttf) format("truetype")
+        }
+    
+    @font-face {
+     font-display:swap;
+     font-family:JF-Dot-Shinonome-14-Regular;
+     font-style:normal;
+     font-weight:400;
+     src: url(https://toby.fangamer.com/assets/fonts/JF-Dot-Shinonome-14-Regular.ttf) format("truetype")
+        }
+
+    @font-face {
+      font-display:swap;
+      font-family:DePixel Schmal;
+      font-style:normal;
+      font-weight:400;
+      src: url(https://toby.fangamer.com/assets/fonts/depixelschmal.ttf) format("truetype")
+        }
+        
+    @font-face {
+      font-display:swap;
+      font-family:DePixel Halbfett;
+      font-style:normal;
+      font-weight:400;
+      src: url(https://toby.fangamer.com/assets/fonts/depixelhalbfett.ttf) format("truetype")
+        }
+ 
+  body {
+       background: black;
+       color: white;
+       font-family: "8bitOperatorPlus-Regular";
+      overflow-x: hidden;
+      font-size: 16px;
+     }
+
+          .rail {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: -109pt;
+    
+        height: 80px;
+        background: url("https://onio.club/rail.png") repeat-x;
+        background-size: 105px;
+        z-index: 0;
+        width: 200%;
+    }
+
+          .rail2 {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: -38pt;
+        height: 10px;
+        width: 200%;
+        background: url("https://onio.club/rail.png") repeat-x;
+        background-size: 45px;
+        z-index: 0;
+    }
+
+    .marquee-content {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+  
+    .marquee-track {
+        position: relative;
+        z-index: 1;
+    
+        display: inline-flex;
+        animation: marquee 20s linear infinite;
+    }
+  
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    h2 {
+      color: yellow;
+      font-family: "8bitOperatorPlus-Bold";
+      white-space: nowrap;
+    }
+  
+    .train-car {
+      width: 94px;
+      height: 43px;
+      position: relative;
+      flex-shrink: 0;      
+    }
+  
+    .freight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 94px;
+      height: 43px;
+    }
+  
+    .train-car a {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 88px;
+      height: 31px;
+      z-index: 2;
+    }
+  
+    .train-car img:not(.freight) {
+      top:1px;
+      width: 88px;
+      height: 31px;
+      object-fit: contain;
+    }
+  
+    @keyframes marquee {
+      0% { transform: translateX(50%) scaleX(1) translateY(0%); }
+      50%   { transform: translateX(-100%) scaleX(1) translateY(0%); }
+      50.1% { transform: translateX(-110%) scaleX(-1) }
+      100%   { transform: translateX(200%) scaleX(-1)  }
+    }
+
+
+    h1 {
+      font-size: 40px;
+      font-family: "DePixel Schmal";
+      font-weight: 700;
+      color: yellow;
+      position: relative;
+     top: -1px;
+     font-family: "8bitOperatorPlus-Bold";
+}
+
+    
+     
+   .box {
+     width: 600px;
+     height: auto;
+     line-height: 160%;
+   }
+   
+
+   
+   p, li {
+     text-align: left;
+   }
+
+   li {
+    list-style-type: square;
+   }
+   
+   strong, b {
+     color: #F9FF10;
+   }
+   
+   small {
+    line-height: 150%;
+    margin-bottom: -6px;
+    position: relative;
+    top: 18px;
+    color: grey;
+   }
+   
+   a {
+     color: yellow;
+     text-decoration: none;
+     transition-duration: 0.5s;
+   }
+   
+   a:hover {
+     color: #fffd70;
+     text-decoration: none;
+     transition-duration: 0.5s;
+   }
+   .blockquote {
+    color: black;
+    font-family: Serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 40px;
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    width: 98%;
+    position: relative;
+  left: -12px;
+    padding: 15px;
+   }
+   .blockquote b {
+    color: black;
+   }
+   #dropcap::first-letter {
+  -webkit-initial-letter: 3; /* Required for Safari support */
+  initial-letter: 3;         /* Sinks the letter down exactly 3 lines */
+  font-weight: bold;
+  padding-right: 8px;        /* Adds breathing room to the right */
+}
+@keyframes horizontal-shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-0.5px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: horizontal-shake 0.3s infinite;
+}
+
+
+
+        .the-fixer {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+    }
+
+.borderimg { 
+  border: 20px solid transparent;
+  padding: 15px;
+  border-image: url(https://files.catbox.moe/szzrm5.png) 30 stretch;
+  background: black;
+  width: 400px;
+  height: 400px;
+
+  color: white;
+}
+
+.emote {
+width: 70px;
+height: 15px;
+display: inline-block;
+top: 2.7px;
+position: relative;
+ image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.junior {
+  color: var(--junior);
+  font-family: JF-Dot-Shinonome-14-Regular;
+  margin-left: 2px;
+  text-align: right !important;
+}
+
+img {
+  image-rendering: pixelated;
+   image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.spoiler {
+  background: red;
+  color: pink;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  border: 1px dotted pink;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;               /* Width of vertical scrollbar */
+  height: 8px;              /* Height of horizontal scrollbar */
+}
+
+/* The background track */
+::-webkit-scrollbar-track {
+  background: black;       /* Background color of the track */       /* Rounded corners */
+}
+
+/* The draggable thumb handle */
+::-webkit-scrollbar-thumb {
+  background: grey;       /* Color of the draggable bar */
+        /* Rounded corners */
+}
+
+/* Hover effect on the draggable handle */
+::-webkit-scrollbar-thumb:hover {
+  background: white;       /* Darker color on hover */
+}
+.hideen {
+  width: 100%;
+  height: auto;
+  cursor: zoom-out;
+}
+    </style>
+  </head>
+  <body>
+<center>
+  <div class="box">
+    <small>udrr's personal newsletter: </small>
+<h1 class="shake">TOO MUCH SUMMER</h1>
+    <div class="the-fixer">
+<div class="marquee" id="marquee">
+          <div class="rail2"></div>
+        <div class="marquee-track" id="track">
+          <div class="marquee-content" id="content">
+             <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>  
+             <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>  
+            <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>   
+            <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>   
+            <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>  
+            <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>   
+            <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>   
+            <div class="train-car">
+              <img src="https://onio.club/engineno.gif" class="freight" alt="freight car">
+            </div>   
+             <div class="train-car">
+              <img src="https://onio.club/choo.gif" class="freight" alt="freight car">
+            </div>   
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://wiby.org/about/" title="Personal site search engine"><img src="https://onio.club/buttons/wiby.org.gif"></a>
+            </div>
+    
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://quake3.that90s.site/" title="play quake 3 online in browser"><img src="https://onio.club/buttons/qbutton1.gif"></a>
+            </div>
+    
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://nightscape.xobyte.org/"><img src="https://onio.club//buttons/night.gif"></a>
+            </div>
+            
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><img src="https://onio.club/buttons/chatbt.gif">
+            </div>
+    
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://kuroi.com.br/" title="Kuroi's Chatroom Rox"><img src="https://onio.club//buttons/button1.png"></a>
+            </div>
+    
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://forum.melonland.net/" title="My favorite forum!"><img src="https://onio.club/melon.gif"></a>
+            </div>
+            
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><img src="https://onio.club/buttons/oniocolor.gif">
+            </div>
+    
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://neocities.org/site/onio" title="Follow me on NeoCities!"><img src="https://onio.club/cafe.png"></a> 
+            </div>
+            
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://that90s.site/"><img src="https://that90s.site/uploads/1773938247726 - orig.webp"></a>
+            </div>
+            
+            <div class="train-car">
+              <img src="https://onio.club/freight4.gif" class="freight" alt="freight car"><a href="https://yelorange.neocities.org/" target="_blank"><img src="https://yelorange.neocities.org/button.png" style="image-rendering: pixelated"></a>
+            </div>
+            <div class="train-car">
+              <img src="https://onio.club/engine2.gif" class="freight" alt="freight car">
+            </div> 
+            <div class="train-car">
+              <img src="https://onio.club/engine2.gif" class="freight" alt="freight car">
+            </div></div>
+        </div>
+      </div></div> 
+    <p>Hello my good sirs, madams, everything in between and out. It seems to be still <strong>SUMMER</strong>.</p>
+    <p> Can you believe June's already finished and I have not once opened up that guestbook WIP?</p>
+    <p>I mean, the sky is still calm shade of blue, and I'm writing this on a typewriter in the middle of a forest. What's the <strong>TEMPERTURE</strong>?</p>
+    <p>44 Celsius?</p>
+    <p>Low humidity?</p>
+    <p>...</p>
+    <p>Hey... That's <i>too</i> much <strong>SUMMER</strong>... and my development deadlines are rapidly approaching!</p>
+    <h2>SUMMER IS BAD</h2>
+    <p>Sorry, I have to say it. It sucks. I'm melting, I can't touch grass or get sunlight, sweaty, and my forehead is drenched.</p>
+    <p>It's usually not 44 Celsius in summer. So don't blame me.</p>
+    <p>...</p>
+    <p>At least I have air conditioning, swimming, and summer break. Those are the only good things for this season.</p>
+    <p>Now, lets talk about something that has nothing to do with summer whatsoever...</p>
+    
+    <h2 style="position: relative; top: 25px;">MY VERY EFFICIENT NON-HYPNOSIS CHATROOM</h2>
+    <small style="top: -44px;">closed on mondays cafe</small>
+    <p>Yup. I'm making a chatroom using <a href="https://iframe.chat">Chattable</a>.</p>
+    <p>Its been an idea of mine for a while. Since the main indie chatroom on the web has been closed for the public (sorry Mr. Boots...), I feel like there should be somewhere to reach out without having to email me or make a Neocities and to connect with all my friends.</p>
+    <img src="https://file.xobyte.org/4ccd05f9-d2a5-4496-8be5-8a703ea831cb" height="200px">
+    <p>If I preview while the iframe is set to Chattable too much, it IP blocks me. It's why I put it to "example" in the screenshot I have.</p>
+<p>Right now, there's...</p>
+  <ul>
+    <li><b>Background music</b>: You can turn on background music (unchecked by default).</li>
+    <li><b>My dumb ramblings</b>: See my ramblings in the left corner! I plan on adding lots of 'em.</li>
+    <li><b>Swatch internet timer</b>: Its cool. What can I say?</li>
+<li><b>Online List</b>: There's an online list you can see by hovering over the <img class="emote" src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/pixil-frame-0%20(5).png" title="Also known as DoktorImprobable"> and clicking the <img class="emote" src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/pixil-frame-0%20(5).png" title="Also known as DoktorImprobable"> makes a cute squeak.</li>
+</ul>
+    <p>I'll probably release it in August or so, as I still have to code in the <i>"closed on mondays"</i> thing, and I usually procastinate. :P</p>
+    <p>Since I'm holding that off (for now) because of summer, lets go somewhere else!</p>
+
+    <h2>PSEUSTUFF COMMUNITY ALBUM</h2>
+    <p>Oh, <a href="https://www.pseustuff.com/Community-Album-1/">it already released?</a></p>
+    <p><span style="color: grey;">I don't</span>, or probably do <span style="color: grey;">give</span> a bumm<span style="color: grey;"">e</span>r about this. I have to talk about it!</p
+    <img src="https://file.garden/aldRlgRfKCChSA2t/PseuStuff%20Community%20Album%201/PSEU%20THIS%20IS%20IT.png" height="400px">
+    <p>So, this is the <strong>Community Album Project</strong>, where you submit songs that are  compil<span style="color: grey;">e</span>d into community albums based on the music taste of PseuStu<span style="color: grey;">ff</span> visitors. The playlists are uploaded <span style="color: grey;">o</span>nline and Pseu burns them <span style="color: grey;">o</span>n physical CDs. How <span style="color: grey;">c</span>ool is that?! </p>
+    <p>Album #1 already released, and I submitted "Sunset Of Seven Suns" for it.</p>
+    <p>If you wanna submit <i>a</i> (singular, you can only have one song per album) song, go <a href="https://www.pseustuff.com/Community-Albums">here</a>.</p>
+    <p>Though, I've already submitted my handcrafted track for the second album...</p>
+    <p>...and I'm doing the cover art!</p>
+    <p>Speaking of art...</p>
+    <div class="hideen">
+    <p style="opacity: 0.6; color: black; font-size: 9px; font-family: DePixel Schmal;text-align: center;">Hey, uh, I just made a cool song. Wanna hear it?</p>
+    <p style="opacity: 0.6; color: black; font-size: 9px; font-family: DePixel Schmal;text-align: center;" class="shake">Please...</p>
+    <p style="opacity: 0.6; color: black; font-size: 9px; font-family: DePixel Schmal;text-align: center;">-- Zfmpsbohf</p></div>
+      <h2>DELTARUNE CHAPTER 5</h2>
+      <div class="spoiler">[SPOILER WARNING!]</div><br>
+      <center><img src="https://email-files.fangamer.com/list_48/campaign_17/jump-full-z3A9HYoVOYipNIao.png" height="430px;"></center>
+      <p>Since the last newsletter, <strong>DELTARUNE</strong>'s latest chapter has released somewhere in late-June. Sorry to keep you waiting? (Wait, why am I saying sorry?)</p>
+      <p>For me, this chapter (named "Festival Day") was a medium blast! (I guess)</p>
+      <img src="https://static0.dualshockersimages.com/wordpress/wp-content/uploads/2026/06/deltarune-chapter-5-3.jpg?w=1600&h=1200&fit=crop" height="400px">
+      <p>Of course, there were some flaws here and there, but I did enjoy this chapter. Cutie Mew Mew Magic and Sunset Of Seven Suns are my favourite tracks, and I liked the personified representations of the seven flowers. I especially connect with Aqua's character; very silly!</p>
+      <img src="https://deltarune.wiki/images/Seth_and_Aqua_battle_dance.gif?cb=61dwyh&h=thumb.php&f=Seth_and_Aqua_battle_dance.gif" height="200px">
+      <p>There's also the golden flower, <b>Flowery</b>. I like him too, and the symbolism was very deep.</p>
+      <p class="junior">Kill or be killed, am I right?</p>
+      <p style="font-size:13px;">(Wait what? When did you get in here?!)</p>
+      <p style="font-size:13px;">(Might need to...)</p>
+      <h2>WHO'S <span style="color: var(--junior);">JRPELO</span>?</h2>
+      <p>I'd like to introduce you to this creature that just so happens to exist purely in my brain.</p>
+      <p class="junior">Not purely since I can get out.</p>
+      <p>Of course, you know his name and his gender already.</p>
+      <p>...</p>
+      <p>1. He's clumsy.</p>
+      <p class="junior">Where's the mouse wheel power thing?</p>
+      <p>2. He runs on a mouse wheel in my brain to power me up. (he gets sleep so its fine)</p>
+      <p class="junior">And I have white pants that have a cool vertical black stripe...!</p>
+      <p>3. With a hat.</p>
+      <p class="junior" style="font-size:13px;">(I was expecting something bigger then 3 points about me...)</p>
+      <h2>MAGICAL QUEST UPDATE?</h2>
+      <p style="opacity: 1; color: black; font-size: 9px; font-family: DePixel Schmal;text-align: center;">4c 6f 6f 6b 20 6f 75 74 20 66 6f 72 20 74 68 65 20 65 6e 64 20 6f 66 20 73 75 6d 6d 65 72 2e</p>
+      <p>As a quick refresher, I mentioned Just an Ordinary Magic Quest last newsletter, and shared a snippet.</p>
+      <p>Though...</p>
+      <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/writersblock.png" height="400px" style="position: relative; left: -20px;">
+      <p>Yeah... I have to take a break from all this stuff for now. </p>
+      <h2>CONCLUSION</h2>
+      <p>Welp, we still have to wait apparently. Summer, I mean, not for Chapter 5 or anything (or the <span title="By that I mean Summer_O. She is the auntie baddie strawberry!">auntie baddie strawberry</span>).</p>
+      <p class="junior">Tuff.</p>
+      <p>Thanks.</p>
+    <br><br>
+    <p style="opacity: 0.3; color: darkgrey; font-size: 9px; font-family: DePixel Schmal;text-align: center;">SXRzIG5vdCBvdmVyIHlldCwgWmZtcHNib2hmLg==</p>
+    
+  </div>
+  </center>
+  </body>
+</html>

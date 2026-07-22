@@ -181,6 +181,11 @@ color: #40E0D0;
 color: #322277;  
 }
 
+		#june-26::marker {
+color: pink;  
+}
+
+
 
 
 details > summary {
@@ -215,12 +220,35 @@ html {
   width: 50%;
   overflow: scroll;
 }
-</style>
-</head>
-<body>
 
+audio {
+  width: 100%;
+  max-width: 400px;
+  height: 30px;
+  border-radius: 1px;
+  outline: none;
+}
 
-<div class="container">
+/* Chrome, Safari, and Opera specific inner styles */
+audio::-webkit-media-controls-panel {
+  background-color: tomato;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: red;
+  margin-left: -10px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+  font-family: sans-serif;
+}
+      </style>
+   </head>
+  <body>
+
+      <div class="container">
   <div> <h3>MUSIC!</h3>
   <a href="/home" id="home">> back_</a><br><br>
    <p>So yeah, I actually do music. i USED to do <a href="https://jummb.us">Jummbox</a> and <a href="//ultraabox.github.io">Ultrabox</a>, not that much anymore, I use <a href="https://choptop84.github.io/abyssbox-app">Abyssbox</a> and it's pretty cool,
@@ -601,7 +629,21 @@ html {
 		    <small style="font-size: 11px;">final exams coming up! here's a song i've been keeping in my pocket for a while</small></p>
             
 				 </details>			
+			
+            <p><details><summary id="july-26" class="calender">july 2026<br></summary></p>
+				<h6>july-22-2026</h6>
+				 <small style="font-size: 6px;" class="tag">#kevin #candy</small>
+	           <br>  <audio controls>
+  <source src="https://file.garden/Z5tLc-9b0gezaMou/upload/songs/candy2.mp3">
+  ur browser does not support the audio tag :(
+</audio>
+	  <br><h2><i><span style="color: tomato">candy</span></i></h2><br>
+	  <p><a href="https://pastelink.net/ivatyd8p">linkity</a><br>
+		    <p>
+		    <small style="font-size: 11px;">finally, the kevin song is out! i have this in my pocket so i decided to release it today</small></p>
+            
+				 </details>			
 				</div>
-</div>
+</div></div>
 </body>
 </html>

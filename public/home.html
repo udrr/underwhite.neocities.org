@@ -1,192 +1,1640 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Underwhite</title>
-   <link href="https://underwhite.neocities.org//style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="https://underwhite.neocities.org//css/dark-stylesheet.css" id="theme" rel="stylesheet" type="text/css" media="all">
-    <link href="https://underwhite.neocities.org/css/loader.css" id="theme" rel="stylesheet" type="text/css" media="all">
- <meta property="title" content="Underwhite">
+<html> 
+  <head>
+    <title>Underwhite</title>
+    <meta property="title" content="Underwhite">
    <meta property="image" content="https://underwhite.neocities.org/images/png/hi.png">
+     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/346/346167.png">
     <meta property="image:type" content="image/svg">
    <meta property="image:alt" content="heloz">
         <meta property="description" content="A random person with a website! :3 I'd say more but this stupid three dots symbol keeps blocking my words >:(">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- HEY HEY WHAT ARE YOU DOIN?????? WHY YOU HERE >:( -->
-   <!-- oh just inspecting, okkk.. if you take code i will kill you. :P -->
-   </head>
-<body>
-   <div id="loader"></div>
-<div class="grid-container">
-  <div class="header">
-  
-    <p style="text-align: center; top: 10px; font-size: 30px; font-weight: bold; position: relative;" class="squish">Underwhite <img src="/images/assets/warpstar.png" id="what"></p><i><p id="msg" style="position: relative; top: -20px; opacity: 0.3;" onclick="document.getElementById('msg').innerText = blurbs[Math.floor(Math.random() * blurbs.length)]"></p></i>
-    <marquee scrollamount="6" style="text-align: center; top: 4px; font-size: 30px; font-weight: bold; position: relative; z-index: 1;  background: rgba(255, 255, 255, 0.05); animation: flicker 0.3s infinite; height: 30px;" onmouseover="this.stop();" onmouseout="this.start();">
-     <img src="/images/blinkies/big_shot.gif">
-     <img src="/images/blinkies/beware_of_dog.gif">
-     <img src="/images/blinkies/kris_why.gif">
-     <img src="/images/blinkies/loser_and_proud.gif">
-     <img src="/images/blinkies/groovy.gif">
-     <img src="/images/blinkies/thank_you.gif">
-     <img src="/images/blinkies/clowns.gif">
-     <img src="/images/blinkies/pepsi.gif">
-  </marquee>
-  <!-- cool disclaimer thing -->
-    <style>
-.warn {
-background: dodgerblue;
-color: white;
-text-align: center;
-transform: rotate(-25deg);
-position: relative;
-left: -320px;
-bottom: 120px;
-z-index: 999;
-height: 20px;
-line-height: 22px;
-}
-.warn::selection {
-background: blue;
-color: white;
-}
-
-.e {
-  height: fit-content;
-}
-
-#what {
-animation: what 0.5s steps(1) infinite;
-top: 0px;
-	position: relative;
-}
-
-@keyframes what {
-50% { top: -2px; }
-}
-
-</style>
-<div class="warn">WARNING: DO NOT EAT WEBSITE!!1!11</div>
-
-<!-- hi ig, waht are you doing? -->
-
-
-
-  
-  </div>
-  <!-- left menu (navigation and extras) -->
-  <div class="menu" style="">
-
-<span></span> <span class="message" style="background-color: black; border-radius: 10px 10px 0px 10px; height: 531%; width: 30%; font-size: 9px; color: white">hewsoo!! uor vistor no.<script type="text/javascript" src="https://counter.websiteout.com/js/35/0/3454/1"></script>!!1!1</span><br><br><img src="images/svg/Ch3vDog.svg" width="40px" style="transform: scaleX(1); float: right;" class="squish3"><br><br><br>
-<iframe src="https://indiedarkwing.neocities.org/minikeys/netbar.html" title="NetBar" height=100px width=150px></iframe>
-
-	<br><hr><br>
-   <p><b style="font-size: 14px;">! NAVAGATION !</b></p>
-    <p style="text-align: center;">&#8595;	&#8595;</p>
-    <center><p style="font-size: 5px;"><span style="color: green;">green</span>: good to go<br><span style="color: goldenrod;">yellow</span>: unfinished or isn't ready</p><br>
-    <div class="e">
-      
-      <p id="personal"><i class="fa fa-heart"></i> personal</p>
-    <br>
-    <div class="link-maybeinvaild"><a href="/credit">credits</a> <img src="/images/assets/caution.gif" width="7px" style="position: relative; top: 1px;"></div><br>
-      <div class="link-vaild"><a href="/about-me">about</a></div><br>
-    <div class="link-vaild"><a href="/journal">journal</a></div><br>
-    <div class="link-vaild" ><a href="/tutorials">tutorials</a></div><br>
-    <div class="link-vaild"><a href="/music">music</a> <img src="/images/assets/caution.gif" width="7px" style="position: relative; top: 1px;"></div><br>
-    <div class="link-vaild"><a href="/shrines">shrines</a></div><br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <script src="https://u.widget.st/ar.js"></script>
+       <!-- tippy! -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<style>  
+  :root {
+    --border: rgba(71, 20, 85, 0.7);
+    --color1: rgba(10, 21, 36,1);
+    --color2: rgba(20, 21, 56,1);
+  }
+  @font-face {
+    font-family: 'n';
+    src: url('https://file.garden/Z5tLc-9b0gezaMou/upload/fonts/thickPixels.otf')
+    }
     
-    <p><i class="fa fa-car"></i> sitely</p>
-    <div class="link-vaild"><a href="/sitemap">sitemap</a></div><br>
-    <div class="link-vaild"><a href="/links">cool links</a> <img src="/images/assets/caution.gif" width="7px" style="position: relative; top: 1px;"></div><br>
-	    <div class="link-maybeinvaild"><a href="/newsletter/index.html">newsletter</a></div><br>
-    
-    <p id="personal"><i class="fa fa-star"></i> offsite</p>
-    <div class="link-maybeinvaild"><a href="https://underwhite.straw.page/">strawpage</a></div><br>
-     <div class="link-vaild" style="font-size: 8px;"><a href="/strawpage">artbox</a></div><br>
-     <div class="link-vaild"><a href="//neocities.org/site/underwhite">neocities</a></div><br>
-	    <div class="link-vaild"><a href="https://github.com/udrr/underwhite.neocities.org">source code (github)</a></div><br>
-    </div>
-      <p>Once i finish a page, i'll add it here!</p>
-    <br><br>
+    @font-face {
+font-family: 'starlight';
+src: url('https://dl.dropbox.com/s/cfcp07kvx3qut4s/starlight.ttf');
+}
+
+ @font-face {
+font-family: 'boldbottom';
+src: url('https://file.garden/Z5tLc-9b0gezaMou/upload/fonts/Bold%20Bottom.otf');
+}
+
+
+    @font-face {
+font-family: 'logo';
+src: url('https://file.garden/Z5tLc-9b0gezaMou/upload/fonts/NotBeast-PersonalUseOnly-BF68c0f8a6cccc6.ttf');
+}
+
  
+    @font-face {
+font-family: 'catscratch';
+src: url('https://file.garden/Z5tLc-9b0gezaMou/upload/fonts/catScratch.ttf');
+}
+ @font-face {
+     font-display:swap;
+     font-family:"8bitOperatorPlus-Bold";
+     font-style:normal;
+     font-weight:400;
+     src:url('https://toby.fangamer.com/assets/fonts/8bitOperatorPlus-Bold.ttf') format("truetype") 
+        }
+    @font-face {
+     font-display:swap;
+     font-family:"8bitOperatorPlus-Regular";
+     font-style:normal;
+     font-weight:400;
+     src: url('https://toby.fangamer.com/assets/fonts/8bitOperatorPlus-Regular.ttf') format("truetype")
+        }
     
+    @font-face {
+     font-display:swap;
+     font-family:JF-Dot-Shinonome-14-Regular;
+     font-style:normal;
+     font-weight:400;
+     src: url('https://toby.fangamer.com/assets/fonts/JF-Dot-Shinonome-14-Regular.ttf') format("truetype")
+        }
 
-  </div>
-  <!-- where my cool info resides! -->
-  <div class="main" style="overflow: hidden;">
-    <p style="font-weight: bold; color: red; background: pink; border-left: 12px soild red; ">WARNING: This website is <i>NOT</i> moblie-friendly! Please use landscape mode! (Although most pages on here are moblie friendly, i'm stupid so i can't do it)</p>
-   <strong> please read this first! <img src="https://underwhite.neocities.org/images/svg/phone.svg"> :D</strong>
-                  <noscript>
-                    
-                    <strong style="color: red;">u-hhfuuuhhhhh where is javascript?? please pelase enable it (:</strong>
-                  </noscript>  
-                  
+    @font-face {
+      font-display:swap;
+      font-family:DePixel Schmal;
+      font-style:normal;
+      font-weight:400;
+      src: url('https://toby.fangamer.com/assets/fonts/depixelschmal.ttf') format("truetype")
+        }
+        
+    @font-face {
+      font-display:swap;
+      font-family:DePixel Halbfett;
+      font-style:normal;
+      font-weight:400;
+      src: url('https://toby.fangamer.com/assets/fonts/depixelhalbfett.ttf') format("truetype")
+        }
+.tippy-box {
+	max-width:300px;
+	z-index:10;
+	margin:4px 4px 7px 2px;
+	background:#111;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	font-family:DePixel Halbfett;
+	font-size:4px;
+  padding: none !important;
+	line-height:16px;
+	color:#fff;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow::before,
+.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+	color: #111;
+}
+  body:before {
+        content: "";
+        position: fixed;
+        opacity: 0.2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1000;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 243, 255, 0.08) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+        background-size: 100% 4px, 3px 100%;
+    }
+
+img { 
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: crisp-edges;               
+  image-rendering: pixelated;                 
+  -ms-interpolation-mode: nearest-neighbor; 
+  }
+
+@keyframes Static {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px 4px;
+    }
+}
+
+    body:after {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1000222222222;
+         background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 243, 255, 0.08) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+        background-repeat: all;
+        background-position: 0px 0px;
+        animation-name: Static;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4);
+        background-size: 100% 4px, 3px 100%;
+    }
+
+  html, body {
+    font-family: 'n';
+    background-color: black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url('https://onio.club/space/stardust.png');
+    font-size: 12px;
+
+  }
     
-                    <p>well hello there fellow traveler, call me <strong>udrr</strong>! i'm just looking to see what <strong>HTML/CSS</strong> is!</p>
-                    
-                    
-                    <p>i do stuff for fun, mainly <strong>HTML</strong>. I also do art, probably javascript/css, some music, annndd writing!</p>
-                    
-                    
-                    <p>so, deciding to make a website for my personal stuff. (not being limited to a profile and banner). i found out about neocities, and gave it a shot. <br> 
-                    it's a long journey. but i was able to shape my website into something i deeply care about! which is this!</p>
-                    
-                    <p>i'm very proud of myself, and i will keep updating this as i love it <small>(aged so horribly)</small>. this website is also under heavy construction. so tomorrow may feel different and new.</p>
-                    
-                    <p>thanks for stopping by, i appreciate it! remember to get a <a href="/sitemap">sitemap</a> so you don't get lost.</p>
-                    <p class="squish2" title="wowzzz" > <img src="images/png/hi.png" style="float: right; width: 250px; height: 150px;"> </p>
-    <p style="text-align: left; padding: 20px;"><b>but first</b>, notes to be careful about:</p>
-    <ul style="text-align: left;">
-      <li>this website uses javascript for fun stuff.</li>
-      <li>keep in mind this is family friendly.</li>
-      <li>my parents are moderating this site.</li>
-      <li>no adult topics please. XD</li>
-      <li>Profanity is very seldom on this website, if your very <br> young (5-8), don't visit this please.<br> I don't wanna scar you with that.</li>
-      </ul>
-      <p style="text-align: right; font-size: 9px; margin-top: -50px;">also I like dave and bambi,<br> fnf, riggy, royalpear, <br>n' srpelo :P <br>
-   </p>
+        .parent { 
+          position: absolute;
+         left: 19%;
+         margin: 0 auto;
+         margin-top: 30px;
+         z-index: 2;
+         justify-content: center;
+        }
+  .flexy {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .header {
+    width: 100%;
+    height: 52px;
+    padding: 25px !important;
+    padding-top: 10px !important;
+    background: black !important;
+    border: 10px solid black !important;
+    box-shadow: none !important;
+  }
+  .contentbox {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    overflow: hidden;
+    font-size: 13px;
+    background: url('https://png.pngtree.com/png-vector/20220722/ourmid/pngtree-black-circle-round-halftone-vector-dot-editable-aesthetic-png-png-image_6033005.png') 140% 200px no-repeat  var(--color1) !important;
+    background-size: 400px !important;
+    image-rendering: pixelated;
+  }
+  .box {
+    background: var(--color1);
+    padding: 25px;
+    color: #fffff1;
+    border: 2px solid var(--border);
+    padding-top: 10px !important;
+    box-shadow: 10px 10px rgba(255,23,255,0.1);
+  }
+  .boxxy {
+    height: 170px;
+    width: 90%;
+  }
+  .sidebar {
+    width: 41%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   
-  </div> 
-<!-- extras for no reason :D -->
-  <div class="right" style="overflow-x: hidden; overflow-y: scroll;">
-    <p style="font-size: 5px;">Wanna link my button, here is my button!</p>
-      <img style="animation: none;" src="https://underwhite.neocities.org/images/link/button.gif" width="100px"><br>
-      <textarea style="width: 40%; height: 20px; font-family: monospace; background: #111; color: white; font-size: 7px;"><a href="//underwhite.neocities.org"><img src="https://underwhite.neocities.org/images/link/button.gif"></a></textarea><br>
-      <small style="font-size: 5px;">Hotlinking is allowed, if you want to not hotlink<br> and save my bandwidth go <a style="background-color: rgba(255, 255, 0, 0.4); text-decoration: none; color: white;" href="https://underwhite.neocities.org/images/link/button.gif" download>save it to your server</a></small><br><hr>
-  <button onclick="toggleTheme()">mod</button>
-<script>
-    function toggleTheme() {
-            let theme = document.getElementById('theme');
-            if (theme.getAttribute('href') == '/css/dark-stylesheet.css') {
-                theme.setAttribute('href', '/css/light-stylesheet.css');
-            } else {
-                theme.setAttribute('href', '/css/dark-stylesheet.css');
+.nav {
+    height: 104.5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 30px;
+     border: 1px solid var(--border);
+    box-shadow: inset 0 0 30px rgba(0, 243, 255, 0.2) ;
+    text-shadow: 0 0 20px;
+    background-color: #121613;
+background-image: conic-gradient(from 60deg at 56.25% calc(425% / 6), transparent 0deg, transparent 0.5deg, #171a21 0.5deg, #171a21 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 60deg at 56.25% calc(425% / 6), transparent 0deg, transparent 0.5deg, #171a21 0.5deg, #171a21 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 180deg at 43.75% calc(425% / 6), transparent 0deg, transparent 0.5deg, #171a21 0.5deg, #171a21 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from 180deg at 43.75% calc(425% / 6), transparent 0deg, transparent 0.5deg, #171a21 0.5deg, #171a21 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from -60deg at 50% calc(175% / 12), transparent 0deg, transparent 0.5deg, #171a21 0.5deg, #171a21 119.5deg, transparent 119.5deg, transparent 120deg), conic-gradient(from -60deg at 50% calc(175% / 12), transparent 0deg, transparent 0.5deg, #171a21 0.5deg, #171a21 119.5deg, transparent 119.5deg, transparent 120deg);
+background-position: 0 0, 10px 17px, 0 0, 10px 17px, 10px 0, 0 17px;
+background-size: 20px 33px;
+
+  }
+  .nowrap {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  #tab {
+    width: 100px;
+    animation: wave 1s infinite steps(1);
+  }
+
+  @keyframes wave {
+  0%, 100% {
+    transform: translate(-3px, 2px);
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 10deg;
+    transform: translate(11px, -14px);
+    
+  }
+  50% {
+    transform: translate(-3px, 2px);
+    rotate: 0deg;
+  }
+  72% {
+    rotate: -10deg;
+    transform: translate(-21px, -14px);
+  }
+}
+
+html, a, a:hover {
+  cursor:url(http://i.imgur.com/ONVDMqu.png), default;
+}
+
+
+box {
+  float: left;
+    border: 2px solid var(--border);
+    margin: 10px 10px 0px -10px;
+    width: 100px;
+    background: black;
+    height: 128px;
+}
+
+box img {
+  width: 100px;
+  height: 104px;
+}
+.nav h2 {
+  color: lime;
+  font-size: 15px;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.taby {
+  padding: 30px;
+  width: auto !important;
+}
+.link a::before {
+  content: ">ㅤ";
+  color: white;
+}
+
+.link:hover .link a::before {
+  content: "|ㅤ";
+  color: white;
+}
+
+ul {
+  position: relative;
+  left: 20px;
+}
+
+.link a {
+  padding: 7px;
+  display: flex;
+            align-items: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background: rgba(45,240,21,0.2);
+            height: 20px;
+            position: relative;
+            overflow: hidden;
+  font-family: 'starlight';
+  font-size: 10px;
+            align-items: center;
+            color: #ffc !important;
+            text-decoration: none;
+            letter-spacing: 1px;
+}
+.link a:hover {
+  background: rgba(45,240,21,0.3);
+            text-shadow: 0 0 2px yellow;
+}
+.non a {
+  background: rgba(255,0,0,0.2)
+}
+.non a:hover {
+  background: rgba(255,0,0,0.3)
+}
+.under a {
+  background: rgba(255,100,0,0.2)
+}
+.under a:hover {
+  background: rgba(255,150,0,0.3)
+}
+
+.scifi-stats {
+  font-family: DePixel Halbfett;
+  float: right;
+  background: linear-gradient(135deg, var(--cyber-gray), var(--dark-void));
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  width: 105%;
+  height: 100px;
+  padding-top: 10px;
+  position: relative;
+  top: -12px;
+  left: 20px;
+  border-radius: 4px;
+  font-size: 1px;
+  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+  
+            
+}
+
+.scifi-stats::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 1) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.2;
+  animation: hover2 6s steps(4) infinite;
+}
+
+@keyframes hover2 {
+
+  50% {
+    transform: translateY(8px);
+    
+  }
+  
+  100% {
+    transform: translateY(16px);
+    
+  }
+}
+
+.scifi-stats h2 {
+  font-size: 1px;
+  border-bottom: 1px ridge var(--border);
+  margin-top: -6px;
+  padding-bottom: 5px;
+  text-shadow: 0 0 5px grey;
+}
+
+.stat-row {
+  margin: 12px 0;
+}
+
+.label {
+  color: #8899a6;
+  text-shadow: none;
+}
+
+.value {
+  float: right;
+  font-weight: bold;
+}
+
+.bar {
+  background: #0b192c;
+  height: 6px;
+  width: 100%;
+  margin-top: 4px;
+  border: 1px solid var(--neon-cyan);
+}
+
+.fill {
+  background: var(--border);
+  height: 100%;
+  box-shadow: 0 0 8px var(--neon-cyan);
+    animation: pulseGlow 1.5s infinite alternate 2s;
+}
+.f-temp {width: 15%; animation: loadStatstemp 2s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;}.f-density{width: 45%; animation: loadStatsden 2s cubic-bezier(0.1, 0.9, 0.2, 1) forwards}
+@keyframes loadStatsden {
+  to { width: 38.4%; }
+}
+@keyframes loadStatstemp {
+  to { width: 95.4%; }
+}
+
+
+@keyframes pulseGlow {
+  from { box-shadow: 0 0 5px var(--neon-cyan); }
+  to { box-shadow: 0 0 20px var(--neon-cyan); }
+}
+
+.nav p {
+  color: lime;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+censor {
+  background: #8899a6;
+}
+
+.foot {
+  position: absolute;
+  left: -16.5%;
+  font-size:3px;
+  top: 0;
+  text-align: left;
+  color: grey;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.moon-icon {
+  transition: all 0.2s steps(9);
+}
+
+.msg {
+  padding: 10px;
+  background: url('https://file.garden/Z5tLc-9b0gezaMou/upload/assets/thoughtbubble.png') center no-repeat;
+  background-position: -5px -20px;
+  background-size: 251px;
+  width: 310px;
+  height: 300px;
+  text-align: center;
+  color: black;
+  position: absolute;
+  top: -170px;
+  rotate: -90deg;
+  right: 110px;
+  z-index: 999;
+}
+
+#msg {
+    margin-top: 71px;
+    width: 225px;
+    font-size: 8px;
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
+    font-weight: 700;
+    user-select: none;
+    color: black;
+    text-transform: none;
+    text-shadow: none;
+}
+
+#udrr {
+  padding: 10px;
+  background: url('https://file.garden/Z5tLc-9b0gezaMou/upload/assets/underwhite.png')center no-repeat;
+  background-position: -5px -20px;
+  background-size: 260px;
+  width: 310px;
+  height: 260px;
+  rotate: 90deg;
+  z-index: -1;
+  image-rendering: pixelated;
+  text-align: center;
+  color: black;
+  position: absolute;
+  top: 370px;
+  right: 5%;
+}
+
+
+#spaceship { 
+  width: 40px;
+  height: 40px;
+  position: absolute; 
+  image-rendering: pixelated;
+  animation: moveRightLeft 10s ease-in-out infinite;
+  z-index: 999;
+  left: -130px;
+  top: 100px;
+  transform-origin: center; 
+  transform: translate(0,-10px)rotate(0deg);
+}
+
+
+#myImage {
+  width: 130px;
+  image-rendering: pixelated;
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 400px;
+  right: 85%;
+}
+
+#cloud {
+ image-rendering: pixelated;
+  position: absolute;
+  right: 80%;
+  top: 500px;
+  width: 300px;
+  opacity: 0.1;
+  animation: slighthover 4s infinite ease-in-out;
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translate(0,-60px)rotate(0deg);
+  }
+  50% {
+    transform: translate(0,-10px)rotate(360deg);
+  }
+100% {
+    transform: translate(0,-60px)rotate(0deg);
+  }
+  }
+
+
+
+.welcome {
+  background-color:rgba(145,0,190,0.2);
+  position: absolute;
+  margin: 0;
+  width: 304px;
+  height: 50px;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 7px;
+  font-weight: normal;
+  border-top-left-radius: 5px;
+  clip-path: polygon(0% 0%, 85% 0, 100% 100%, 0% 100%);
+}
+
+.welcome h1 {
+ font-family: DePixel Halbfett;
+ background: linear-gradient(rgba(255,255,0), rgba(255,5,90));
+ -webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;
+ background-clip: text;
+ -webkit-text-stroke: 0.4px #144447;
+ margin-left: 10px;
+}
+
+@keyframes hover {
+  0% {
+    transform: translate(110px, -100px);
+  }
+  25% {
+    transform: translate(300px, 200px); 
+  }
+  50% {
+    transform: translate(-190px, 600px); 
+  }
+  100% {
+    transform: translate(0px, 100px);
+  }
+}
+@keyframes slighthover {
+ 0%, 100% {
+  transform: translate(0px, 2px);
+ }
+ 50% {
+  transform: translate(0px, 0px);
+ }
+}
+
+a {
+  text-decoration: none;
+  color: magenta;
+}
+a:hover {
+  color: pink;
+}
+
+.inactive {
+  filter: contrast(5%) brightness(3%) grayscale(100%);
+  animation: none;
+  opacity: 0.9;
+  transition: all 0.5s steps(5);
+}
+
+.inactive::before {
+  animation: none;
+}
+
+#t {
+  position: relative;
+  top: -5px;
+  right: 23px;
+  rotate: 30deg;
+  z-index: 1;
+  animation: e 4s infinite steps(4);
+}
+
+@keyframes e {
+  0% {
+    rotate: 30deg;
+  }
+  50% {
+    rotate: 39deg;
+    right: 24px;
+  }
+  100% {
+    rotate: 30deg;
+  }
+}
+
+.moony {
+  background: var(--color1);
+	  border-radius: 3px;
+	  font-family: "n";
+	  font-weight: none;
+	  padding: 20px;
+	  padding-bottom: 8px;
+	  width: 45px;
+	  position: absolute;
+	  top: 207px;
+    z-index: -1;
+	  text-align: center;
+	  height: 43px;
+    left: -79px;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease;
+}
+
+#moony {
+  width: 35px;
+  height: 35px;
+  margin-right: 30px;
+}
+
+.active {
+	  left: -300px;
+    width: 200px;
+	
+	}
+
+  .moony:hover #headr {
+     display: none;
+     
+  }
+
+  .boxo {
+   background: rgba(3, 21, 36,1);
+   width: 500px !important;
+   padding: 20px;
+   border-radius: 5px;
+   margin-top: -20px;
+  }
+
+  .newsletter {
+    width: auto !important;
+    height: auto;
+     background: url('https://equisett.nekoweb.org/assets/images/light-noise.png'), var(--color1);
+  background-size: 66px 66px !important;
+  }
+
+  ul, ol, li {
+   line-height: 1.7;
+  }
+water {
+  font-family: 'logo';
+        font-size: 3vw;
+        position: relative;
+        color:rgba(255,255,0,0.7);
+        -webkit-text-stroke: 1.6vw rgba(155,55,0,0.7); 
+        position: absolute;
+        left: 5px;
+        letter-spacing: 2vw;
+        bottom: 2.1vw;
+        filter: none !important;
+        
+    }
+water:before {
+        content: "UNDERWHITE";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color:white;
+        overflow: hidden;
+        animation: animate 8s ease infinite;
+        clip-path: shape(from 0 0,vline to calc(100% - 5px),curve to 3.57% calc(100% - 3px) with 2.38% calc(100% - 3px),smooth to 5.95% calc(100% - 1.5px),smooth to 8.33% calc(100% - 4px),smooth to 10.71% calc(100% - 9px),smooth to 13.1% calc(100% - 5.5px),smooth to 15.48% calc(100% - 4px),smooth to 17.86% calc(100% - 4.5px),smooth to 20.24% calc(100% - 2px),smooth to 22.62% calc(100% - 1px),smooth to 25% calc(100% - 2px),smooth to 27.38% calc(100% - 2.5px),smooth to 29.76% calc(100% - 4px),smooth to 32.14% calc(100% - 4.5px),smooth to 34.52% calc(100% - 5.5px),smooth to 36.9% calc(100% - 5px),smooth to 39.29% calc(100% - 5px),smooth to 41.67% calc(100% - 8.5px),smooth to 44.05% calc(100% - 6px),smooth to 46.43% calc(100% - 5.5px),smooth to 48.81% calc(100% - 5px),smooth to 51.19% calc(100% - 3px),smooth to 53.57% calc(100% - 5.5px),smooth to 55.95% calc(100% - 8px),smooth to 58.33% calc(100% - 5.5px),smooth to 60.71% calc(100% - 1.5px),smooth to 63.1% calc(100% - 2.5px),smooth to 65.48% calc(100% - 5.5px),smooth to 67.86% calc(100% - 5.5px),smooth to 70.24% calc(100% - 5.5px),smooth to 72.62% calc(100% - 7px),smooth to 75% calc(100% - 5.5px),smooth to 77.38% calc(100% - 6px),smooth to 79.76% calc(100% - 7.5px),smooth to 82.14% calc(100% - 5px),smooth to 84.52% calc(100% - 2.5px),smooth to 86.9% calc(100% - 2px),smooth to 89.29% calc(100% - 4.5px),smooth to 91.67% calc(100% - 6px),smooth to 94.05% calc(100% - 4.5px),smooth to 96.43% calc(100% - 6.5px),smooth to 100% calc(100% - 5px),vline to 0, hline to 0);
+    }
+ 
+    @keyframes animate {
+        0% {
+        height: 25%;
+        }
+        25% {
+        height: 50%;
+        }
+        50% {
+        height: 65%;
+        }
+        75% {
+        height: 40%;
+        }
+        100% {
+        height: 25%;
+        }
+    }
+
+ 
+
+    @keyframes easer {
+      0% {
+        top: 600px;
+      }
+      10% {
+        top: 600px;
+      }
+      100% {
+        top: 20px;
+      }
+    }
+
+
+    footer {
+      z-index: 10;
+      background: black;
+      border-radius: 10px;
+     padding: 10px;
+     margin-left: -20px;
+    }
+.linkbox {
+ background: transparent !important;
+ border: none !important;
+}
+#wires {
+  position: absolute;
+  left: -17px;
+  top: 110px;
+  z-index: -10;
+  border-right: 50px solid #000444;
+}
+#solgan {
+  position: absolute;
+  z-index: 999;
+  color: black;
+  right: 17.5%;
+  top: 80px;
+  height: 20px;
+    width: 20%;
+  font-family: 'starlight';
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  background: #fffffc;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding: 10px 2px 6px 6px;
+  border-bottom: 1px solid rgba(0,25,0,0.8);
+  box-shadow: inset 2px 4px 3px -1px rgba(0,0,0,0.4), inset -2px -4px 3px -1px rgba(0,0,0,0.2);
+}
+#mooder {
+  height: 15px;
+  width: 75px;
+  background: black;
+  display: block;
+}
+
+.parent {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1340px) {
+  #top-bar {
+    width: 850px !important;
+  }
+
+  #solgan {
+    right: 120px;
+  }
+
+  water {
+    font-size: 40px !important;
+  }
+}
+#top-bar {
+ height: 65px;
+ position: absolute;
+  width: 64%;
+  background: url('https://file.garden/Z5tLc-9b0gezaMou/upload/assets/colorized-image.png') no-repeat, #000;
+  border-radius: 2px;
+  background-size: 100% 90%;
+  top: 70px;
+  left: 19%;
+  image-rendering: pixelated;
+  filter: hue-rotate(234deg)contrast(140%)brightness(70%);
+  object-fit: fill;
+   }
+
+   #solgan {
+    top: 10px;
+    font-size: 10px;
+    right: 1%;
+    width: 240px;
+   }
+.blog-widget {
+  margin-top: 10px;
+  background: url('https://equisett.nekoweb.org/assets/images/dark-noise.png'), #000;
+  background-size: 10px;
+  padding: 20px;
+  border-radius: 4px;
+  font-family: '8bitOperatorPlus-Regular';
+}
+  .blog-widget h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: yellow;
+    font-family:"8bitOperatorPlus-Bold";
+    border-bottom: 2px dashed var(--border);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -30px;
+    width: 100%;
+  }
+
+  .widget-list li {
+    margin-bottom: 12px;
+  }
+  .widget-list li {
+   background: rgba(255,255,255,0.1);
+   padding: 10px;
+   border-radius: 3px;
+   border-left: 10px solid var(--border);
+   font-family:"8bitOperatorPlus-Bold";
+  }
+
+  .widget-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .widget-list a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-date {
+    font-size: 8px;
+    color: #888;
+    margin-bottom: 1px;
+  }
+
+  .post-title {
+    font-size: 14px;
+    color: yellow;
+    font-weight: bold;
+  }
+
+  .post-desc {
+    color: #888;
+    font-size: 11px;
+  }
+
+  .widget-list a:hover .post-title {
+    color: rgb(255,185,170);
+  }
+  .widget-list li:hover {
+    background: rgba(255,255,255,0.2);
+    border-left: 15px solid var(--border);
+  }
+
+footer {
+              display: block;
+              width: 15%
+            }
+
+            #moblie {
+              display: none;
+              justify-content: center;
+              text-align: center;
+              
+            }
+
+              /* HTML: <div class="loader"></div> */
+.loader {
+    width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -30px;
+  border: 1px solid #333;
+  animation: blink 3s infinite steps(1);
+}
+
+.pup {
+   width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+  transform-origin: center center; 
+  
+}
+@keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+#fire {
+  margin-bottom: -40px;
+  filter: none;
+  transition: filter 0.1s steps(2);
+}  
+#fire:hover {
+  margin-bottom: -40px;
+  filter: brightness(130%);
+}           
+
+
+ @media (max-width: 768px) {
+            #moblie {
+              display: block;
+              font-size:9vw !important;
+              left: 13%;
+              top: -10px;
+              margin-top: 30px;
+              -webkit-text-stroke: 0vw rgba(255,255,0,0.7); 
+            }
+
+            #top-bar, footer, #topb, .e, #solgan, #arrow, #moony, .moony, #myImage, #cloud {
+              display: none;
+            }
+
+            .flexy {
+              flex-direction: column;
+            }
+
+            .header {
+              width: 80%;
+            }
+
+          
+            .sidebar {
+              width: 100%;
+            }
+
+            .nav, #marquee {
+              width: 90%;
+            }
+
+
+            .update-card {
+              width: 60% !important;
+            }
+
+            #udrr {
+              width: 100px;
+              background-size: 150px;
+              right: 18%;
+            }
+
+            .msg {
+              background-size: 190px;
+              top: -200px;
+              right: -70px;
+            }
+            #msg {
+              margin-top: 50px;
+              width: 130px;
+              margin-left: 20px;
+              font-size: 2px;
+            }
+
+            #ransom {
+              width: 400px !important;
+              margin-left: -32px !important;
             }
         }
-        </script>
-        <p>current modes: dark, light</p>
-        <hr><br>
-        <!-- button shower -->
-   <marquee scrollamount="3"  style="background: rgba(255, 255, 255, 0.1); animation: flicker 0.1s infinite;" onmouseover="this.stop();" onmouseout="this.start();" >
-     <a href="https://nekoweb.org/" target="_blank"><img src="https://files.joo.sh/img/buttons/nekoweb.gif"></a> <!-- button by joosh.nekoweb.org -->
-     <img src="/images/buttons/neocities_button.gif">
-     <img src="/images/buttons/made_with_windows.gif">
-     <img src="/images/buttons/learn_html.gif">
-     <img src="/images/buttons/get_a_computer.jpg">
-     <img src="/images/buttons/krisbtn.png">
-     <a href="https://yesterweb.org/no-to-web3/"><img src="/images/buttons/freeware.gif"> </a>
-     <img src="/images/buttons/windows_xp.gif">
-     <img src="/images/buttons/wwwbutton.gif">
-  </marquee><br><br><hr><br>
-<h3>Settings:</h3>
-<!-- music maker and turns off because no one wants music :D -->
-    <style>
+
+        .welcomeo {
+          font-size: 23px;
+          z-index: 2;
+        }
+
+#preloader {
+position: fixed;
+  background-color: #fff;
+z-index: 9999 !important;
+top:0;
+left:0;
+height: 100vh;
+width:100vw;
+overflow: hidden;
+transition: all 1s linear;
+}
+
+#preloader-status {
+width: 200px;
+height: 200px;
+position: absolute;
+left: 50%;
+top: 50%;
+background-image: url(https://cssbud.com/wp-content/uploads/2022/05/triangle-spinner.gif);
+background-size: 200px;
+background-repeat: no-repeat;
+background-position: center;
+margin: -100px 0 0 -100px;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+}
+
+        .infobox {
+          color: black;
+          background-color: rgba(255,255,240,0.9);
+          padding: 25px;
+          padding-left: 28px;
+          border-radius: 4px;
+          border: 2px solid rgba(0,25,0,0.8);
+          margin-top: 10px;
+  clip-path: shape(from 0 0,vline to calc(100% - 5px),curve to 3.57% calc(100% - 3px) with 2.38% calc(100% - 3px),smooth to 5.95% calc(100% - 1.5px),smooth to 8.33% calc(100% - 4px),smooth to 10.71% calc(100% - 9px),smooth to 13.1% calc(100% - 5.5px),smooth to 15.48% calc(100% - 4px),smooth to 17.86% calc(100% - 4.5px),smooth to 20.24% calc(100% - 2px),smooth to 22.62% calc(100% - 1px),smooth to 25% calc(100% - 2px),smooth to 27.38% calc(100% - 2.5px),smooth to 29.76% calc(100% - 4px),smooth to 32.14% calc(100% - 4.5px),smooth to 34.52% calc(100% - 5.5px),smooth to 36.9% calc(100% - 5px),smooth to 39.29% calc(100% - 5px),smooth to 41.67% calc(100% - 8.5px),smooth to 44.05% calc(100% - 6px),smooth to 46.43% calc(100% - 5.5px),smooth to 48.81% calc(100% - 5px),smooth to 51.19% calc(100% - 3px),smooth to 53.57% calc(100% - 5.5px),smooth to 55.95% calc(100% - 8px),smooth to 58.33% calc(100% - 5.5px),smooth to 60.71% calc(100% - 1.5px),smooth to 63.1% calc(100% - 2.5px),smooth to 65.48% calc(100% - 5.5px),smooth to 67.86% calc(100% - 5.5px),smooth to 70.24% calc(100% - 5.5px),smooth to 72.62% calc(100% - 7px),smooth to 75% calc(100% - 5.5px),smooth to 77.38% calc(100% - 6px),smooth to 79.76% calc(100% - 7.5px),smooth to 82.14% calc(100% - 5px),smooth to 84.52% calc(100% - 2.5px),smooth to 86.9% calc(100% - 2px),smooth to 89.29% calc(100% - 4.5px),smooth to 91.67% calc(100% - 6px),smooth to 94.05% calc(100% - 4.5px),smooth to 96.43% calc(100% - 6.5px),smooth to 100% calc(100% - 5px),vline to 0, hline to 0);
+
+        }
+
+        .infobox b, .infobox strong, .infobox u {
+          text-decoration-line: underline;
+          text-decoration-style: "solid";
+          text-decoration-color: rgba(232,54,0,1);
+          text-decoration-thickness: 2px;
+          font-weight: 500;
+        }
+
+        /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #412f6a #0d0d0d;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #412f6a;
+    border-radius: 0px;
+    border: 2px dashed #ffffff;
+  }
+
+  ::selection {
+    color: white;
+    background-color: var(--color1);
+  }
+
+  #debug {
+    color: lime;
+    margin-top: 5px;
+    font-family: DePixel Halbfett;
+    font-size: 5px;
+    opacity: 0.3;
+    position: fixed;
+    z-index: 9999;
+    user-select: none;
+  }
+@font-face {
+	font-family: 'Cooper Lt BT';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('https://japanwebdesign.wpenginepowered.com/wp-content/uploads/2024/03/CooperBT-Light.eot');
+	src: url('https://japanwebdesign.wpenginepowered.com/wp-content/uploads/2024/03/CooperBT-Light.eot?#iefix') format('embedded-opentype'),
+		url('https://japanwebdesign.wpenginepowered.com/wp-content/uploads/2024/03/CooperBT-Light.woff2') format('woff2'),
+		url('https://japanwebdesign.wpenginepowered.com/wp-content/uploads/2024/03/CooperBT-Light.woff') format('woff'),
+		url('https://japanwebdesign.wpenginepowered.com/wp-content/uploads/2024/03/CooperBT-Light.ttf') format('truetype'),
+		url('https://japanwebdesign.wpenginepowered.com/wp-content/uploads/2024/03/CooperBT-Light.svg#CooperLtBT') format('svg');
+}
+
+  .message {
+    background: black; border-radius: 10px 10px 0px 10px; width: 80%; font-size: 9px; color: white;
+    padding: 10px;
+    border: 1px dashed grey;
+    text-shadow: none;
+    font-family: 'Cooper Lt BT';
+  }
+
+  .marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+.marquee-content {
+  display: inline-flex;
+  gap: 1rem;
+  animation: scroll 20s linear infinite;
+  height: 60px;
+}
+@keyframes scroll {
+  0% { transform: translateX(160%); }
+  100% { transform: translateX(-150%); }
+}
+
+.marquee-content:hover {
+      animation-play-state: paused;
+    }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.notmarquee {
+  display: flex;
+  gap: 2%;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.notmarquee img {
+  width: auto !important;
+}
+
+#ransom {
+  width: 500px;
+  margin-bottom: 10px;
+  margin-left: -60px;
+  filter: sepia(30%);
+  animation: hover 4s ease-in-out infinite;
+  transform: translateX(10px);
+}
+
+#arrow {
+  position: relative;
+  z-index: 9999999 !important;
+  width: 90px;
+  rotate: 65deg;
+  top: -30px;
+  left: -10px;
+  margin-left: 7px;
+  filter: invert(100%);
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.modal-window {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9999;
+}
+.modal-window.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.xp-window {
+  width: 400px;
+  background: #ece9d8;
+  border: 3px solid #0054e3;
+  border-radius: 7px 7px 0 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+}
+.xp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 6px 4px 6px;
+  height: 25px;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(
+    to bottom,
+    #1e72f2 0%,
+    #0054e3 8%,
+    #0d61f2 35%,
+    #004cd9 65%,
+    #0a4ae1 90%,
+    #002ec7 100%
+  );
+  overflow: hidden;
+}
+.xp-title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 1px #001d7e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.xp-controls {
+  display: flex;
+  gap: 2px;
+}
+.xp-btn {
+  width: 21px;
+  height: 21px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: inset 0 -1px 2px rgba(0,0,0,0.4);
+}
+.xp-minimize {
+  background: linear-gradient(to bottom, #3c93ee, #0055e4);
+  position: relative;
+}
+.xp-minimize::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: 8px;
+  height: 2px;
+  background: white;
+}
+.xp-maximize {
+  background: linear-gradient(to bottom, #3c93ee, #0055e4);
+  position: relative;
+}
+.xp-maximize::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 9px;
+  height: 7px;
+  border: 2px solid white;
+  border-top: 3px solid white;
+}.xp-close {
+  background: linear-gradient(to bottom, #e76c3c 0%, #e74e1d 15%, #b42900 85%, #971c00 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 1px #640000;
+}.xp-close:hover {
+  background: linear-gradient(to bottom, #f28d68 0%, #f1683a 15%, #d63c0c 85%, #b92900 100%);
+}.xp-body {
+  padding: 10px;
+  min-height: 100px;
+  background-color: #ffffff;
+}
+.spin-div {
+  width: 50%;
+  height: auto;
+  animation: spin 3s linear infinite;
+  filter: brightness(100%);
+  image-rendering: pixelated;
+}
+
+.spin-div:hover {
+ filter: brightness(110%);
+}
+.spin-div:active {
+ filter: brightness(97%);
+}
+
+#spins {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 4px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.currently {
+  padding: 40px 20px;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+.currently h2 {
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: center;
+}
+#sluggy {
+  float: right;
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 210px;
+  left: 60%;
+  z-index: 10;
+}
+.section-header {
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  margin-bottom: -5px;
+}
+
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.status-card {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 85%;
+  transition: border 0.1s steps(4);
+  border-left: 0px dashed var(--border);
+}
+.status-card:hover {
+  border-left: 2px dashed var(--border);
+}
+
+.status-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #111827;
+}
+
+#goobe {
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  bottom: -50px;
+  position: relative;
+  animation: none;
+}
+
+.status-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.status-card span {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#pseu {
+  background: -webkit-linear-gradient(red, tomato);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 14px;
+  font-weight: 800;
+  position: relative;
+  top: 0.2px;
+}
+#pseu:hover {
+  background: -webkit-linear-gradient(orange, tomato);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+  </head>
+  <body>
+    <div id="secret-window" class="modal-window">
+      <div class="xp-window">
+  <div class="xp-header">
+    <span class="xp-title">Secret Unlocked</span>
+    <div class="xp-controls">
+      <button class="xp-btn xp-minimize"></button>
+      <button class="xp-btn xp-maximize"></button>
+      <button class="xp-btn xp-close" onclick="closeWindow()">X</button>
+    </div>
+  </div>
+  <div class="xp-body">
+  <div class="modal-content">
+    <p>You found the Konami code easter egg, so good job.!</p>
+  </div>
+</div></div></div>
+    <img src='https://cdn.creazilla.com/cliparts/1990686/cloud-clipart-lg.png' id='cloud'><img src="https://deltarune.wiki/images/Susie_battle_spellready.gif" id="myImage">
+    <div id="debug">Sound blocked. <br> Requires user interaction.</div>
+    <div id="preloader">
+      <div id="preloader-status"></div>
+</div>
+
+      <div id="top-bar"><water id="toggleImage">UNDERWHITE</water>
+      <div id="solgan"><div class="loader"><div class="pup"></div></div>
+Caffeine, warnings not to eat website, and bad ideas</div></div>
+   <water id="moblie">UNDERWHITE</water>
+    <div class="parent">
+<div class="flexy"><a rel="noopener" href="//kenvexity.org" title="Kenvexity himself" target="_blank" id="guh"><img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/kenners.png" id="spaceship"></a>
+    
+ <div class="box header">
+
+ <div class="scifi-stats">
+  <h2>(≧▽≦)
+//: <small><span id="swatchClock-nolink">@000</span><script defer src="https://melonking.net/scripts/swatchTime.js"></script></small></h2>
+  <div class="stat-row">
+    <span class="label">Okay Status ↷</span>
+    <span class="value">95%</span>
+    <div class="bar"><div class="fill f-temp"></div></div>
+  </div>
+  <div class="stat-row">
+    <span class="label"><censor title="I bet you selected that, right?">Doktor</censor>'s Dewalt Powerwasher PSI ↷</span>
+    <span class="value">1400 PSI</span>
+    <div class="bar"><div class="fill f-density"></div></div></div>
+    </div>
+ </div>
+<div class="moony">
+  <img src="https://dimden.dev/images/moon.png" class="moon-icon" id="moony" title="Moony!">
+  <div class="boxo" style="height: 185px;">
+<iframe width="200" height="205" style="border:none" src="https://dimden.dev/moon?custom=1" name="dimdenmoonwidget"></iframe></div>
+  </div>
+ <div class="flexy nowrap">
+  <div class="contentbox">
+<div class="box content">
+  <div id=wires style="border-bottom: 2px dotted rgba(70,0,30); width: 350px; transform: rotate(-34deg); border-radius: 2px;"></div>
+   <div class="welcome"><h1 class="welcomeo">Welcome!
+  <img src="https://blob.gifcities.org/gifcities/2W2CR2TDGQMXSAMCZJUGVZGXGWZ2BQ3P.gif" class="moon-icon" width="20px;" title="That's Earth for you!">
+  </h1>
+  </div><img id="t" title="Turn off backlight." src="https://dimden.dev/images/electricity_on.png" onclick="toggle();toggleImage()" alt="Image" width="35"> 
+<br>
+<div class="infobox">
+ <box><img src="https://file.xobyte.org/4082b28f-855d-4b92-ab30-66568daac6e7" title="Yes. This is me"><a href="https://www.imood.com/users/underwhite" target="_blank"><img id="mooder" src="https://moods.imood.com/display/uname-underwhite/fg-ffffff/trans-1/imood.gif"  alt="The current mood of underwhite at www.imood.com" border="0" title="Current mood of me"></a></box> 
+ 
+ <p>Hello there, fellow traveler. I'm <b>udrr</b>, and this is my site. I do small projects mainly for enjoyment, and for my <i>love</i> for the indie web.</p>
+
+<p>After finding out about Neocities, I gave it a shot. It was a long journey, though i was able to shape my website into something I deeply care about.</p>
+
+<p>I'm pretty proud of how far a simple website can come, even under heavy construction.</p>
+
+ <ul>
+  <li>I use a ton of JavaScript<noscript>, so please enable it</noscript>.</li> 
+  <li>Semi-family friendly. I'm too prone to throwing out random swears.</li> 
+  <li>I love <a href="//pseustuff.com" target="_blank" id="pseu">Pseu</a>.</li>
+  <li>I like content about writing or analysis on something.</li>
+  <li>I enjoy Dave and Bambi, Friday Night Funkin', Danno, Royalpear, and, of course, SrPelo.</li>
+  </ul>
+ <p>Thanks for stopping by. I appreciate it.</p> 
+
+</div>
+</div>
+<div class="flex notmarquee">
+     <img src="https://hellnet.work/8831/img/buttons/Area51_Cavern_7110_linuxnow.jpg">
+     <img src="https://hellnet.work/8831/img/buttons/Area51_Corridor_2173_strongvisualslogo.gif">
+     <img src="https://hellnet.work/8831/img/buttons/Area51_Corridor_3621_anybrow.gif">
+     <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/JSaB_button.gif">
+     <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/OneShot_button.gif">
+     <a href="https://neocities.org/site/underwhite"><img src="https://onio.club/cafe.png"> </a>
+</div>
+<div class="box boxxy newsletter">
+
+<div class="blog-widget">
+  <h3><a href="/newsletter/index.html"><img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/ransomizer.com.png" id="ransom"></a>  <img src="https://static.vecteezy.com/system/resources/previews/011/154/200/non_2x/black-painted-arrow-free-png.png" id="arrow"></h3>
+  <ul class="widget-list">
+    <li onmouseenter="playBeep(300,10)" onclick="typea()">
+      <a href="/newsletter/too_much_summer">
+        <span class="post-date">July 2026</span>
+        <span class="post-title">Too Much Summer</span>
+        <span class="post-desc">
+          Hello my good sirs, madams, everything in between and out. It seems to be still <strong style="color: yellow;">SUMMER</strong>...
+          </span>
+      </a>
+    </li>
+    <li onmouseenter="playBeep(700,10)" onclick="typea()">
+      <a href="/newsletter/summer2026">
+        <span class="post-date">June 2026</span>
+        <span class="post-title">Summer Of 2026 + Novel</span>
+        <span class="post-desc">
+          It appears that it is <strong style="color: yellow;">SUMMER</strong> again. The sun shines with immense...
+          </span>
+      </a>
+    </li>
+    <li onmouseenter="playBeep(900,10)" onclick="typea()">
+      <a href="/newsletter/winter2026">
+        <span class="post-date">Feb 2026</span>
+        <span class="post-title">Winter Of 2026</span>
+        <span class="post-desc">
+          Oh, Hey hey! sorry for no updates, the newsletter...
+          </span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+</div> 
+<div class="currently box">
+  <div class="section-header">
+     
+      <h2>Right now, I'm...</h2>
+    </div>
+    <div class="container">
+    
+    <div class="card-grid" id="status-container">
+      <!-- content injected via js -->
+    </div>
+    <img style="float: right;" src="https://i.pinimg.com/736x/c1/40/77/c14077022fea216f352b12c8a5695c5a.jpg" id="goobe" class="spin-div">
+   </div> </div>
+<div id="spins"><img class="spin-div" src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/disk.png">
+<img class="spin-div" src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/disk.png"></div>
+</div>
+<div class="sidebar">
+  <div class="box nav"><div id="udrr"><div class="msg"><p id="msg"></p></div>  
+  </div><h2><img src='https://blob.gifcities.org/gifcities/M7TAQJJOU47NQDSXC5G7UUS3RDQJK4QH.gif' style='margin-bottom:-7px;'> // navagation</h2>
+  <div class="message">こんにちは。訪問者数は<script type="text/javascript" src="https://counter.websiteout.com/js/35/0/3454/1"></script>! (≧▽≦)</div><br><br><img src="images/svg/Ch3vDog.svg" width="40px" style="transform: scaleX(1); float: right;" class="squish3"><br><br><br>
+
+    
+    <p id="personal"><i class="fa fa-heart"></i>  personal</p>
+    <div class="link under"><a data-tippy-placement="right" href="/credit" title="Not everything is truely by myself; there's borrowing here and there">Credits</a></div><br>
+      <div class="link"><a data-tippy-placement="right" href="/about-me" title="Oh cool, an ASCII computer telling the world who I am (Not really.)">About</a></div><br>
+    <div class="link"><a data-tippy-placement="right" href="/journal" title="A journal I forget to update often :P">Journal</a></div><br>
+    <div class="link" ><a data-tippy-placement="right" href="/tutorials" title="Coding tutorials. Everyone loves those!">Tutorials</a></div><br>
+    <div class="link non" ><a data-tippy-placement="right" href="" title="Oof, that doesn't exist yet.">Recipes</a></div><br>
+    <div class="link"><a data-tippy-placement="right" href="/music" title="Listen to muh music here">Music</a></div><br>
+    <div class="link"><a data-tippy-placement="right" href="/shrines" title="My shrines for stuff I enjoy :) xD">Shrines</a></div><br>
+    <p><i class="fa fa-car"></i> sitely</p>
+    <div class="link under"><a data-tippy-placement="right" title="A sitemap to go by" href="/sitemap">Sitemap</a></div><br>
+    <div class="link under"><a data-tippy-placement="right" title="Check out some cool sites!" href="/links">Links</a></div><br>
+    <div class="link"><a data-tippy-placement="right" title="Who doesn't like a good newsletter?" href="/newsletter/index.html">Newsletter</a></div><br>
+    <div class="link" style="font-size: 8px;"><a data-tippy-placement="right" href="/strawpage" title="Where I showcase the things you draw :)">Artbox</a></div><br>
+    <p id="personal"><i class="fa fa-star"></i>  offsite</p>
+    <div class="link"><a data-tippy-placement="right" href="https://neocities.org/site/underwhite" title="Follow me">Neocities</a></div><br>
+    <div class="link under"><a data-tippy-placement="right" href="https://underwhite.straw.page/" title="Do something here, such as drawing or asking me to draw things">Strawpage</a></div><br>
+   
+    <div class="link"><a data-tippy-placement="right" href="https://github.com/udrr/underwhite.neocities.org" title="Looka muh source code and almost die because of how messy it is">Source code (GitHub)</a></div>
+    <center><img id="fire" src="https://onio.club/fireplace.gif">
+      <style>
     .button{
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 50px;
   cursor:url(http://i.imgur.com/ONVDMqu.png), default;
     }
     input[type="checkbox"] {
@@ -194,8 +1642,9 @@ top: 0px;
       width: 10px;
       height: 10px;
       position: relative;
+      bottom: -1px;
        cursor:url(http://i.imgur.com/ONVDMqu.png), default;
-       accent-color: slateblue;
+       accent-color: green;
     }
   </style>
   <audio id="audio" src="https://file.garden/Z5tLc-9b0gezaMou/mobile-casual-video-game-music-158301.mp3" preload="auto"></audio>
@@ -205,14 +1654,14 @@ top: 0px;
     </label>
   </div>
   <script>
-    const audio = document.getElementById('audio');
+    const a = document.getElementById('audio');
     const checkbox = document.getElementById('playPauseCheckbox');
 
     function toggleAudio() {
       if (checkbox.checked) {
-        audio.play();
+        a.play();
       } else {
-        audio.pause();
+        a.pause();
       }
     }
     
@@ -220,26 +1669,190 @@ top: 0px;
 
     window.onload = function() {
       if (checkbox.checked) {
-        audio.play();
+        a.play();
       }
     };
   </script>
-  
-<br><hr><br>
-<!-- status.cafe and piclog combo (your free to check out source) -->
-	<iframe scrolling="no" style="height: 230px; width: 150px; border-radius: 4px; border: none;" src="https://underwhite.neocities.org/rss/vaild2" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'></iframe>
-
-      
-    
-    
-  </div>
-  </div>
-  <!-- homemade footer -->
- <center style="position: relative; top: 120px;"> <p style="font-size: 7.6px; text-align: center;">made by underwhite with love on care on <a href="https://neocities.org/" id="n">neocities</a> ** <a href="//github.com/udrr/underwhite.neocities.org/">source code</a><img src="https://neocities.org/img/neocitieslogo.svg" width="10px">. <br>2024-2025.</p> 
-<img src="/images/misc/disk.png" style="position: relative; top: -600px; width:270px; height:250px; right: -470px; z-index: 1; animation: rotation 2s infinite linear; object-fit: cover;">
   </center>
+  </div>
+   <div class="marquee-container">
+  <div class="marquee-content" id="marquee">
+     <img src="/images/buttons/neocities_button.gif">
+     <img src="/images/buttons/made_with_windows.gif">
+     <img src="/images/buttons/learn_html.gif">
+     <img src="/images/buttons/get_a_computer.jpg">
+     <img src="/images/buttons/krisbtn.png">
+     <a href="https://yesterweb.org/no-to-web3/"><img src="/images/buttons/freeware.gif"> </a>
+     <img src="/images/buttons/windows_xp.gif">
+     <img src="/images/buttons/wwwbutton.gif">
+  </div></div>
+  <div class="active box boxxy taby flex">
+    <a href="//tabf5.com/100" target="_blank"><img src="https://tabf5.com/img/100/102.webp" id="tab" title="My own tabling?!"></a><a href="//yelorange.neocities.org/coolpeople" target="_blank"><img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/cerfofcool.png" style="width: 105px; float: right" title="Yelorange's Cool People Badge, which I am proud of."></a>
+  </div>
+  <div class="active box taby linkbox"> <p style="font-size: 5px;">Wanna link my button? Here it is!</p>
+      <img style="animation: none;" src="https://underwhite.neocities.org/images/link/button.gif" width="100px" title="Underwhite"><br>
+      <textarea style="width: 100%; height: 20px; font-family: monospace; padding: 5px; background: #111; overflow: hidden; color: white; font-size: 7px;"><a href="//underwhite.neocities.org"><img src="https://underwhite.neocities.org/images/link/button.gif" title="Underwhite"></a></textarea><br>
+      <small style="font-size: 5px;">Hotlinking is allowew. If you do not want to hotlink<br> (and save my bandwidth), go <a style="background-color: rgba(255, 255, 0, 0.4); text-decoration: none; color: white;" href="https://underwhite.neocities.org/images/link/button.gif" download>save it to your site</a>.</small></div>
+    <div class="active box taby linkbox">
+      <iframe scrolling="no" style="height: 230px; width: 110%; border-radius: 4px; border: none;" src="https://underwhite.neocities.org/rss/vaild2"></iframe>
+
+    </div>   
+</div>
+</div>
+</div>
+<footer class="foot">
+ <p>Made by Underwhite with love on care on 
+  <a 
+  href="https://neocities.org/" id="n">
+  Neocities
+  </a>
+  <img src="https://neocities.org/img/neocitieslogo.svg" width="10px"> 
+  ** 
+  <br>
+  <a href="//github.com/udrr/underwhite.neocities.org/">
+  Here's the source code
+  </a>! 
+  <br><br>
+ 2024-basically forver. Rights? Perhaps.
+ </p></footer>
+
+</div>
+
+</div><img src="https://i.pinimg.com/originals/b1/63/a0/b163a03a00b1d6f3d65cb6f20c02ff80.gif" id="sluggy">  
+<script>
+
   
-    <!-- cat thingy that follows your mouse :D , not mine though! -->
+  
+  
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  function typea() {
+  const osc = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  
+  osc.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  osc.type = 'square'; 
+  osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+  
+  gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime); 
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.05);
+  
+  osc.start();
+  osc.stop(audioCtx.currentTime + 0.02);
+}
+function clicker2() {
+  const osc = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  
+  osc.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(900, audioCtx.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(10, audioCtx.currentTime + 0.9);
+  
+  gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.8);
+  
+  osc.start();
+  osc.stop(audioCtx.currentTime + 0.04);
+}
+              const blurbs = [
+              "the dark blue of neocities", 
+              "vroom vroom car", 
+              "oh no", 
+              "I watch mokey daily so he doesn't break any more bones", 
+              "may be easily a mistake", 
+              "the neocities that neocities", 
+              "mewo site", 
+              "the site of a wolf", 
+              "the javascript master", 
+              "the clone of clones", 
+              "goes sand-ways", 
+              "the site that blues", 
+              "the site that uses javascript", 
+              "gave expunged a batch of cookies and regrets it", 
+              "haha dave wheelchair go brrr", 
+              "tooltips go hard", 
+              "rss feeds love me", 
+              "itz now KRISMAA", 
+              "MOMMY COME PICK ME UP I IZ SCARED", 
+              "so cold lol", 
+              "document.getElementById", 
+              "this message has double the chances of appearing", 
+              "this message has double the chances of appearing", 
+              "''police he wants to kill me police''",
+              "help me",
+              "gonna start the next new year",
+              "Your file has been saved.",
+              "Your filled with DETERMINATION",
+              "SANDWICHES",
+              "time to get depression wewewewewewewe",
+              "GET AWAY",
+              "I HAVE LORE",
+              "I'M GONNA (probably) BLOG",
+              "no pear you can't have the ice cream",
+	      "neocities is da best",
+	      "what are those reddit tts stories I keep seeing on youtube?? THERE EVERYWHERE",
+	      "r/LodedDiper",
+	      "hehe",
+	      "i've got a cheeseburgerz",
+	      "i loveb being spoiled",
+        "making a gallery soon, i'm sorry for no updates..!!",
+	      "this aged horriblely",
+	      "dave don't vroom with your wheelchair",
+	      "I once got flatted like a pancake by lightin mcqueen and it hurt :(",
+	      "buttersotch",
+	      "I would kill you but not really",
+	      "will use gaster blasters",
+	      "why did bambi slashed muh tires (not the deer)",
+	      "gonna cause a wormhole",
+	      "MY TIRES",
+        "ITZA HALLOWEEN"
+              ]
+              function rambler() {
+              document.getElementById("msg").innerText = blurbs[Math.floor(Math.random() * blurbs.length)]}
+              rambler()
+              var moons = Array.from(document.getElementsByClassName("moon-icon"));
+var _loop = function _loop() {
+  var moon = moons[_i4];
+  moon.onclick = function () {
+    if (!moon.style.transform) {
+      moon.style.transform = "rotate(90deg)";
+    } else {
+      moon.style.transform = "rotate(".concat(
+        parseInt(moon.style.transform.split("(")[1].split("deg")[0]) + 90,
+        "deg)"
+      );
+    }
+  };
+};
+for (var _i4 in moons) {
+  _loop();
+}
+
+const moonpromax = document.querySelector('.moony')
+moonpromax.addEventListener('click', (event) => {
+  moonpromax.classList.toggle('active');
+  Image()
+  clicker2();
+});
+</script>
+<script>
+tippy("[title]", {
+	content(reference) {
+		const title = reference.getAttribute("title");
+		reference.removeAttribute("title");
+		return title;
+	},
+	followCursor: true,
+	interactive: false,
+	maxWidth: 250,
+  placement: 'top',
+});
+
+	</script>
+ <!-- cat thingy that follows your mouse :D , not mine though! -->
     <script>(function oneko() {
     const nekoEl = document.createElement("div");
 
@@ -333,7 +1946,7 @@ top: 0px;
       nekoEl.style.height = "32px";
       nekoEl.style.position = "fixed";
       nekoEl.style.pointerEvents = "none"; 
-      nekoEl.style.zIndex = "9999";
+      nekoEl.style.zIndex = "999";
       nekoEl.style.backgroundImage =
         "url('data:image/gif;base64,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')";
       nekoEl.style.imageRendering = "pixelated";
@@ -486,92 +2099,199 @@ top: 0px;
         blocks: [],
       };
     }
-  }</script>
+  }
+function playBeep(e=800,t=80,n="square"){
+  try{audioCtx||(audioCtx=new(window.AudioContext||window.webkitAudioContext));
+  const a=audioCtx.createOscillator(),o=audioCtx.createGain();
+  a.type=n,a.frequency.value=e,o.gain.value=.12,a.connect(o),o.connect(audioCtx.destination),a.start(),setTimeout(()=>{o.gain.linearRampToValueAtTime(1e-4,audioCtx.currentTime+.08),setTimeout(()=>{a.stop()},100)},t)}catch(e){console.error(e)}
+  }
 
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
-    <!-- blurb randomizer i took/borrowed from sugarforbrains.neocities.org's or benny's microblog-->
-    <script>
-      
-              const blurbs = [
-              "the dark blue of neocities", 
-              "vroom vroom car", 
-              "oh no", 
-              "watchs mokey daily so he doesn't break any more bones", 
-              "may be easily a mistake", 
-              "the neocities that neocities", 
-              "mewo site", 
-              "the site of a wolf", 
-              "the javascript master", 
-              "the clone of clones", 
-              "goes sand-ways", 
-              "is the site that blues", 
-              "is the site that uses javascript", 
-              "gave expunged a batch of cookies and regrets it", 
-              "haha dave wheelchair go brrr", 
-              "tooltips go hard", 
-              "rss feeds love me", 
-              "itz now KRISMAA", 
-              "MOMMY COME PICK ME UP I IZ SCARED", 
-              "so cold lol", 
-              "document.getElementById", 
-              "this message has double the chances of appearing", 
-              "this message has double the chances of appearing", 
-              "''police he wants to kill me police''",
-              "help me",
-              "is gonna start the next new year",
-              "did you know you can click this to randomize to another blurb",
-              "did you know you can click this to randomize to another blurb!",
-              "did you know you can click this to randomize to another blurb!!",
-              "Your file has been saved.",
-              "Your filled with DETERMINATION",
-              "SANDWICHES",
-              "I miss lori and doodler, haven't meet them in like.. too many months.",
-              "time to get depression wewewewewewewe",
-              "GET AWAY",
-              "I HAVE LORE",
-              "I'M GONNA (probably) BLOG",
-              "no pear you can't have the ice cream",
-	      "neocities is da best",
-	      "what are those reddit tts stories I keep seeing on youtube?? THERE EVERYWHERE",
-	      "r/LodedDiper",
-	      "hehe",
-	      "i've got a cheeseburgerz",
-	      "i loveb being spoiled",
-              "making a gallery soon, i'm sorry for no updates..!!",
-	      "this aged horriblely",
-	      "dave don't vroom with your wheelchair",
-	      "once got flatted like a pancake by lightin mcqueen and it hurt :(",
-	      "buttersotch",
-	      "would kill you but wouldnt",
-	      "will use gaster blasters",
-	      "is talking about why bambi slashed his tires (not the deer)",
-	      "is gonna cause a wormhole",
-	      "MY TIRES",
-        "ITZA HALLOWEEN"
-              ]
-              
-              document.getElementById("msg").innerText = blurbs[Math.floor(Math.random() * blurbs.length)]
+  const audio = new Audio('https://files.catbox.moe/d1zfk3.mp3');
+  
+  
+     function toggle(){
+       document.getElementById('toggleImage').classList.toggle('inactive');
+       audio.currentTime = "0";
+       typea();
+     }
 
-              var loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-  loader.style.display = "none";
+        function toggleImage() {
+            var img = document.getElementById("t");
+            if (img.src.includes("https://dimden.dev/images/electricity_on.png")) {
+                img.src = "https://dimden.dev/images/electricity_off.png";
+            } else {
+                img.src = "https://dimden.dev/images/electricity_on.png";
+            }
+        }
+document.getElementById('guh').addEventListener('click', (event) => {
+  playBeep(1800,90)
+  clicker2()
+  }); 
+  
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.classList.add('fade-out');
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 900); 
+});
+
+const eye = document.querySelector('.loader');
+const pupil = document.querySelector('.pup');
+
+window.addEventListener('mousemove', (e) => {
+  const eyeRect = eye.getBoundingClientRect();
+  const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+  const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+  const deltaX = e.clientX - eyeCenterX;
+  const deltaY = e.clientY - eyeCenterY;
+  const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+  pupil.style.transform = `rotate(${angle}deg) translateX(10px)`;
+});
+
+const textElement = document.querySelector('#debug');
+const e = new (window.AudioContext || window.webkitAudioContext)();
+function funny() {
+if (e.state === 'suspended') {
+  textElement.innerHTML = "Sound blocked. <br> Requires user interaction.";
+} else if (e.state === 'running') {
+  textElement.innerHTML = "Sound allowed.";
+} }
+let timerId = setInterval(funny, 1000);
+const splat = new Audio('https://file.garden/Z5tLc-9b0gezaMou/upload/assets/lancer_splat_sound.mp3');
+
+function Image() {
+  const img = document.getElementById("myImage");
+  
+  if (img.src.includes("https://deltarune.wiki/images/Susie_battle_spellready.gif")) {
+    splat.play();
+    img.src = "https://deltarune.wiki/images/Susie_overworld_splat.png";
+    img.style.top = "490px";
+    splat.currentTime = "0";
+    
+  } else {
+    img.src = "https://deltarune.wiki/images/Susie_battle_spellready.gif";
+    img.style.top = "400px";
+  }
+}
+
+const marquee = document.getElementById('marquee');
+marquee.innerHTML += marquee.innerHTML; 
+
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let cursor = 0;
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === konamiCode[cursor]) {
+    cursor++;
+    if (cursor === konamiCode.length) {
+      playBeep(800,60),setTimeout(()=>playBeep(1200,80),150),setTimeout(()=>playBeep(1600,120),280)
+      document.getElementById('secret-window').classList.add('is-visible');
+      cursor = 0;
+    }
+  } else {
+    cursor = 0;
+  }
+});
+
+function closeWindow() {
+  document.getElementById('secret-window').classList.remove('is-visible');
+}
+
+// activyt
+const currentActivities = [
+  {
+    category: "Building",
+    title: "Small sideprojects",
+    description: "Its not much, but I can possibly link them somewhere.",
+    status: "Halfway there"
+  },
+  {
+    category: "Learning",
+    title: "Javascript",
+    description: "Attempting to use JSON objects and arrays to store data and render 'em properly.",
+    status: "20% of the way there"
+  },
+  {
+    category: "Building",
+    title: "Cafe chatroom + recipes page",
+    description: `See <a href="/newsletter/too_much_summer#chatroom">here</a> for more info on chatroom. Recipes page is still in the works!`,
+    status: "Chatroom: 95% of the way there <br> Recipe: 60% of the way there"
+  }
+];
+
+function renderActivities() {
+  const container = document.getElementById('status-container');
+  if (!container) return;
+
+  container.innerHTML = currentActivities.map(item => `
+    <div class="status-card">   
+      <span>${item.category}</span>
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+      <small style="font-size: 5px; color: green; font-family: monospace;"><b>STATUS</b>: ${item.status}</small>
+    </div>
+  `).join('');
+}
+// render
+document.addEventListener('DOMContentLoaded', renderActivities);
+
+// activyt
+const news = [
+  {
+    date: "Jul 2026",
+    title: "Too Much Summer",
+    description: `Hello my good sirs, madams, everything in between and out. It seems to be still <strong style="color: yellow;">SUMMER</strong>...`,
+    link: `/newsletter/too_much_summer`,
+    beep: 'playBeep(300,10)'
+  },
+  {
+    date: "Jun 2026",
+    title: "Summer Of 2026 + Novel",
+    description: `It appears that it is <strong style="color: yellow;">SUMMER</strong> again. The sun shines with immense...`,
+    link: '/newsletter/summer2026',
+    beep: 'playBeep(700,10)'
+  },
+  {
+    date: "Feb 2026",
+    title: "Winter Of 2026",
+    description: `Oh, Hey hey! sorry for no updates, the newsletter...`,
+    link: '/newsletter/winter2026',
+    beep: 'playBeep(900,10)'
+  }
+];
+
+function renderNews() {
+  const container = document.querySelector('.widget-list');
+  if (!container) return;
+
+  container.innerHTML = news.map(item => `
+    <li onmouseenter="${item.beep}" onclick="typea()">
+      <a href="${item.link}">
+        <span class="post-date">${item.date}</span>
+        <span class="post-title">${item.title}</span>
+        <span class="post-desc">
+         ${item.description}
+          </span>
+      </a>
+    </li>
+  `).join('');
+}
+// render
+document.addEventListener('DOMContentLoaded', renderNews);
+
+
+const imageElement = document.getElementById('spaceship');
+
+
+imageElement.addEventListener('mouseover', () => {
+    imageElement.src = 'https://file.xobyte.org/d9f7854e-591b-4e79-94c5-87640badabcc';
 });
 
 
-            </script>
-  <!-- basic styling for buttons -->
-   <style>
-     button {
-       border-color: blue;
-       background: blue;
-       color: white;
-       font-size: 10px;
-       font-family: "Nunito", sans-serif;
-       width: 100px;
-       height: 20px;
-     }
-    
-   </style>
+imageElement.addEventListener('mouseout', () => {
+    imageElement.src = 'https://file.garden/Z5tLc-9b0gezaMou/upload/assets/kenners.png';
+});
+</script>
   </body>
 </html>

@@ -216,10 +216,10 @@
     color: black;
    }
    #dropcap::first-letter {
-  -webkit-initial-letter: 3; /* Required for Safari support */
-  initial-letter: 3;         /* Sinks the letter down exactly 3 lines */
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
   font-weight: bold;
-  padding-right: 8px;        /* Adds breathing room to the right */
+  padding-right: 8px;
 }
 @keyframes horizontal-shake {
   0% { transform: translateX(0); }
@@ -291,24 +291,20 @@ img {
 
 
 ::-webkit-scrollbar {
-  width: 8px;               /* Width of vertical scrollbar */
-  height: 8px;              /* Height of horizontal scrollbar */
+  width: 8px;
+  height: 8px;
 }
 
-/* The background track */
 ::-webkit-scrollbar-track {
-  background: black;       /* Background color of the track */       /* Rounded corners */
+  background: black;
 }
 
-/* The draggable thumb handle */
 ::-webkit-scrollbar-thumb {
-  background: grey;       /* Color of the draggable bar */
-        /* Rounded corners */
+  background: grey;
 }
 
-/* Hover effect on the draggable handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: white;       /* Darker color on hover */
+  background: white;
 }
 .hideen {
   width: 100%;

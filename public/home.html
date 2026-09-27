@@ -2103,19 +2103,19 @@ const currentActivities = [
     category: "Building",
     title: "Small sideprojects",
     description: "Its not much, but I can possibly link them somewhere.",
-    status: "65% there"
+    status: "68% there"
   },
   {
     category: "Building",
     title: "auga_terminal",
     description: "Attempting to remake an old Nekoweb site of mine to give to someone.",
-    status: "50% of the way there"
+    status: "56% of the way there"
   },
   {
     category: "Building",
     title: "Cafe chatroom + recipes page",
     description: `See <a href="/newsletter/too_much_summer#chatroom">here</a> for more info on chatroom. Recipes page is still in the works!`,
-    status: "Chatroom: 92% of the way there (have to remake somethings) <br> Recipe: 61% of the way there"
+    status: "Chatroom: 95% of the way there (have to remake somethings) <br> Recipe: 63% of the way there"
   }
 ];
 
@@ -2138,26 +2138,26 @@ document.addEventListener('DOMContentLoaded', renderActivities);
 // activyt
 const news = [
   {
+    date: "Sep 2026",
+    title: "Fall Haul",
+    description: `Hello ladies, gentlemen, and humans. (in general) The temperature dropped by around five degrees, which only means… a neat <strong>Fall Haul</strong>!`,
+    link: '/newsletter/fallhaul',
+    beep: 'playBeep(300,10)'
+  },
+  {
     date: "Jul 2026",
     title: "Too Much Summer",
     description: `Hello my good sirs, madams, everything in between and out. It seems to be still <strong style="color: yellow;">SUMMER</strong>...`,
     link: `/newsletter/too_much_summer`,
-    beep: 'playBeep(300,10)'
+    beep: 'playBeep(700,10)'
   },
   {
     date: "Jun 2026",
     title: "Summer Of 2026 + Novel",
     description: `It appears that it is <strong style="color: yellow;">SUMMER</strong> again. The sun shines with immense...`,
     link: '/newsletter/summer2026',
-    beep: 'playBeep(700,10)'
-  },
-  {
-    date: "Feb 2026",
-    title: "Winter Of 2026",
-    description: `Oh, Hey hey! sorry for no updates, the newsletter...`,
-    link: '/newsletter/winter2026',
     beep: 'playBeep(900,10)'
-  }
+  },
 ];
 
 function renderNews() {

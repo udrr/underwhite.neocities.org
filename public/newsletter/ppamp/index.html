@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charSet="utf-8" data-next-head=""/><meta charSet="utf-8"/> <!-- gotta get them utf-8 yah -->
+    <link rel="icon" href="https://underwhite.neocities.org/images/png/ff5b8bd5-0632-4563-9a74-6ef3e72e7ad7_removalai_preview.png">
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+    <title>PUMPKINS, PUMPKINS, AND MORE PUMPKINS</title>
+    <style>
+.tippy-box {
+	max-width:300px;
+	z-index:10;
+	margin:4px 4px 7px 2px;
+	background:#111;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	font-family:JF-Dot-Shinonome-14-Regular, serif;
+	font-size:12px;
+  padding: none !important;
+	line-height:16px;
+	color:#fff;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow::before,
+.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+	color: #111;
+}
+      ::selection {
+        background: white;
+        color: black;
+      }
+      :root {
+        --junior: #b95dff;
+      }
+    @font-face {
+     font-display:swap;
+     font-family:"8bitOperatorPlus-Bold";
+     font-style:normal;
+     font-weight:400;
+     src:url(https://toby.fangamer.com/assets/fonts/8bitOperatorPlus-Bold.ttf) format("truetype") 
+        }
+    @font-face {
+     font-display:swap;
+     font-family:"8bitOperatorPlus-Regular";
+     font-style:normal;
+     font-weight:400;
+     src: url(https://toby.fangamer.com/assets/fonts/8bitOperatorPlus-Regular.ttf) format("truetype")
+        }
+    
+    @font-face {
+     font-display:swap;
+     font-family:JF-Dot-Shinonome-14-Regular;
+     font-style:normal;
+     font-weight:400;
+     src: url(https://toby.fangamer.com/assets/fonts/JF-Dot-Shinonome-14-Regular.ttf) format("truetype")
+        }
+
+    @font-face {
+      font-display:swap;
+      font-family:DePixel Schmal;
+      font-style:normal;
+      font-weight:400;
+      src: url(https://toby.fangamer.com/assets/fonts/depixelschmal.ttf) format("truetype")
+        }
+        
+    @font-face {
+      font-display:swap;
+      font-family:DePixel Halbfett;
+      font-style:normal;
+      font-weight:400;
+      src: url(https://toby.fangamer.com/assets/fonts/depixelhalbfett.ttf) format("truetype")
+        }
+ 
+  body {
+       background: black;
+       color: white;
+       font-family: "8bitOperatorPlus-Regular";
+      overflow-x: hidden;
+      font-size: 16px;
+     }
+
+      
+    h2 {
+      color: yellow;
+      font-family: "8bitOperatorPlus-Bold";
+      white-space: nowrap;
+    }
+  
+   
+    h1 {
+      font-size: 40px;
+      font-family: "DePixel Schmal";
+      font-weight: 700;
+      color: yellow;
+      position: relative;
+     top: -1px;
+     line-height: 50px;
+     font-family: "8bitOperatorPlus-Bold";
+}
+
+    
+     
+   .box {
+     width: 600px;
+     height: auto;
+     line-height: 180%;
+   }
+   
+
+   
+   p, li {
+     text-align: left;
+   }
+
+   li {
+    list-style-type: square;
+   }
+   
+   strong, b {
+     color: #F9FF10;
+   }
+   
+   small {
+    line-height: 150%;
+    margin-bottom: -6px;
+    position: relative;
+    top: 18px;
+    color: grey;
+   }
+   
+   a {
+     color: yellow;
+     text-decoration: none;
+     transition-duration: 0.5s;
+   }
+   
+   a:hover {
+     color: #fffd70;
+     text-decoration: none;
+     transition-duration: 0.5s;
+   }
+   .blockquote {
+    color: black;
+    font-family: Serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 40px;
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    width: 98%;
+    position: relative;
+  left: -12px;
+    padding: 15px;
+   }
+   .blockquote b {
+    color: black;
+   }
+   #dropcap::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+  font-weight: bold;
+  padding-right: 8px;
+}
+@keyframes horizontal-shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-0.5px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: horizontal-shake 0.3s infinite;
+}
+
+
+
+        .the-fixer {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+    }
+
+.borderimg { 
+  border: 20px solid transparent;
+  padding: 15px;
+  border-image: url(https://files.catbox.moe/szzrm5.png) 30 stretch;
+  background: black;
+  width: 400px;
+  height: 400px;
+
+  color: white;
+}
+
+.emote {
+width: 70px;
+height: 15px;
+display: inline-block;
+top: 2.7px;
+position: relative;
+ image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.junior {
+  color: var(--junior);
+  font-family: JF-Dot-Shinonome-14-Regular;
+  margin-left: 2px;
+  text-align: right !important;
+}
+
+img {
+  image-rendering: pixelated;
+   image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.spoiler {
+  background: red;
+  color: pink;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  border: 1px dotted pink;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+.hideen {
+  width: 100%;
+  height: auto;
+  cursor: zoom-out;
+}
+
+.boom {
+  transform: none;
+  transform-origin: bottom;
+  filter: brightness(100%);
+}
+.boom:hover {
+  transform: translateY(-2px)scaleY(1.01);
+  filter: brightness(109%);
+  cursor: pointer;
+}
+.boom:active {
+  transform: translateY(2px)scaleY(1);
+  filter: brightness(93%);
+}
+code {
+  border-radius: 10px;
+  color: white;
+  font-family: DePixel Schmal;
+  letter-spacing: 1px;
+  white-space: pre-break;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  font-size: 12px;
+}
+
+j {
+  font-family:JF-Dot-Shinonome-14-Regular;
+}
+.image-container {
+      text-align: center;
+      clip-path: polygon(19% 0, 74% 0, 60% 100%, 35% 100%);
+    }
+    #cc {
+      width: 380px;
+      height: 190px;
+      object-fit: cover; 
+     object-position: 0 -70px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.1s ease;
+      image-rendering: pixelated;
+    }
+    .s {
+      animation: shakeEffect 0.2s steps(1);
+      filter: brightness(98%);
+      transition: filter 0.2s steps(2);
+    }
+
+    @keyframes shakeEffect {
+   0% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+    }
+    .disabled {
+      opacity: 0.9;
+    }
+   c {
+    background: white;
+    padding:2px;
+    user-select: all;
+   }
+   c::selection {
+    background: none;
+   }
+   .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 10px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: black;
+            padding: 5px;
+            z-index: 10;
+            width: 138px;
+        }
+        .switch-input {
+            display: none;
+        }
+        .switch-label {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 16px;
+            background-color: #222;
+            cursor: pointer;
+            transition: background-color 0.3s steps(4);
+        }
+        .switch-label::after {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 8px;
+            background-color: white;
+            top: 4px;
+            left: 4px;
+            transition: transform 0.3s;
+        }
+        .switch-input:checked + .switch-label {
+            background-color: rgba(204,164,60);
+        }
+
+        .switch-input:checked + .switch-label::after {
+            transform: translateX(15.7px); 
+        }
+
+        .status-text {
+            font-weight: bold;
+            color: #999;
+        }
+
+        .the {
+          width: 88px;
+          height: 31px;
+          border-radius:2px;
+        }
+
+        #ad {
+          display: none;
+        }
+.audio-player-ui {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #000001;
+  color: #fff;
+  border: 4px solid #222;
+  padding: 5px 20px;
+  width: fit-content;
+}
+
+.play-btn {
+  background: none;
+  border: none;
+  color: yellow;
+  cursor: pointer;
+  padding:10px;
+  height: 40px;
+  width: 10px;
+  font-family: "8bitOperatorPlus-Bold";
+  margin-left: -5px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.progress-container {
+  background: #222;
+  height: 6px;
+  width: 200px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.progress-bar {
+  background: #fff;
+  height: 100%;
+  width: 0%;
+  border-right: 1px solid black;
+}
+
+.time-display {
+  font-size: 12px;
+  min-width: 35px;
+}
+q {
+  background: #223;
+  padding: 15px;
+  display:block;
+  font-family: JF-Dot-Shinonome-14-Regular;
+  border-radius: 2px;
+ animation: flash-sharp 0.023s steps(1) infinite;
+}
+
+@keyframes flash-sharp {
+  0%, 34%, 100% { opacity: 0.98; }
+  2%, 28%, 34% { opacity: 0.87; }
+  10.1%, 21%, 46.5% { opacity: 1; }
+}
+
+#flas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s steps(2);
+  z-index: 9999;
+}
+
+#flas.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+html.flas {
+  overflow: hidden;
+}
+
+    </style>
+  </head>
+  <body>
+<center>
+  <div id="flas"></div>
+  <div class="toggle-container">
+        <input onclick="b(200,20,0.1)" type="checkbox" id="toggleSwitch" class="switch-input">
+        <label for="toggleSwitch" class="switch-label"></label>
+        
+        <span id="status" class="status-text" title="This newsletter contains content that may not be safe for individuals with epilepsy.">Epilepsy Friendly Mode</span>
+    </div>
+  <div class="box">
+    <small>udrr's personal newsletter: </small>
+<h1>PUMPKINS, PUMPKINS, AND MORE PUMPKINS</h1>
+  
+    <p>Last newsletter, the leaves were falling. Now, it still is, but now the air smells like cheap trick-or-treat buckets and practically ancient sugar.</p>
+    <p>And yet, I'm here. I promised a newsletter close to November.</p>
+    <div class="image-container">
+    <img id="cc" src="https://file.garden/Z5tLc-9b0gezaMou/upload/archive/png/pum.png" title="Pumki!! Pumki!!" alt="pumkin">
+    </div>
+    <p>I got some news to share, so hopefully I can bundle it all up in one newsletter.</p>
+    <h2>THE WEEN™</h2>
+    <p>So, first. Happy Halloween, and a heartfelt anniversary to the projects that are currently in hibernation.</p>
+    <p>It's great how I'm still here, and that my site just turned 3 years old...</p>
+    <p>Crazy, right?</p>
+    <img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/IMG_3337.gif" width="205px">
+    <p>On Halloween, I tried opening the door to the living room, but I was greeted by an enormous amount of snow. </p>
+    <p><a href="//underwhite.neocities.org/newsletter/ppamp/snow.html" id="snow">I know exactly who it is just by the color of the snow alone</a>. It was a great day to start my morning and upload this newsletter.</p>
+    <p>But, that's not important, isn't it?</p>
+    <p>Now, speaking of projects...</p>
+    <h2>WHAT'S HAPPENING?</h2>
+    <img src="https://email-files.fangamer.com/list_48/campaign_2/balloon-dog.gif" title="It's like a little bee swinging from tree to tree." width="340px">
+    <p>Uhm, let's just cut to the chase:</p>
+    <ul>
+      <li><b>AUGAR</b> is 65% done. Only the main content and some elements remain, which I will hand off to someone else.</li>
+      <li><b>CHAT</b>: Well, you're never getting the chatroom at this point. I haven't opened up the file for it since the sun beckoned.<br>"I'll probably release it in August or so," has "probably" in it, which means I can release it whenever I need to if something happens.</li>
+      <li><b>RECIPE</b>: I'm trying. Trust me.</li>
+    </ul>
+    <p></p>
+    <h2>POLL RESULTS</h2>
+    <p>A staggering <strong>93</strong> of you chose <strong>A</strong>! That means that, somehow, a lot of people drink coffee.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8OWLWy_UdTmzzKt3mobyhEjm-bMAWCp5ySPA2795q45VL7Yfnhwqruv5z&s=10" width="400px">
+    <p>Not to be a rambler or anything, but I sure do love coffee. I have many ways to drink a daily one, like via capsules, beans, concentrated coffee, or instant coffee. I have tried cold brew and pourover, but I dont got the money for that anymore.</p>
+    <p>Oh, and if you were wondering about the rest of y'all...</p>
+    <ul>
+      <li><strong>B</strong>: 43</li>
+      <li><strong>C</strong>: 23</li>
+      <li><strong>D</strong>: 66</li>
+    </ul>
+    <p>For another question, this time from you!</p>
+    <h2>MUSIC?</h2>
+    <p>Going great, but I dont think I will do monthly releases at this point. Ever since the Grand Wiping...</p>
+    <p>Oh well, I have a teaser of "Been While" if anyone wants it.</p>
+    <audio src="https://file.garden/Z5tLc-9b0gezaMou/upload/snippets/been%20while.mp3" controls>
+  Your browser does not support the audio element!
+</audio>
+<p>It's a short one, yes, but it's a teaser. I hope you enjoy it.</p>
+<p>I also promised something! Here, let me get it...</p>
+<h2>COLLECTION OF WEIRD CREATURES: REPRISE</h2>
+<p>Last newsletter, I said I would attempt to translate my friend's notes written mostly in Japanense.</p>
+<p>So, here are my attempts:</p>
+<h3>PAGE 1</h3>
+<q>Kaiju A02 is <i>(untranslatable)</i> absorb <i>(untranslatable)</i> picture of it soon in the <i>(rest untranslatable)</i></q>
+<h3>PAGE 2</h3>
+<q>Kaiju A01 seems to be <i>(untranslatable)</i> chronic <i>(rest untranslatable)</i></q>
+<h3>PAGE 3</h3>
+<q><i>(everything untranslatable)</i></q>
+<p>...</p>
+<p>I'm not that good at translating, am I? Or maybe their handwriting sucks.</p>
+<p>Oh well, I'll just ask them to translate it for me. I hope.</p>
+<h2>A SPECIAL WORD</h2>
+<p>For this newsletter, I asked my <span title="Yelorange, or simply Yelo">friend</span> what they would like to say in it. Here's what they said:</p>
+<q><span style="color: rgba(255,120,1)">C</span><span style="color: orange">a</span><span style="color: yellow">r</span>.</q>
+<p>It was truly touching.</p>
+<div id='ad'>
+  <a id="a" href="//yeloran.ge/vxt3.html"><img class="the" src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/placeholder.png" alt="You can do it."></a>
+</div>
+<h2>CONCLUSION</h2>
+<p>Happy Halloween</p>
+<p>get many candy yes</p>
+<img src="https://file.garden/Z5tLc-9b0gezaMou/upload/assets/aa.png" width="480px" height="350px">
+</div>
+    <p style="opacity: 0.2; color: white; font-size: 9px; font-family: DePixel Schmal;text-align: center;">Open that pumpkin vertically at the start of this... "newsletter".</p>
+    
+  </div>
+  </center>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const flashOverlay = document.getElementById('flas');
+  const links = document.querySelectorAll('#snow');
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      const targetUrl = link.href;
+        document.documentElement.classList.add("flas");
+      flashOverlay.classList.add('active');
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 390);
+    });
+  });
+});
+
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+ // tippy
+const t = tippy("[title]", {
+	content(reference) {
+		const title = reference.getAttribute("title");
+		reference.removeAttribute("title");
+		return title;
+	},
+	followCursor: true,
+	interactive: false,
+	maxWidth: 250,
+  delay: 500,
+  placement: 'top',
+});
+function b(frequency = 440, duration = 100, volume = 0.1) {
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  oscillator.type = 'square';
+  oscillator.frequency.value = frequency;
+  gainNode.gain.value = volume;
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+  const startTime = audioCtx.currentTime;
+  const stopTime = startTime + (duration / 1000);
+  
+  oscillator.start(startTime);
+  oscillator.stop(stopTime);
+}
+    audio = new Audio('https://file.garden/Z5tLc-9b0gezaMou/upload/sfx/snd_bump.wav');
+    a = new Audio('https://file.garden/Z5tLc-9b0gezaMou/upload/sfx/snd_screenshake.wav');
+    img = document.getElementById('cc');
+    c = 0;
+    h = false;
+    f = "https://file.garden/Z5tLc-9b0gezaMou/upload/archive/png/untitled-pixel-art@4x%20(1).png";
+
+    img.addEventListener('click', () => {
+      audio.currentTime = 0;
+      audio.play();
+      if (c >= 6) return;
+
+      c++;
+      img.classList.remove('s');
+      img.classList.add('s');
+
+      setTimeout(() => {
+        img.classList.remove('s');
+      }, 150);
+
+      if (c === 6) {
+        
+      a.play();
+        img.src = f;
+        h = true;
+        img.classList.add('disabled');
+        img.style.cursor = "default";
+        img._tippy.destroy()
+        tippy(img, {
+	content: 'You did it.',
+	followCursor: true,
+	interactive: false,
+	maxWidth: 250,
+  delay: 500,
+  placement: 'top',
+});
+      }
+    });
+
+
+   
+element = document.querySelector('#ad');
+ae = document.querySelector('#a');
+e = document.getElementById('toggleSwitch');
+e.addEventListener('change', function() {
+            if (this.checked) {
+               ae.href = "//yeloran.ge/vxt3.html?epilepsy";
+               document.querySelectorAll('q').forEach((a)=> { a.style.animation = "none"; });
+            } else {
+                ae.href = "//yeloran.ge/vxt3.html";
+                document.querySelectorAll('q').forEach((a)=> { a.style.animation = "flash-sharp 0.023s steps(1) infinite"});
+            }
+        });
+check = function() {
+  if (h === true) { element.style.display = "block"; } else { element.style.display = "none"; }
+}
+setInterval(check, 400)
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audioElements = document.querySelectorAll('audio');
+
+  audioElements.forEach(audio => {
+    audio.controls = false;
+    audio.style.display = 'none';
+    const playerWrapper = document.createElement('div');
+    playerWrapper.className = 'audio-player-ui';
+    playerWrapper.draggable = false;
+    playerWrapper.innerHTML = `
+      <button class="play-btn">></button>
+      <div class="progress-container">
+        <div class="progress-bar" draggable="false"></div>
+      </div>
+      <span class="time-display">0:00</span>
+    `;
+    audio.parentNode.insertBefore(playerWrapper, audio.nextSibling);
+    const playBtn = playerWrapper.querySelector('.play-btn');
+    const progressContainer = playerWrapper.querySelector('.progress-container');
+    const progressBar = playerWrapper.querySelector('.progress-bar');
+    const timeDisplay = playerWrapper.querySelector('.time-display');
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = '-';
+      } else {
+        audio.pause();
+        playBtn.textContent = '>';
+      }
+    });
+    audio.addEventListener('timeupdate', () => {
+      const percentage = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = `${percentage}%`;
+      const minutes = Math.floor(audio.currentTime / 60);
+      const seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+      timeDisplay.textContent = `${minutes}:${seconds}`;
+    });
+    progressContainer.addEventListener('mousedown', (e) => {
+      const rect = progressContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const clickPercent = clickX / width;
+      
+      audio.currentTime = clickPercent * audio.duration;
+    });
+    audio.addEventListener('ended', () => {
+      playBtn.textContent = '>';
+      progressBar.style.width = '0%';
+    });
+  });
+});
+</script>
+
+  </body>
+</html>

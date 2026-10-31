@@ -2138,26 +2138,27 @@ document.addEventListener('DOMContentLoaded', renderActivities);
 // activyt
 const news = [
   {
+    date: "Oct 2026",
+    title: "Pumpkins, Pumpkins, And More Pumpkins",
+    description: `Last newsletter, the leaves were falling. Now, it still is, but now the air smells like cheap trick-or-treat buckets and practically ancient sugar.`,
+    link: '/newsletter/ppamp/index.html',
+    beep: 'playBeep(300,10)'
+  },
+  {
     date: "Sep 2026",
     title: "Fall Haul",
     description: `Hello ladies, gentlemen, and humans. (in general) The temperature dropped by around five degrees, which only means… a neat <strong>Fall Haul</strong>!`,
     link: '/newsletter/fallhaul',
-    beep: 'playBeep(300,10)'
+    beep: 'playBeep(700,10)'
   },
   {
     date: "Jul 2026",
     title: "Too Much Summer",
     description: `Hello my good sirs, madams, everything in between and out. It seems to be still <strong style="color: yellow;">SUMMER</strong>...`,
     link: `/newsletter/too_much_summer`,
-    beep: 'playBeep(700,10)'
-  },
-  {
-    date: "Jun 2026",
-    title: "Summer Of 2026 + Novel",
-    description: `It appears that it is <strong style="color: yellow;">SUMMER</strong> again. The sun shines with immense...`,
-    link: '/newsletter/summer2026',
     beep: 'playBeep(900,10)'
   },
+  
 ];
 
 function renderNews() {

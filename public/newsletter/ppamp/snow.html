@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>snow</title>
+    <style>
+      @font-face {
+     font-display:swap;
+     font-family:jp;
+     font-style:normal;
+     font-weight:400;
+     src: url(https://toby.fangamer.com/assets/fonts/JF-Dot-Shinonome-14-Regular.ttf) format("truetype")
+        }
+        @keyframes fade {
+          from {
+            opacity: 0.5;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        body {
+         animation: 0.4s fade steps(2);
+         font-family:jp;
+         text-align:center;
+         line-height: 30px;
+         height: 100vh;
+         overflow: hidden;
+         padding: 50px;
+         
+        }
+        input[type="text"] {
+            outline: none;
+            border: none;
+            padding: 5px;
+            width: 40px;
+            margin-left: 3.9%;
+            font-family: inherit;
+            text-align: left;
+            caret-shape: block;
+            caret-color: grey;
+        }
+        .void {
+          width: 440px;
+          height: 400px;
+          border-radius: 50%;
+          filter: invert(1)url(#line-boil2);
+          object-fit: cover; 
+          object-position: -118px; 
+        }
+
+        ::selection {
+          background: black;
+          color: white;
+        }
+        .sparkle {
+          position: absolute;
+          left: 49.5%;
+          top:260px;
+          z-index: 1;
+          background: url('https://media.tenor.com/tGUIZ_LdMNQAAAAj/white-sparkle.gif') center;
+          background-size: 50px;
+          width: 30px;
+          height: 30px;
+          display: block;
+          cursor: pointer;
+        }
+        .sparkle.inactive {
+          display: none;
+        }
+
+        a {
+          text-decoration: none;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sparkle inactive"></div>
+    <img class="void" src="https://file.garden/Z5tLc-9b0gezaMou/upload/transfer/aaaa.jpg">
+    <p id="para"></p>
+    <div style="filter:url('#line-boil')" id="a-form">
+        <input type="text" id="answer" maxlength="4" oninput="this.value=this.value.toLowerCase();if(this.value.length>=4&&secretCode.startsWith(this.value)&&this.value.length<secretCode.length)this.setAttribute('maxlength',this.value.length+1);if(this.getAttribute('maxlength')>4&&!secretCode.startsWith(this.value)){this.value='load';a('No. Reload now.', 'refresh');}if(this.getAttribute('maxlength')>4&&this.value.length<=this.getAttribute('maxlength'))this.setAttribute('maxlength',this.value.length+1)" placeholder="....">
+    </div>
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <filter id="line-boil2" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise">
+        <animate 
+          attributeName="seed" 
+          values="1;2;3;2" 
+          dur="1.5s" 
+          repeatCount="indefinite" 
+          calcMode="discrete" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    </defs>
+    <defs>
+    <filter id="line-boil" x="-10%" y="-10%" width="140%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.21" numOctaves="28" result="noise">
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+</svg>
+    <script>
+      const secretCode = "maxisthebestboy"
+      const s = document.querySelector('.sparkle');
+sparkle = false;
+      let smallslottext = "There is a small slot in the wall. It asks for at most 4 characters.";
+      audio = new Audio('https://files.catbox.moe/ul5y4w.mp3');
+      let smallslot = document.querySelector("#para");
+      let amount = 0;
+      smallslot.innerText = smallslottext;
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      function b(frequency = 440, duration = 100, volume = 0.1) {
+  oscillator = audioCtx.createOscillator();
+  g = audioCtx.createGain();
+  oscillator.type = 'square';
+  oscillator.frequency.value = frequency;
+  g.gain.value = volume;
+  oscillator.connect(g);
+  g.connect(audioCtx.destination);
+  const startTime = audioCtx.currentTime;
+  const stopTime = startTime + (duration / 1000);
+  c = false;
+  oscillator.start(startTime);
+  oscillator.stop(stopTime);
+}
+document.getElementById('a-form').addEventListener('input', function(e) {
+  b(30,0.1,0.3)
+});
+oki = false;
+warm = false;
+const f = (str) => /^(.)\1{3}$/.test(str);
+        document.getElementById('a-form').addEventListener('keydown', function(e) {
+          /* if (e.key == "Enter") {
+            e.preventDefault();
+            const v = document.getElementById('answer').value.trim().toLowerCase();
+            if(v === 'yelo' || v === 'rnge') {
+                a("Right...");
+            }  else if(v === 'dude' || v === 'folk') {
+                a("Ah, I know what you're doing.");
+            }  else if(v === 'udrr') {
+                a("Try that, but somewhere else.");
+            } else if(v === 'cofe' || v === 'kofe' || v === 'coff' || v === 'cffe' || v === 'cfee') {
+                a(`"${v}?" I don't give EEFFOC.`);
+            } else if(v === 'uddr') {
+                a("Try that, but somewhere else. Also, it's spelled incorrectly.");
+            } else if(v === 'aaaa' || v === 'aa') { 
+              a("You think you're funny, right?");
+            } else if(v === 'bbbb' || v === 'bb') { 
+              a("Uhm... what?");
+            } else if(v === 'test' || v === 'tset') { 
+              a("Acknowleged.");
+            } else if(f(v) === true) { 
+              a("Alright, stop this.");
+            } else if(v === 'no' || v === 'nah' || v === 'nope' || v === 'nuh' || v === 'nawh') { 
+              a("Okay.");
+              oki = true;
+            } else if(v === 'okay' || v === 'oki' || v === 'ok' || v === 'sure' || v === 'yah' || v === 'ye' || v === 'yes') { 
+              if (oki = true) {
+                a("Are you just... repeating what I said?");
+              } else {
+                a("Sure, why not?")
+              }
+            } else if(v === 'bore' || v === 'bord') { 
+              a("Are you just here because you're bored?");
+            } else if(v === 'cows') { 
+              a(`Oh yes, ${v}. Are you just here?`);
+            } else if (v === "snow") {
+              if (sparkle === true) {
+               a('It was a great day, you know?') }
+                else {
+                  a('I know exactly who it is just by the color of the snow alone.')
+                }
+            }
+            else if(v === 'cow') { 
+              a(`Oh yes, a ${v}. Are you just here?`);
+            } else if(v === 'yd' || v === 'orf' || v === "of") { 
+              a(`Hm, we're getting somewhere with "${v}". Keep going.`);
+            } else if(v === 'vxt3' || v === 'vitx') { 
+              if (sparkle === true) {
+                a(`I said that one, "${v}".`); }
+                else {
+                  a(`Hm, keep that word with you. It might provide something you desire.`, "snow");
+                }
+            } else if(v === 'slee' || v === 'tire' || v === 'eepy' || v === 'eep' || v === 'slep' || v === 'nap') { 
+              a(`If you wanna ${v}, then ${v}.`);
+            } else if(v === 'end' || v === 'sum' || v === 'sumr' || v === 'summ') { 
+              if (sparkle === true) {
+              a(`I assume you already know <i>what's</i> about to happen, right?`);}
+                else {  
+              a(`The end of summer. Yes. Something will happen.`);
+                }
+            } else if(v === 'ball') {
+              a("Ball.");
+            } else {
+              a("Nothing happened.");
+            }
+            } */
+            if (e.key == "Enter") {
+            e.preventDefault();
+            const v = document.getElementById('answer').value.trim().toLowerCase();
+switch (v) {
+case 'yelo':
+case 'rnge':
+a("Right…")
+break;
+case 'ball':
+a('Ball.')
+break;
+case 'test': 
+case 'tset':
+              a("Acknowleged.");
+break;
+case 'need':
+case 'neef':
+case 'ned':
+if (sparkle === true) {
+               a(`You "${v}" him, don't you?`) }
+                else {
+                  a('Need what? You need him?');
+                }
+break;
+case 'bore':
+case 'bord':
+              a("Are you just here because you're bored?");
+case 'cows':
+              a(`Oh yes, ${v}. Are you just here?`);
+break;
+case 'snow':
+              if (sparkle === true) {
+               a('It was a great day, you know?') }
+                else {
+                  a('I know exactly who it is just by the color of the snow alone.')
+                }
+break;
+case 'cow': 
+              a(`Oh yes, a ${v}. Are you just here?`);
+break;
+case 'yd':
+case 'orf':
+case "of":
+              a(`Hm, we're getting somewhere with "${v}". Keep going.`);
+break;
+case 'wtrr':
+case 'wate':
+case 'wter':
+case 'wata':
+a("I'm hoping this time the water is perfectly warm.")
+warm = true;
+break;
+case 'cool':
+a("I remember when I said that once.");
+break;
+case 'cant':
+a("Can't? Can't what?");
+break;
+case 'what':
+a("Huh?");
+break;
+case 'raty':
+a(`<a href="https://microstudio.io/RattyusMaximus/pseuukythingsarehappening/M4SXGT3C/">Here</a>.`);
+break;
+case 'warm':
+if (warm === true) {
+  warm = "no";
+                a(`I hope the water's warm, just like how you write it. "${v}". Just like that.`); 
+                 } else if (warm === "no") {
+                a(`...`); }
+                else {
+                  a(`Warm...`);
+                }
+break;
+case 'cld':
+case 'col;':
+case 'cold':
+a("It's so cold.")
+break;
+case 'vxt3':
+case 'vitx':
+              if (sparkle === true) {
+                a(`I said that one, "${v}".`); }
+                else {
+                  a(`Hm, keep that word with you. It might provide something you desire.`, "snow");
+                }
+break;
+case 'meow':
+case 'woof':
+case 'bark':
+case 'nya':
+a('No, just no.')
+break;
+case 'qwer':
+a('Are you testing your keyboard?')
+break;
+case 'abcd':
+a('Efghijklmnop...')
+break;
+case 'slee':
+case 'tire':
+case 'eepy':
+case 'eep':
+case 'slep':
+case 'nap':
+              a(`If you wanna ${v}, then ${v}.`);
+break;
+case 'end':
+case 'sum':
+case 'sumr':
+case 'summ':
+              if (sparkle === true) {
+              a(`I assume you already know <i>what's</i> about to happen, right?`);}
+                else {  
+              a(`The end of summer. Yes. Something will happen.`);
+                }
+break;
+case 'cofe':
+case 'kofe':
+case 'coff' :
+case 'cffe' :
+case 'cfee':
+ a(`"${v}?" I don't give EEFFOC.`);
+break;
+case 'no': 
+case 'nah':
+case 'nope':
+case 'nuh':
+case 'nawh':
+              a("Okay.");
+              oki = true;
+break;
+case 'okay':
+case 'oki':
+case  'ok':
+case 'sure':
+case 'yah': 
+case 'okau':
+case 'ye': 
+case 'yes':
+              if (oki === true && v === "okay") {
+                a("Are you just... repeating what I said?");
+              } else if (oki === true) {
+                a("Strange.");
+              } else {
+                a("Sure, why not?")
+              }
+break;
+case 'dude':
+case 'folk':
+                a("Ah, I know what you're doing.");
+break;
+case 'auga':
+case 'augr':
+case "aurd":
+if (sparkle === true) {
+              a("Not now.")
+}
+                else {  
+              a("Don't mention his name.");
+                }
+break;
+case 'anon':
+a("Sure, go for that.");
+break;
+case 'num':
+case 'numb':
+case 'nmbr':
+case 'amou':
+case 'amot':
+case 'amon':
+a(`You spoke to me like ${amount} times.`);
+break;
+case 'oran':
+case 'range':
+a("Heh, you're silly.");
+break;
+case 'udrr':
+                a("Try that, but somewhere else.");
+break;
+case 'uddr':
+                a("Try that, but somewhere else. Also, it's spelled incorrectly.");
+break;
+case 'aaaa': 
+case 'aa':
+a("You think you're funny, right?");
+break;
+case 'bbbb': 
+case 'bb':
+a("Uhm… what?");
+break;
+case 'slot':
+a("Oh look! A slot.");
+break;
+default:
+if(f(v) === true) {
+a("Alright, stop this.")
+} else { a('Nothing happened.');}
+break;
+}
+}
+
+        });
+s.addEventListener('click', ()=> {
+toggler();
+audio.play();
+sparkle = true;
+});
+refresh = false
+       async function a(text, va = '') {
+          if (c) return; 
+          const v = document.getElementById('answer').value.trim().toLowerCase();
+          smallslot.innerText = `You slid the note with "${v}" written on it...`;
+          b(300,300,0.1)
+          c = true;
+          setTimeout(()=> {
+          amount++;
+          alert(text);
+          c = false;
+          if (sparkle === true) return;
+          if (va === 'refresh') refresh = true;
+          if (va === 'snow') toggler();
+          }, 1000);
+          
+        }
+function toggler() {
+ s.classList.toggle('inactive');
+}
+window.alert = function(message) {
+  const overlay = document.createElement("div");
+  overlay.style.cssText = `
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 20, 0.5); z-index: 9999;
+    display: flex; justify-content: center; align-items: center;
+  `;
+  const alertBox = document.createElement("div");
+  alertBox.style.cssText = `
+    background: white; padding: 20px; border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center; min-width: 250px;
+  `;
+  const text = document.createElement("p");
+  text.innerHTML = message;
+  text.style.margin = "0 0 15px 0";
+  alertBox.appendChild(text);
+  const button = document.createElement("button");
+  button.textContent = "OK";
+  button.style.cssText = "padding: 8px 20px; background: #000; color: white; border: none;cursor: pointer;font-family:jp;";
+  button.onclick = function() {
+    setTimeout(()=>{if (refresh == true) return window.location.reload();},1)
+    b(140,30,0.1);
+    smallslot.innerText = smallslottext;
+    document.getElementById('answer').value = "" // clear value
+    document.body.removeChild(overlay);
+    
+  };
+  alertBox.appendChild(button);
+  overlay.appendChild(alertBox);
+  document.body.appendChild(overlay);
+};
+
+    </script>
+  </body>
+</html>
